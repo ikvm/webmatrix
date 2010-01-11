@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{BF18EE70-9F39-4D99-AD14-7098D35BED0A}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -156,1129 +156,1128 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.JSharp\JSharpCodeGenerator.cs">
+    <Compile Include="JSharp\JSharpCodeGenerator.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.JSharp\JSharpCodeProvider.cs">
+    <Compile Include="JSharp\JSharpCodeProvider.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Application\ApplicationType.cs">
+    <Compile Include="Core\Application\ApplicationType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Application\GlobalExceptionHandler.cs">
+    <Compile Include="Core\Application\GlobalExceptionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Application\IApplicationIdentity.cs">
+    <Compile Include="Core\Application\IApplicationIdentity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Application\MxApplication.cs">
+    <Compile Include="Core\Application\MxApplication.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Application\WebLink.cs">
+    <Compile Include="Core\Application\WebLink.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Application\WebLinksSectionHandler.cs">
+    <Compile Include="Core\Application\WebLinksSectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Designer\DesignerHost.cs">
+    <Compile Include="Core\Designer\DesignerHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Designer\DesignSite.cs">
+    <Compile Include="Core\Designer\DesignSite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Designer\IDesignLayer.cs">
+    <Compile Include="Core\Designer\IDesignLayer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Designer\IDocumentDesignerHost.cs">
+    <Compile Include="Core\Designer\IDocumentDesignerHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Designer\ILayeredDesignerHost.cs">
+    <Compile Include="Core\Designer\ILayeredDesignerHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Code\CodeDocument.cs">
+    <Compile Include="Core\Documents\Code\CodeDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Code\CodeDocumentFactory.cs">
+    <Compile Include="Core\Documents\Code\CodeDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Code\CodeDocumentLanguage.cs">
+    <Compile Include="Core\Documents\Code\CodeDocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Code\CodeDocumentStorage.cs">
+    <Compile Include="Core\Documents\Code\CodeDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Code\ICodeBehindDocumentLanguage.cs">
+    <Compile Include="Core\Documents\Code\ICodeBehindDocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Code\IDocumentWithCode.cs">
+    <Compile Include="Core\Documents\Code\IDocumentWithCode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Design\DocumentDesigner.cs">
+    <Compile Include="Core\Documents\Design\DocumentDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Text.Design\TextDocumentDesigner.cs">
+    <Compile Include="Core\Documents\Text.Design\TextDocumentDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Text\MxTextManager.cs">
+    <Compile Include="Core\Documents\Text\MxTextManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Text\TextDocument.cs">
+    <Compile Include="Core\Documents\Text\TextDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Text\TextDocumentFactory.cs">
+    <Compile Include="Core\Documents\Text\TextDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Text\TextDocumentLanguage.cs">
+    <Compile Include="Core\Documents\Text\TextDocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Text\TextDocumentStorage.cs">
+    <Compile Include="Core\Documents\Text\TextDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Text\TextOptions.cs">
+    <Compile Include="Core\Documents\Text\TextOptions.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents.Text\TextPrintDocument.cs">
+    <Compile Include="Core\Documents\Text\TextPrintDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\ActiveDocumentEventArgs.cs">
+    <Compile Include="Core\Documents\ActiveDocumentEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\ActiveDocumentEventHandler.cs">
+    <Compile Include="Core\Documents\ActiveDocumentEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\CustomizedDocumentType.cs">
+    <Compile Include="Core\Documents\CustomizedDocumentType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\Document.cs">
+    <Compile Include="Core\Documents\Document.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentEventArgs.cs">
+    <Compile Include="Core\Documents\DocumentEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentEventHandler.cs">
+    <Compile Include="Core\Documents\DocumentEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentInstanceArguments.cs">
+    <Compile Include="Core\Documents\DocumentInstanceArguments.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentLanguage.cs">
+    <Compile Include="Core\Documents\DocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentManager.cs">
+    <Compile Include="Core\Documents\DocumentManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentMode.cs">
+    <Compile Include="Core\Documents\DocumentMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentType.cs">
+    <Compile Include="Core\Documents\DocumentType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentTypeCollection.cs">
+    <Compile Include="Core\Documents\DocumentTypeCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentTypeManager.cs">
+    <Compile Include="Core\Documents\DocumentTypeManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentTypesSectionHandler.cs">
+    <Compile Include="Core\Documents\DocumentTypesSectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\DocumentViewType.cs">
+    <Compile Include="Core\Documents\DocumentViewType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\IDocumentFactory.cs">
+    <Compile Include="Core\Documents\IDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\IDocumentManager.cs">
+    <Compile Include="Core\Documents\IDocumentManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\IDocumentStorage.cs">
+    <Compile Include="Core\Documents\IDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\IDocumentTypeManager.cs">
+    <Compile Include="Core\Documents\IDocumentTypeManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\IEmbeddedDocumentStorage.cs">
+    <Compile Include="Core\Documents\IEmbeddedDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\ILanguageManager.cs">
+    <Compile Include="Core\Documents\ILanguageManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\IPrintableDocument.cs">
+    <Compile Include="Core\Documents\IPrintableDocument.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\IRunnableDocument.cs">
+    <Compile Include="Core\Documents\IRunnableDocument.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\LanguageManager.cs">
+    <Compile Include="Core\Documents\LanguageManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\LanguageManagerSectionHandler.cs">
+    <Compile Include="Core\Documents\LanguageManagerSectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\TemplateDocumentType.cs">
+    <Compile Include="Core\Documents\TemplateDocumentType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\TemplateFlags.cs">
+    <Compile Include="Core\Documents\TemplateFlags.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Documents\WizardDocumentType.cs">
+    <Compile Include="Core\Documents\WizardDocumentType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Packages\CorePackage.cs">
+    <Compile Include="Core\Packages\CorePackage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Packages\IApplicationPackage.cs">
+    <Compile Include="Core\Packages\IApplicationPackage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Packages\IPackage.cs">
+    <Compile Include="Core\Packages\IPackage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Packages\IPackageManager.cs">
+    <Compile Include="Core\Packages\IPackageManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Packages\PackageListSectionHandler.cs">
+    <Compile Include="Core\Packages\PackageListSectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Packages\PackageManager.cs">
+    <Compile Include="Core\Packages\PackageManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\AddIn.cs">
+    <Compile Include="Core\Plugins\AddIn.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\AddInEntry.cs">
+    <Compile Include="Core\Plugins\AddInEntry.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\AddInForm.cs">
+    <Compile Include="Core\Plugins\AddInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\AddInHost.cs">
+    <Compile Include="Core\Plugins\AddInHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\AddInListSectionHandler.cs">
+    <Compile Include="Core\Plugins\AddInListSectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\AddInManager.cs">
+    <Compile Include="Core\Plugins\AddInManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\AddInScope.cs">
+    <Compile Include="Core\Plugins\AddInScope.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\CodeWizard.cs">
+    <Compile Include="Core\Plugins\CodeWizard.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\CodeWizardForm.cs">
+    <Compile Include="Core\Plugins\CodeWizardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\CodeWizardHost.cs">
+    <Compile Include="Core\Plugins\CodeWizardHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\DocumentAddIn.cs">
+    <Compile Include="Core\Plugins\DocumentAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\DocumentWizard.cs">
+    <Compile Include="Core\Plugins\DocumentWizard.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\DocumentWizardForm.cs">
+    <Compile Include="Core\Plugins\DocumentWizardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\DocumentWizardHost.cs">
+    <Compile Include="Core\Plugins\DocumentWizardHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\Plugin.cs">
+    <Compile Include="Core\Plugins\Plugin.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\PluginAttribute.cs">
+    <Compile Include="Core\Plugins\PluginAttribute.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Plugins\PluginHost.cs">
+    <Compile Include="Core\Plugins\PluginHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\DirectoryProjectItem.cs">
+    <Compile Include="Core\FileSystem\DirectoryProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\FileProjectItem.cs">
+    <Compile Include="Core\FileSystem\FileProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\FileSystemProject.cs">
+    <Compile Include="Core\FileSystem\FileSystemProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\ILocalFileSystemProject.cs">
+    <Compile Include="Core\FileSystem\ILocalFileSystemProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\IMiscProjectItem.cs">
+    <Compile Include="Core\FileSystem\IMiscProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\MiscDirectoryProjectItem.cs">
+    <Compile Include="Core\FileSystem\MiscDirectoryProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\MiscFileProjectItem.cs">
+    <Compile Include="Core\FileSystem\MiscFileProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\MyComputerProject.cs">
+    <Compile Include="Core\FileSystem\MyComputerProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\MyComputerProjectFactory.cs">
+    <Compile Include="Core\FileSystem\MyComputerProjectFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\MyComputerProjectItem.cs">
+    <Compile Include="Core\FileSystem\MyComputerProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\ShortcutProject.cs">
+    <Compile Include="Core\FileSystem\ShortcutProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\ShortcutProjectFactory.cs">
+    <Compile Include="Core\FileSystem\ShortcutProjectFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects.FileSystem\ShortcutProjectItem.cs">
+    <Compile Include="Core\FileSystem\ShortcutProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\DocumentProjectItem.cs">
+    <Compile Include="Core\Projects\DocumentProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\FolderProjectItem.cs">
+    <Compile Include="Core\Projects\FolderProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\IProjectFactory.cs">
+    <Compile Include="Core\Projects\IProjectFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\IProjectManager.cs">
+    <Compile Include="Core\Projects\IProjectManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\Project.cs">
+    <Compile Include="Core\Projects\Project.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectEventArgs.cs">
+    <Compile Include="Core\Projects\ProjectEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectEventHandler.cs">
+    <Compile Include="Core\Projects\ProjectEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectFactoryListSectionHandler.cs">
+    <Compile Include="Core\Projects\ProjectFactoryListSectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectFactorySaveMode.cs">
+    <Compile Include="Core\Projects\ProjectFactorySaveMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectItem.cs">
+    <Compile Include="Core\Projects\ProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectItemAttributes.cs">
+    <Compile Include="Core\Projects\ProjectItemAttributes.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectItemCollection.cs">
+    <Compile Include="Core\Projects\ProjectItemCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectItemEventArgs.cs">
+    <Compile Include="Core\Projects\ProjectItemEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectItemEventHandler.cs">
+    <Compile Include="Core\Projects\ProjectItemEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectItemFlags.cs">
+    <Compile Include="Core\Projects\ProjectItemFlags.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectItemStreamMode.cs">
+    <Compile Include="Core\Projects\ProjectItemStreamMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\ProjectManager.cs">
+    <Compile Include="Core\Projects\ProjectManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\RootProjectItem.cs">
+    <Compile Include="Core\Projects\RootProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Projects\WorkspaceProject.cs">
+    <Compile Include="Core\Projects\WorkspaceProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\ComponentGalleryService.cs">
+    <Compile Include="Core\Services\ComponentGalleryService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\DataObjectMappingInfo.cs">
+    <Compile Include="Core\Services\DataObjectMappingInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\DataObjectMappingSectionHandler.cs">
+    <Compile Include="Core\Services\DataObjectMappingSectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\DataObjectMappingService.cs">
+    <Compile Include="Core\Services\DataObjectMappingService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\IClassViewService.cs">
+    <Compile Include="Core\Services\IClassViewService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\IComponentGalleryService.cs">
+    <Compile Include="Core\Services\IComponentGalleryService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\IDataObjectMapper.cs">
+    <Compile Include="Core\Services\IDataObjectMapper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\IDataObjectMappingService.cs">
+    <Compile Include="Core\Services\IDataObjectMappingService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\IPreferencesService.cs">
+    <Compile Include="Core\Services\IPreferencesService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\IPrintService.cs">
+    <Compile Include="Core\Services\IPrintService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\IWebBrowsingService.cs">
+    <Compile Include="Core\Services\IWebBrowsingService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\PreferenceEncryption.cs">
+    <Compile Include="Core\Services\PreferenceEncryption.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\PreferencesService.cs">
+    <Compile Include="Core\Services\PreferencesService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\PreferencesStore.cs">
+    <Compile Include="Core\Services\PreferencesStore.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\PrintService.cs">
+    <Compile Include="Core\Services\PrintService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Services\WebBrowsingService.cs">
+    <Compile Include="Core\Services\WebBrowsingService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\CodeWizardToolboxDataItem.cs">
+    <Compile Include="Core\Toolbox\CodeWizardToolboxDataItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\CodeWizardToolboxSection.cs">
+    <Compile Include="Core\Toolbox\CodeWizardToolboxSection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\IToolboxService.cs">
+    <Compile Include="Core\Toolbox\IToolboxService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\SnippetToolboxDataItem.cs">
+    <Compile Include="Core\Toolbox\SnippetToolboxDataItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\SnippetToolboxSection.cs">
+    <Compile Include="Core\Toolbox\SnippetToolboxSection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\ToolboxDataItem.cs">
+    <Compile Include="Core\Toolbox\ToolboxDataItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\ToolboxSection.cs">
+    <Compile Include="Core\Toolbox\ToolboxSection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\ToolboxSectionEventArgs.cs">
+    <Compile Include="Core\Toolbox\ToolboxSectionEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\ToolboxSectionEventHandler.cs">
+    <Compile Include="Core\Toolbox\ToolboxSectionEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\ToolboxSectionHandler.cs">
+    <Compile Include="Core\Toolbox\ToolboxSectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\ToolboxService.cs">
+    <Compile Include="Core\Toolbox\ToolboxService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\TypeToolboxDataItem.cs">
+    <Compile Include="Core\Toolbox\TypeToolboxDataItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.Toolbox\TypeToolboxSection.cs">
+    <Compile Include="Core\Toolbox\TypeToolboxSection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\AboutDialogButton.cs">
+    <Compile Include="Core\UserInterface\AboutDialogButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\AboutPluginDialog.cs">
+    <Compile Include="Core\UserInterface\AboutPluginDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\AddFileDialog.cs">
+    <Compile Include="Core\UserInterface\AddFileDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\AddInOrganizer.cs">
+    <Compile Include="Core\UserInterface\AddInOrganizer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\AddInRunSelector.cs">
+    <Compile Include="Core\UserInterface\AddInRunSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\AddProjectDialog.cs">
+    <Compile Include="Core\UserInterface\AddProjectDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ApplicationInfoDialog.cs">
+    <Compile Include="Core\UserInterface\ApplicationInfoDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ApplicationInformation.cs">
+    <Compile Include="Core\UserInterface\ApplicationInformation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\AssemblySelectionDialog.cs">
+    <Compile Include="Core\UserInterface\AssemblySelectionDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\CategoryInfo.cs">
+    <Compile Include="Core\UserInterface\CategoryInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\CodeBehindView.cs">
+    <Compile Include="Core\UserInterface\CodeBehindView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\CodeDocumentWindow.cs">
+    <Compile Include="Core\UserInterface\CodeDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\CodeView.cs">
+    <Compile Include="Core\UserInterface\CodeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\CommandToolWindow.cs">
+    <Compile Include="Core\UserInterface\CommandToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ComponentDescription.cs">
+    <Compile Include="Core\UserInterface\ComponentDescription.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ComponentDetailsDialog.cs">
+    <Compile Include="Core\UserInterface\ComponentDetailsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ComponentGalleryDialog.cs">
+    <Compile Include="Core\UserInterface\ComponentGalleryDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ComponentGalleryServiceProxy.cs">
+    <Compile Include="Core\UserInterface\ComponentGalleryServiceProxy.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ComponentInfo.cs">
+    <Compile Include="Core\UserInterface\ComponentInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ComponentTypeInfo.cs">
+    <Compile Include="Core\UserInterface\ComponentTypeInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\DocumentWindow.cs">
+    <Compile Include="Core\UserInterface\DocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ExportSnippetsWizard.cs">
+    <Compile Include="Core\UserInterface\ExportSnippetsWizard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\FeedbackData.cs">
+    <Compile Include="Core\UserInterface\FeedbackData.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\FindReplaceOptions.cs">
+    <Compile Include="Core\UserInterface\FindReplaceOptions.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\FontOptionsPage.cs">
+    <Compile Include="Core\UserInterface\FontOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\GlobalCommands.cs">
+    <Compile Include="Core\UserInterface\GlobalCommands.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\IDesignView.cs">
+    <Compile Include="Core\UserInterface\IDesignView.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\IDocumentView.cs">
+    <Compile Include="Core\UserInterface\IDocumentView.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ImportSnippetsWizard.cs">
+    <Compile Include="Core\UserInterface\ImportSnippetsWizard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\IMultiViewDocumentWindow.cs">
+    <Compile Include="Core\UserInterface\IMultiViewDocumentWindow.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\IPropertyBrowserClient.cs">
+    <Compile Include="Core\UserInterface\IPropertyBrowserClient.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ISearchableDocumentView.cs">
+    <Compile Include="Core\UserInterface\ISearchableDocumentView.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ISelectionContainer.cs">
+    <Compile Include="Core\UserInterface\ISelectionContainer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ISelectionOutlineProvider.cs">
+    <Compile Include="Core\UserInterface\ISelectionOutlineProvider.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\IToolboxClient.cs">
+    <Compile Include="Core\UserInterface\IToolboxClient.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\LanguageOptionsPage.cs">
+    <Compile Include="Core\UserInterface\LanguageOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ListSnippetsWizardPanel.cs">
+    <Compile Include="Core\UserInterface\ListSnippetsWizardPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\MultiViewDocumentWindow.cs">
+    <Compile Include="Core\UserInterface\MultiViewDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\MxAboutDialog.cs">
+    <Compile Include="Core\UserInterface\MxAboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\MxApplicationWindow.cs">
+    <Compile Include="Core\UserInterface\MxApplicationWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\OpenDocumentsToolWindow.cs">
+    <Compile Include="Core\UserInterface\OpenDocumentsToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\OpenSnippetsWizardPanel.cs">
+    <Compile Include="Core\UserInterface\OpenSnippetsWizardPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\OptionsDialog.cs">
+    <Compile Include="Core\UserInterface\OptionsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\OptionsPage.cs">
+    <Compile Include="Core\UserInterface\OptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\PrintPreviewDialog.cs">
+    <Compile Include="Core\UserInterface\PrintPreviewDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\PropertyBrowserToolWindow.cs">
+    <Compile Include="Core\UserInterface\PropertyBrowserToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ReplaceDialog.cs">
+    <Compile Include="Core\UserInterface\ReplaceDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\Review.cs">
+    <Compile Include="Core\UserInterface\Review.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\SaveSnippetsWizardPanel.cs">
+    <Compile Include="Core\UserInterface\SaveSnippetsWizardPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\SearchForm.cs">
+    <Compile Include="Core\UserInterface\SearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\SendFeedbackService.cs">
+    <Compile Include="Core\UserInterface\SendFeedbackService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\SourceView.cs">
+    <Compile Include="Core\UserInterface\SourceView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\TextDocumentWindow.cs">
+    <Compile Include="Core\UserInterface\TextDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\TextLanguageOptionsPage.cs">
+    <Compile Include="Core\UserInterface\TextLanguageOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ThreadExceptionDialog.cs">
+    <Compile Include="Core\UserInterface\ThreadExceptionDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\ToolboxToolWindow.cs">
+    <Compile Include="Core\UserInterface\ToolboxToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\UIService.cs">
+    <Compile Include="Core\UserInterface\UIService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\WorkspaceIcon.cs">
+    <Compile Include="Core\UserInterface\WorkspaceIcon.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Core.UserInterface\WorkspaceToolWindow.cs">
+    <Compile Include="Core\UserInterface\WorkspaceToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <None Include="ClassDiagram1.cd" />
-    <None Include="Microsoft.Matrix.Core.UserInterface\副本 UIService.cs" />
-    <Compile Include="Microsoft.Matrix.Packages.Code.CSharp\CSharpCodeDocumentLanguage.cs">
+    <None Include="Core\UserInterface\副本 UIService.cs" />
+    <Compile Include="Packages.Code.CSharp\CSharpCodeDocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.CSharp\CSharpColorizer.cs">
+    <Compile Include="Packages.Code.CSharp\CSharpColorizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.CSharp\CSharpDocumentFactory.cs">
+    <Compile Include="Packages.Code.CSharp\CSharpDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.CSharp\CSharpTextControlHost.cs">
+    <Compile Include="Packages.Code.CSharp\CSharpTextControlHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.CSharp\CSharpTextViewCommandHandler.cs">
+    <Compile Include="Packages.Code.CSharp\CSharpTextViewCommandHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.JSharp\JSharpCodeDocumentLanguage.cs">
+    <Compile Include="Packages.Code.JSharp\JSharpCodeDocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.JSharp\JSharpColorizer.cs">
+    <Compile Include="Packages.Code.JSharp\JSharpColorizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.JSharp\JSharpDocumentFactory.cs">
+    <Compile Include="Packages.Code.JSharp\JSharpDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.JSharp\JSharpTextControlHost.cs">
+    <Compile Include="Packages.Code.JSharp\JSharpTextControlHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.JSharp\JSharpTextViewCommandHandler.cs">
+    <Compile Include="Packages.Code.JSharp\JSharpTextViewCommandHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicCodeDocumentLanguage.cs">
+    <Compile Include="Packages.Code.VisualBasic\VisualBasicCodeDocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicColorizer.cs">
+    <Compile Include="Packages.Code.VisualBasic\VisualBasicColorizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicDocumentFactory.cs">
+    <Compile Include="Packages.Code.VisualBasic\VisualBasicDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicTextControlHost.cs">
+    <Compile Include="Packages.Code.VisualBasic\VisualBasicTextControlHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicTextViewCommandHandler.cs">
+    <Compile Include="Packages.Code.VisualBasic\VisualBasicTextViewCommandHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\BlockElement.cs">
+    <Compile Include="UIComponents.HtmlLite\BlockElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\BoxEdges.cs">
+    <Compile Include="UIComponents.HtmlLite\BoxEdges.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\ContentElement.cs">
+    <Compile Include="UIComponents.HtmlLite\ContentElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\DividerElement.cs">
+    <Compile Include="UIComponents.HtmlLite\DividerElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\Element.cs">
+    <Compile Include="UIComponents.HtmlLite\Element.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\ElementCollection.cs">
+    <Compile Include="UIComponents.HtmlLite\ElementCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\ElementEventArgs.cs">
+    <Compile Include="UIComponents.HtmlLite\ElementEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\ElementEventHandler.cs">
+    <Compile Include="UIComponents.HtmlLite\ElementEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\ElementRenderData.cs">
+    <Compile Include="UIComponents.HtmlLite\ElementRenderData.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\EmptyElementCollection.cs">
+    <Compile Include="UIComponents.HtmlLite\EmptyElementCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\HyperLinkElement.cs">
+    <Compile Include="UIComponents.HtmlLite\HyperLinkElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\IContentElementHost.cs">
+    <Compile Include="UIComponents.HtmlLite\IContentElementHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\ImageElement.cs">
+    <Compile Include="UIComponents.HtmlLite\ImageElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\INameScopeElement.cs">
+    <Compile Include="UIComponents.HtmlLite\INameScopeElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\LayoutMode.cs">
+    <Compile Include="UIComponents.HtmlLite\LayoutMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\LineBreakElement.cs">
+    <Compile Include="UIComponents.HtmlLite\LineBreakElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\Page.cs">
+    <Compile Include="UIComponents.HtmlLite\Page.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\PageBuilder.cs">
+    <Compile Include="UIComponents.HtmlLite\PageBuilder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\PageChangedEventArgs.cs">
+    <Compile Include="UIComponents.HtmlLite\PageChangedEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\PageChangedEventHandler.cs">
+    <Compile Include="UIComponents.HtmlLite\PageChangedEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\PageCreationData.cs">
+    <Compile Include="UIComponents.HtmlLite\PageCreationData.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\PageFactory.cs">
+    <Compile Include="UIComponents.HtmlLite\PageFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\PageViewer.cs">
+    <Compile Include="UIComponents.HtmlLite\PageViewer.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\RenderedElements.cs">
+    <Compile Include="UIComponents.HtmlLite\RenderedElements.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\SectionElement.cs">
+    <Compile Include="UIComponents.HtmlLite\SectionElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\SectionElementCollection.cs">
+    <Compile Include="UIComponents.HtmlLite\SectionElementCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\SizeMode.cs">
+    <Compile Include="UIComponents.HtmlLite\SizeMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\TextElement.cs">
+    <Compile Include="UIComponents.HtmlLite\TextElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\TextSpanElement.cs">
+    <Compile Include="UIComponents.HtmlLite\TextSpanElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\VisualElement.cs">
+    <Compile Include="UIComponents.HtmlLite\VisualElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\VisualElementCollection.cs">
+    <Compile Include="UIComponents.HtmlLite\VisualElementCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\Watermark.cs">
+    <Compile Include="UIComponents.HtmlLite\Watermark.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.HtmlLite\WatermarkPlacement.cs">
+    <Compile Include="UIComponents.HtmlLite\WatermarkPlacement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\AutoCompleteForm.cs">
+    <Compile Include="UIComponents.SourceEditing\AutoCompleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\BlockIndentTextViewCommandHandler.cs">
+    <Compile Include="UIComponents.SourceEditing\BlockIndentTextViewCommandHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\ColorInfo.cs">
+    <Compile Include="UIComponents.SourceEditing\ColorInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\ColorInfoTable.cs">
+    <Compile Include="UIComponents.SourceEditing\ColorInfoTable.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\GoToLineDialog.cs">
+    <Compile Include="UIComponents.SourceEditing\GoToLineDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\ITextAutoCompletionList.cs">
+    <Compile Include="UIComponents.SourceEditing\ITextAutoCompletionList.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\ITextColorizer.cs">
+    <Compile Include="UIComponents.SourceEditing\ITextColorizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\ITextControlHost.cs">
+    <Compile Include="UIComponents.SourceEditing\ITextControlHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\ITextLanguage.cs">
+    <Compile Include="UIComponents.SourceEditing\ITextLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\PlainTextColorizer.cs">
+    <Compile Include="UIComponents.SourceEditing\PlainTextColorizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\PlainTextViewCommandHandler.cs">
+    <Compile Include="UIComponents.SourceEditing\PlainTextViewCommandHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextAutoCompletionItem.cs">
+    <Compile Include="UIComponents.SourceEditing\TextAutoCompletionItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextBuffer.cs">
+    <Compile Include="UIComponents.SourceEditing\TextBuffer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextBufferCommand.cs">
+    <Compile Include="UIComponents.SourceEditing\TextBufferCommand.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextBufferCommands.cs">
+    <Compile Include="UIComponents.SourceEditing\TextBufferCommands.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextBufferEventArgs.cs">
+    <Compile Include="UIComponents.SourceEditing\TextBufferEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextBufferEventHandler.cs">
+    <Compile Include="UIComponents.SourceEditing\TextBufferEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextBufferLocation.cs">
+    <Compile Include="UIComponents.SourceEditing\TextBufferLocation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextBufferSpan.cs">
+    <Compile Include="UIComponents.SourceEditing\TextBufferSpan.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextControl.cs">
+    <Compile Include="UIComponents.SourceEditing\TextControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextControlSite.cs">
+    <Compile Include="UIComponents.SourceEditing\TextControlSite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextLanguage.cs">
+    <Compile Include="UIComponents.SourceEditing\TextLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextLine.cs">
+    <Compile Include="UIComponents.SourceEditing\TextLine.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextManager.cs">
+    <Compile Include="UIComponents.SourceEditing\TextManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextView.cs">
+    <Compile Include="UIComponents.SourceEditing\TextView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextViewEventArgs.cs">
+    <Compile Include="UIComponents.SourceEditing\TextViewEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\TextViewEventHandler.cs">
+    <Compile Include="UIComponents.SourceEditing\TextViewEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents.SourceEditing\WordType.cs">
+    <Compile Include="UIComponents.SourceEditing\WordType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ComboBoxToolBarButton.cs">
+    <Compile Include="UIComponents\ComboBoxToolBarButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\Command.cs">
+    <Compile Include="UIComponents\Command.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\CommandBar.cs">
+    <Compile Include="UIComponents\CommandBar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\CommandManager.cs">
+    <Compile Include="UIComponents\CommandManager.cs">
       <SubType>Component</SubType>
     </Compile>
-    <None Include="Microsoft.Matrix.UIComponents\TabControl.cs.bak">
+    <None Include="UIComponents\TabControl.cs.bak">
       <SubType>Component</SubType>
     </None>
-    <Compile Include="Microsoft.Matrix.UIComponents\DockedToolWindowHost.cs">
+    <Compile Include="UIComponents\DockedToolWindowHost.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\DockingContainer.cs">
+    <Compile Include="UIComponents\DockingContainer.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\EditorStatusBarPanel.cs">
+    <Compile Include="UIComponents\EditorStatusBarPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\EditorStatusBarPanelCommand.cs">
+    <Compile Include="UIComponents\EditorStatusBarPanelCommand.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\FlagsEnumEditor.cs">
+    <Compile Include="UIComponents\FlagsEnumEditor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\FolderBrowser.cs">
+    <Compile Include="UIComponents\FolderBrowser.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\FolderBrowserLocation.cs">
+    <Compile Include="UIComponents\FolderBrowserLocation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\FolderBrowserStyles.cs">
+    <Compile Include="UIComponents\FolderBrowserStyles.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\FontComboBox.cs">
+    <Compile Include="UIComponents\FontComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\FontComboBoxToolBarButton.cs">
+    <Compile Include="UIComponents\FontComboBoxToolBarButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GdiLabel.cs">
+    <Compile Include="UIComponents\GdiLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GradientBand.cs">
+    <Compile Include="UIComponents\GradientBand.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GroupLabel.cs">
+    <Compile Include="UIComponents\GroupLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GroupView.cs">
+    <Compile Include="UIComponents\GroupView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GroupViewItem.cs">
+    <Compile Include="UIComponents\GroupViewItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GroupViewItemEventArgs.cs">
+    <Compile Include="UIComponents\GroupViewItemEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GroupViewItemEventHandler.cs">
+    <Compile Include="UIComponents\GroupViewItemEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GroupViewListView.cs">
+    <Compile Include="UIComponents\GroupViewListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GroupViewListViewItem.cs">
+    <Compile Include="UIComponents\GroupViewListViewItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GroupViewPanel.cs">
+    <Compile Include="UIComponents\GroupViewPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\GroupViewSection.cs">
+    <Compile Include="UIComponents\GroupViewSection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ICommandHandler.cs">
+    <Compile Include="UIComponents\ICommandHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ICommandHandlerWithContext.cs">
+    <Compile Include="UIComponents\ICommandHandlerWithContext.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ICommandManager.cs">
+    <Compile Include="UIComponents\ICommandManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ImageButton.cs">
+    <Compile Include="UIComponents\ImageButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ImageUtility.cs">
+    <Compile Include="UIComponents\ImageUtility.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\IMxUIService.cs">
+    <Compile Include="UIComponents\IMxUIService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\IStatusBar.cs">
+    <Compile Include="UIComponents\IStatusBar.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\IToolWindowManager.cs">
+    <Compile Include="UIComponents\IToolWindowManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\IWindowManager.cs">
+    <Compile Include="UIComponents\IWindowManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MdiWindowManager.cs">
+    <Compile Include="UIComponents\MdiWindowManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MenuItemCommand.cs">
+    <Compile Include="UIComponents\MenuItemCommand.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxButton.cs">
+    <Compile Include="UIComponents\MxButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxCheckBox.cs">
+    <Compile Include="UIComponents\MxCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxComboBox.cs">
+    <Compile Include="UIComponents\MxComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxContextMenu.cs">
+    <Compile Include="UIComponents\MxContextMenu.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxForm.cs">
+    <Compile Include="UIComponents\MxForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxGroupBox.cs">
+    <Compile Include="UIComponents\MxGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxInfoLabel.cs">
+    <Compile Include="UIComponents\MxInfoLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxLabel.cs">
+    <Compile Include="UIComponents\MxLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxListView.cs">
+    <Compile Include="UIComponents\MxListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxMainForm.cs">
+    <Compile Include="UIComponents\MxMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxMenuItem.cs">
+    <Compile Include="UIComponents\MxMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxRadioButton.cs">
+    <Compile Include="UIComponents\MxRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxRichTextBox.cs">
+    <Compile Include="UIComponents\MxRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxStatusBar.cs">
+    <Compile Include="UIComponents\MxStatusBar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxStatusBarPanel.cs">
+    <Compile Include="UIComponents\MxStatusBarPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxTextBox.cs">
+    <Compile Include="UIComponents\MxTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxTheme.cs">
+    <Compile Include="UIComponents\MxTheme.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxToolBar.cs">
+    <Compile Include="UIComponents\MxToolBar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxToolBarButton.cs">
+    <Compile Include="UIComponents\MxToolBarButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxToolBarPainter.cs">
+    <Compile Include="UIComponents\MxToolBarPainter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxToolBarSubclasser.cs">
+    <Compile Include="UIComponents\MxToolBarSubclasser.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxTreeView.cs">
+    <Compile Include="UIComponents\MxTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\MxUserControl.cs">
+    <Compile Include="UIComponents\MxUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ProgressStatusBarPanel.cs">
+    <Compile Include="UIComponents\ProgressStatusBarPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\PromptDialog.cs">
+    <Compile Include="UIComponents\PromptDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\RegionToolTip.cs">
+    <Compile Include="UIComponents\RegionToolTip.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\RtfTextWriter.cs">
+    <Compile Include="UIComponents\RtfTextWriter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ShowContextMenuEventArgs.cs">
+    <Compile Include="UIComponents\ShowContextMenuEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ShowContextMenuEventHandler.cs">
+    <Compile Include="UIComponents\ShowContextMenuEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\SplashScreen.cs">
+    <Compile Include="UIComponents\SplashScreen.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\SplashScreenCustomizeCallback.cs">
+    <Compile Include="UIComponents\SplashScreenCustomizeCallback.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\SplashScreenSurface.cs">
+    <Compile Include="UIComponents\SplashScreenSurface.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\StatusBarPanelCommand.cs">
+    <Compile Include="UIComponents\StatusBarPanelCommand.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\TabControl.cs">
+    <Compile Include="UIComponents\TabControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\TabControlMode.cs">
+    <Compile Include="UIComponents\TabControlMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\TabPage.cs">
+    <Compile Include="UIComponents\TabPage.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\TabPlacement.cs">
+    <Compile Include="UIComponents\TabPlacement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\TaskForm.cs">
+    <Compile Include="UIComponents\TaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ToolBarButtonCommand.cs">
+    <Compile Include="UIComponents\ToolBarButtonCommand.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ToolBarComboBox.cs">
+    <Compile Include="UIComponents\ToolBarComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ToolBarComboBoxButtonEventArgs.cs">
+    <Compile Include="UIComponents\ToolBarComboBoxButtonEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ToolBarComboBoxButtonEventHandler.cs">
+    <Compile Include="UIComponents\ToolBarComboBoxButtonEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ToolBarComboBoxCommand.cs">
+    <Compile Include="UIComponents\ToolBarComboBoxCommand.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ToolWindow.cs">
+    <Compile Include="UIComponents\ToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ToolWindowHolder.cs">
+    <Compile Include="UIComponents\ToolWindowHolder.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\ToolWindowHost.cs">
+    <Compile Include="UIComponents\ToolWindowHost.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\TrackButton.cs">
+    <Compile Include="UIComponents\TrackButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\TrayIcon.cs">
+    <Compile Include="UIComponents\TrayIcon.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\WindowHandle.cs">
+    <Compile Include="UIComponents\WindowHandle.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\WizardForm.cs">
+    <Compile Include="UIComponents\WizardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.UIComponents\WizardPanel.cs">
+    <Compile Include="UIComponents\WizardPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\AsyncTask.cs">
+    <Compile Include="Utility\AsyncTask.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\AsyncTaskManager.cs">
+    <Compile Include="Utility\AsyncTaskManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\AsyncTaskMessage.cs">
+    <Compile Include="Utility\AsyncTaskMessage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\AsyncTaskResultPostedEventArgs.cs">
+    <Compile Include="Utility\AsyncTaskResultPostedEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\AsyncTaskResultPostedEventHandler.cs">
+    <Compile Include="Utility\AsyncTaskResultPostedEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\CommandLine.cs">
+    <Compile Include="Utility\CommandLine.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\DataProtection.cs">
+    <Compile Include="Utility\DataProtection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\Gac.cs">
+    <Compile Include="Utility\Gac.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\Library.cs">
+    <Compile Include="Utility\Library.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Utility\MruList.cs">
+    <Compile Include="Utility\MruList.cs">
       <SubType>Code</SubType>
     </Compile>
-    <None Include="Microsoft.Matrix\Interop.cs.bak" />
-    <Compile Include="Microsoft.Matrix\Interop.cs">
+    <Compile Include="Interop.cs">
       <SubType>Code</SubType>
     </Compile>
     <EmbeddedResource Include="Core.Designer.ToolboxSection.ico" />

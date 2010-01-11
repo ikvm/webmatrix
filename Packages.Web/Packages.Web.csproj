@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{5F94714E-615C-4C9E-ACEF-12BD5656A24B}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -154,655 +154,655 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\CustomControlsToolboxSection.cs">
+    <Compile Include="Designer\CustomControlsToolboxSection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\HtmlElementToolboxDataItem.cs">
+    <Compile Include="Designer\HtmlElementToolboxDataItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\HtmlElementToolboxSection.cs">
+    <Compile Include="Designer\HtmlElementToolboxSection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\MxUserControlDesigner.cs">
+    <Compile Include="Designer\MxUserControlDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\UserControlDesignTimeHtmlGenerator.cs">
+    <Compile Include="Designer\UserControlDesignTimeHtmlGenerator.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\WebFormsDesignerHost.cs">
+    <Compile Include="Designer\WebFormsDesignerHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\WebFormsReferenceManager.cs">
+    <Compile Include="Designer\WebFormsReferenceManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\WebFormsRootDesigner.cs">
+    <Compile Include="Designer\WebFormsRootDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\WebFormsToolboxDataItem.cs">
+    <Compile Include="Designer\WebFormsToolboxDataItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Designer\WebFormsToolboxSection.cs">
+    <Compile Include="Designer\WebFormsToolboxSection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents.Design\HtmlDocumentDesigner.cs">
+    <Compile Include="Documents.Design\HtmlDocumentDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents.Design\WebFormsDocumentDesigner.cs">
+    <Compile Include="Documents.Design\WebFormsDocumentDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AscxDocument.cs">
+    <Compile Include="Documents\AscxDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AscxDocumentFactory.cs">
+    <Compile Include="Documents\AscxDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AshxDocument.cs">
+    <Compile Include="Documents\AshxDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AshxDocumentFactory.cs">
+    <Compile Include="Documents\AshxDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AsmxDocument.cs">
+    <Compile Include="Documents\AsmxDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AsmxDocumentFactory.cs">
+    <Compile Include="Documents\AsmxDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AspNetDocument.cs">
+    <Compile Include="Documents\AspNetDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AspNetDocumentLanguage.cs">
+    <Compile Include="Documents\AspNetDocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AspxDocument.cs">
+    <Compile Include="Documents\AspxDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\AspxDocumentFactory.cs">
+    <Compile Include="Documents\AspxDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\ControlDirective.cs">
+    <Compile Include="Documents\ControlDirective.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\Directive.cs">
+    <Compile Include="Documents\Directive.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\DirectiveEventArgs.cs">
+    <Compile Include="Documents\DirectiveEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\DirectiveEventHandler.cs">
+    <Compile Include="Documents\DirectiveEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\DocumentDirective.cs">
+    <Compile Include="Documents\DocumentDirective.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\HtmlDocument.cs">
+    <Compile Include="Documents\HtmlDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\HtmlDocumentFactory.cs">
+    <Compile Include="Documents\HtmlDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\HtmlDocumentLanguage.cs">
+    <Compile Include="Documents\HtmlDocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\HtmlDocumentStorage.cs">
+    <Compile Include="Documents\HtmlDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\ImageDocument.cs">
+    <Compile Include="Documents\ImageDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\ImageDocumentFactory.cs">
+    <Compile Include="Documents\ImageDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\ImageDocumentStorage.cs">
+    <Compile Include="Documents\ImageDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\ImagePrintDocument.cs">
+    <Compile Include="Documents\ImagePrintDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\PageDirective.cs">
+    <Compile Include="Documents\PageDirective.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\RegisterDirective.cs">
+    <Compile Include="Documents\RegisterDirective.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\RegisterDirectiveCollection.cs">
+    <Compile Include="Documents\RegisterDirectiveCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\UnknownDirective.cs">
+    <Compile Include="Documents\UnknownDirective.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\WebFormsDocument.cs">
+    <Compile Include="Documents\WebFormsDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\WebFormsDocumentLanguage.cs">
+    <Compile Include="Documents\WebFormsDocumentLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\WebFormsDocumentStorage.cs">
+    <Compile Include="Documents\WebFormsDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\WebHandlerDirective.cs">
+    <Compile Include="Documents\WebHandlerDirective.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Documents\WebServiceDirective.cs">
+    <Compile Include="Documents\WebServiceDirective.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\BackgroundCssAttributes.cs">
+    <Compile Include="Html.Css\BackgroundCssAttributes.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\BackgroundPosition.cs">
+    <Compile Include="Html.Css\BackgroundPosition.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\BackgroundPositionConverter.cs">
+    <Compile Include="Html.Css\BackgroundPositionConverter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\BackgroundPositionType.cs">
+    <Compile Include="Html.Css\BackgroundPositionType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\BackgroundRepeat.cs">
+    <Compile Include="Html.Css\BackgroundRepeat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\BackgroundScroll.cs">
+    <Compile Include="Html.Css\BackgroundScroll.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\CssAttribute.cs">
+    <Compile Include="Html.Css\CssAttribute.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\CssAttributes.cs">
+    <Compile Include="Html.Css\CssAttributes.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\FontCssAttributes.cs">
+    <Compile Include="Html.Css\FontCssAttributes.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\FontEditor.cs">
+    <Compile Include="Html.Css\FontEditor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\FontStyle.cs">
+    <Compile Include="Html.Css\FontStyle.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\FontVariant.cs">
+    <Compile Include="Html.Css\FontVariant.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\FontWeight.cs">
+    <Compile Include="Html.Css\FontWeight.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\InlineStyle.cs">
+    <Compile Include="Html.Css\InlineStyle.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\IStyle.cs">
+    <Compile Include="Html.Css\IStyle.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Css\TextDecoration.cs">
+    <Compile Include="Html.Css\TextDecoration.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\AnchorElement.cs">
+    <Compile Include="Html.Elements\AnchorElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\BackgroundPropertyType.cs">
+    <Compile Include="Html.Elements\BackgroundPropertyType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\BodyElement.cs">
+    <Compile Include="Html.Elements\BodyElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ButtonElement.cs">
+    <Compile Include="Html.Elements\ButtonElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\DivElement.cs">
+    <Compile Include="Html.Elements\DivElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\Element.cs">
+    <Compile Include="Html.Elements\Element.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ElementStyleEditor.cs">
+    <Compile Include="Html.Elements\ElementStyleEditor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ElementWrapperTable.cs">
+    <Compile Include="Html.Elements\ElementWrapperTable.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\EncodingType.cs">
+    <Compile Include="Html.Elements\EncodingType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\FieldSetElement.cs">
+    <Compile Include="Html.Elements\FieldSetElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\FontElement.cs">
+    <Compile Include="Html.Elements\FontElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\FontFaceTypeConverter.cs">
+    <Compile Include="Html.Elements\FontFaceTypeConverter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\FormElement.cs">
+    <Compile Include="Html.Elements\FormElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\FormMethod.cs">
+    <Compile Include="Html.Elements\FormMethod.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\HorizontalRuleElement.cs">
+    <Compile Include="Html.Elements\HorizontalRuleElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\IFrameElement.cs">
+    <Compile Include="Html.Elements\IFrameElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ImageElement.cs">
+    <Compile Include="Html.Elements\ImageElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputButtonElement.cs">
+    <Compile Include="Html.Elements\InputButtonElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputCheckboxElement.cs">
+    <Compile Include="Html.Elements\InputCheckboxElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputElement.cs">
+    <Compile Include="Html.Elements\InputElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputFileElement.cs">
+    <Compile Include="Html.Elements\InputFileElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputHiddenElement.cs">
+    <Compile Include="Html.Elements\InputHiddenElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputImageElement.cs">
+    <Compile Include="Html.Elements\InputImageElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputPasswordElement.cs">
+    <Compile Include="Html.Elements\InputPasswordElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputRadioElement.cs">
+    <Compile Include="Html.Elements\InputRadioElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputResetElement.cs">
+    <Compile Include="Html.Elements\InputResetElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputSubmitElement.cs">
+    <Compile Include="Html.Elements\InputSubmitElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\InputTextElement.cs">
+    <Compile Include="Html.Elements\InputTextElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\LabelElement.cs">
+    <Compile Include="Html.Elements\LabelElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\LegendElement.cs">
+    <Compile Include="Html.Elements\LegendElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ListBoxElement.cs">
+    <Compile Include="Html.Elements\ListBoxElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ListItemElement.cs">
+    <Compile Include="Html.Elements\ListItemElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ListType.cs">
+    <Compile Include="Html.Elements\ListType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\OrderedListElement.cs">
+    <Compile Include="Html.Elements\OrderedListElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\OrderedListType.cs">
+    <Compile Include="Html.Elements\OrderedListType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\PanelElement.cs">
+    <Compile Include="Html.Elements\PanelElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ParagraphElement.cs">
+    <Compile Include="Html.Elements\ParagraphElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\PreformattedElement.cs">
+    <Compile Include="Html.Elements\PreformattedElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\RulesType.cs">
+    <Compile Include="Html.Elements\RulesType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ScrollType.cs">
+    <Compile Include="Html.Elements\ScrollType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\SelectableElement.cs">
+    <Compile Include="Html.Elements\SelectableElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\SelectElement.cs">
+    <Compile Include="Html.Elements\SelectElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\SpanElement.cs">
+    <Compile Include="Html.Elements\SpanElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\StyledElement.cs">
+    <Compile Include="Html.Elements\StyledElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\TableCellElement.cs">
+    <Compile Include="Html.Elements\TableCellElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\TableElement.cs">
+    <Compile Include="Html.Elements\TableElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\TableRowElement.cs">
+    <Compile Include="Html.Elements\TableRowElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\TextAreaElement.cs">
+    <Compile Include="Html.Elements\TextAreaElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\ToolboxHtmlAttribute.cs">
+    <Compile Include="Html.Elements\ToolboxHtmlAttribute.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\UnorderedListElement.cs">
+    <Compile Include="Html.Elements\UnorderedListElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.Elements\UnorderedListType.cs">
+    <Compile Include="Html.Elements\UnorderedListType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.WebForms\Behavior.cs">
+    <Compile Include="Html.WebForms\Behavior.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.WebForms\EventPropertyDescriptor.cs">
+    <Compile Include="Html.WebForms\EventPropertyDescriptor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.WebForms\NamespaceManager.cs">
+    <Compile Include="Html.WebForms\NamespaceManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.WebForms\WebFormsEditor.cs">
+    <Compile Include="Html.WebForms\WebFormsEditor.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.WebForms\WebFormsEditorMode.cs">
+    <Compile Include="Html.WebForms\WebFormsEditorMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html.WebForms\WebFormsEditorSelection.cs">
+    <Compile Include="Html.WebForms\WebFormsEditorSelection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\Alignment.cs">
+    <Compile Include="Html\Alignment.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\BatchedUndoType.cs">
+    <Compile Include="Html\BatchedUndoType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\BatchedUndoUnit.cs">
+    <Compile Include="Html\BatchedUndoUnit.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\CommandInfo.cs">
+    <Compile Include="Html\CommandInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\DataObjectConverter.cs">
+    <Compile Include="Html\DataObjectConverter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\DataObjectConverterInfo.cs">
+    <Compile Include="Html\DataObjectConverterInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\EditorDocument.cs">
+    <Compile Include="Html\EditorDocument.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\EditorGlyph.cs">
+    <Compile Include="Html\EditorGlyph.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\EditorGlyphTable.cs">
+    <Compile Include="Html\EditorGlyphTable.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\EditorGlyphType.cs">
+    <Compile Include="Html\EditorGlyphType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\EditorGrid.cs">
+    <Compile Include="Html\EditorGrid.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\EditorSelection.cs">
+    <Compile Include="Html\EditorSelection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\EditorSelectionType.cs">
+    <Compile Include="Html\EditorSelectionType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\EditorTable.cs">
+    <Compile Include="Html\EditorTable.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\EditorTextFormatting.cs">
+    <Compile Include="Html\EditorTextFormatting.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\FontSize.cs">
+    <Compile Include="Html\FontSize.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\HtmlControl.cs">
+    <Compile Include="Html\HtmlControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\HtmlEditor.cs">
+    <Compile Include="Html\HtmlEditor.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\MshtmlSite.cs">
+    <Compile Include="Html\MshtmlSite.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\ProtocolHandler.cs">
+    <Compile Include="Html\ProtocolHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\ProtocolRequest.cs">
+    <Compile Include="Html\ProtocolRequest.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Html\TextFormat.cs">
+    <Compile Include="Html\TextFormat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\DirectoryProjectItem.cs">
+    <Compile Include="Projects.Ftp\DirectoryProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FileProjectItem.cs">
+    <Compile Include="Projects.Ftp\FileProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpConnection.cs">
+    <Compile Include="Projects.Ftp\FtpConnection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpConnectionInfo.cs">
+    <Compile Include="Projects.Ftp\FtpConnectionInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpConnectionProjectItem.cs">
+    <Compile Include="Projects.Ftp\FtpConnectionProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpEntry.cs">
+    <Compile Include="Projects.Ftp\FtpEntry.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpEntryType.cs">
+    <Compile Include="Projects.Ftp\FtpEntryType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpException.cs">
+    <Compile Include="Projects.Ftp\FtpException.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpProject.cs">
+    <Compile Include="Projects.Ftp\FtpProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpProjectFactory.cs">
+    <Compile Include="Projects.Ftp\FtpProjectFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpResponseCode.cs">
+    <Compile Include="Projects.Ftp\FtpResponseCode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Projects.Ftp\MiscFileProjectItem.cs">
+    <Compile Include="Projects.Ftp\MiscFileProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Services\IWebDocumentRunService.cs">
+    <Compile Include="Services\IWebDocumentRunService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Services\TemplateEditingFrame.cs">
+    <Compile Include="Services\TemplateEditingFrame.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Services\TemplateEditingService.cs">
+    <Compile Include="Services\TemplateEditingService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Services\WebDocumentRunService.cs">
+    <Compile Include="Services\WebDocumentRunService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\AscxDocumentWindow.cs">
+    <Compile Include="UserInterface\AscxDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\AshxDocumentWindow.cs">
+    <Compile Include="UserInterface\AshxDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\AsmxDocumentWindow.cs">
+    <Compile Include="UserInterface\AsmxDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\AspNetDocumentWindow.cs">
+    <Compile Include="UserInterface\AspNetDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\AspNetSourceView.cs">
+    <Compile Include="UserInterface\AspNetSourceView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\AspNetTextControlHost.cs">
+    <Compile Include="UserInterface\AspNetTextControlHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\AspxDocumentWindow.cs">
+    <Compile Include="UserInterface\AspxDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\DataTableDataObjectMapper.cs">
+    <Compile Include="UserInterface\DataTableDataObjectMapper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\FontPicker.cs">
+    <Compile Include="UserInterface\FontPicker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\FtpConnectionDialog.cs">
+    <Compile Include="UserInterface\FtpConnectionDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\HtmlDesignView.cs">
+    <Compile Include="UserInterface\HtmlDesignView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\HtmlDocumentWindow.cs">
+    <Compile Include="UserInterface\HtmlDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\HtmlPreviewView.cs">
+    <Compile Include="UserInterface\HtmlPreviewView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\HtmlSourceView.cs">
+    <Compile Include="UserInterface\HtmlSourceView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\HtmlTextControlHost.cs">
+    <Compile Include="UserInterface\HtmlTextControlHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\HtmlTextViewCommandHandler.cs">
+    <Compile Include="UserInterface\HtmlTextViewCommandHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\ImageDocumentWindow.cs">
+    <Compile Include="UserInterface\ImageDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\ImageView.cs">
+    <Compile Include="UserInterface\ImageView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\InsertHyperlinkDialog.cs">
+    <Compile Include="UserInterface\InsertHyperlinkDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\InsertTableDialog.cs">
+    <Compile Include="UserInterface\InsertTableDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\ITemplateDesignView.cs">
+    <Compile Include="UserInterface\ITemplateDesignView.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\QuickTagEditDialog.cs">
+    <Compile Include="UserInterface\QuickTagEditDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\StartWebAppDialog.cs">
+    <Compile Include="UserInterface\StartWebAppDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\StyleBuilderDialog.cs">
+    <Compile Include="UserInterface\StyleBuilderDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\TemplateDesignView.cs">
+    <Compile Include="UserInterface\TemplateDesignView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\TemplateEditingDialog.cs">
+    <Compile Include="UserInterface\TemplateEditingDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\UserControlDataObjectMapper.cs">
+    <Compile Include="UserInterface\UserControlDataObjectMapper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebFormsAllView.cs">
+    <Compile Include="UserInterface\WebFormsAllView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebFormsCodeBehindView.cs">
+    <Compile Include="UserInterface\WebFormsCodeBehindView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebFormsDesignView.cs">
+    <Compile Include="UserInterface\WebFormsDesignView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebFormsDocumentWindow.cs">
+    <Compile Include="UserInterface\WebFormsDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebFormsPreviewView.cs">
+    <Compile Include="UserInterface\WebFormsPreviewView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebFormsSourceView.cs">
+    <Compile Include="UserInterface\WebFormsSourceView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebFormsTextControlHost.cs">
+    <Compile Include="UserInterface\WebFormsTextControlHost.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebFormsTextViewCommandHandler.cs">
+    <Compile Include="UserInterface\WebFormsTextViewCommandHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebFormsToolboxDataObjectMapper.cs">
+    <Compile Include="UserInterface\WebFormsToolboxDataObjectMapper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.UserInterface\WebOptionsPage.cs">
+    <Compile Include="UserInterface\WebOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\ElementType.cs">
+    <Compile Include="Utility.Formatting\ElementType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\FormattedTextWriter.cs">
+    <Compile Include="Utility.Formatting\FormattedTextWriter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\FormattingFlags.cs">
+    <Compile Include="Utility.Formatting\FormattingFlags.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\HtmlWriter.cs">
+    <Compile Include="Utility.Formatting\HtmlWriter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\LITagInfo.cs">
+    <Compile Include="Utility.Formatting\LITagInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\OLTagInfo.cs">
+    <Compile Include="Utility.Formatting\OLTagInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\PTagInfo.cs">
+    <Compile Include="Utility.Formatting\PTagInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\TagInfo.cs">
+    <Compile Include="Utility.Formatting\TagInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\TDTagInfo.cs">
+    <Compile Include="Utility.Formatting\TDTagInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\TRTagInfo.cs">
+    <Compile Include="Utility.Formatting\TRTagInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\WhiteSpaceType.cs">
+    <Compile Include="Utility.Formatting\WhiteSpaceType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility.Formatting\XmlWriter.cs">
+    <Compile Include="Utility.Formatting\XmlWriter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\AspNetColorizer.cs">
+    <Compile Include="Utility\AspNetColorizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\DirectiveParser.cs">
+    <Compile Include="Utility\DirectiveParser.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\HtmlColorizer.cs">
+    <Compile Include="Utility\HtmlColorizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\HtmlFormatter.cs">
+    <Compile Include="Utility\HtmlFormatter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\HtmlFormatterCase.cs">
+    <Compile Include="Utility\HtmlFormatterCase.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\HtmlFormatterOptions.cs">
+    <Compile Include="Utility\HtmlFormatterOptions.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\HtmlTokenizer.cs">
+    <Compile Include="Utility\HtmlTokenizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\ScriptFormatter.cs">
+    <Compile Include="Utility\ScriptFormatter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\Token.cs">
+    <Compile Include="Utility\Token.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web.Utility\WebFormsColorizer.cs">
+    <Compile Include="Utility\WebFormsColorizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web\Interop.cs">
+    <Compile Include="Interop.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web\WebCommands.cs">
+    <Compile Include="WebCommands.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Web\WebPackage.cs">
+    <Compile Include="WebPackage.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

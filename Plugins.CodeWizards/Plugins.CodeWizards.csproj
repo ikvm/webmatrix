@@ -47,7 +47,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3E39FAC6-908A-4B4E-8524-16BBE26B7538}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -166,91 +166,91 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\BuildDeletePanel.cs">
+    <Compile Include="Data\BuildDeletePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\BuildInsertPanel.cs">
+    <Compile Include="Data\BuildInsertPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\BuildSelectPanel.cs">
+    <Compile Include="Data\BuildSelectPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\BuildUpdatePanel.cs">
+    <Compile Include="Data\BuildUpdatePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\ClauseNode.cs">
+    <Compile Include="Data\ClauseNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\ColumnListItem.cs">
+    <Compile Include="Data\ColumnListItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\CreateClauseDialog.cs">
+    <Compile Include="Data\CreateClauseDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\DeleteCodeWizard.cs">
+    <Compile Include="Data\DeleteCodeWizard.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\FilterInfo.cs">
+    <Compile Include="Data\FilterInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\FilterNode.cs">
+    <Compile Include="Data\FilterNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\InsertCodeWizard.cs">
+    <Compile Include="Data\InsertCodeWizard.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\JoinNode.cs">
+    <Compile Include="Data\JoinNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\NameNonQueryMethodPanel.cs">
+    <Compile Include="Data\NameNonQueryMethodPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\NameSelectMethodPanel.cs">
+    <Compile Include="Data\NameSelectMethodPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\QueryBuilder.cs">
+    <Compile Include="Data\QueryBuilder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\QueryBuilderType.cs">
+    <Compile Include="Data\QueryBuilderType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\QueryParameter.cs">
+    <Compile Include="Data\QueryParameter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\QueryPreviewPanel.cs">
+    <Compile Include="Data\QueryPreviewPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\SelectCodeWizard.cs">
+    <Compile Include="Data\SelectCodeWizard.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\SelectDatabasePanel.cs">
+    <Compile Include="Data\SelectDatabasePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\SetDefaultDialog.cs">
+    <Compile Include="Data\SetDefaultDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\SqlCodeWizard.cs">
+    <Compile Include="Data\SqlCodeWizard.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\TableColumn.cs">
+    <Compile Include="Data\TableColumn.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\TableListItem.cs">
+    <Compile Include="Data\TableListItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\UpdateCodeWizard.cs">
+    <Compile Include="Data\UpdateCodeWizard.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Data\WhereClauseBuilder.cs">
+    <Compile Include="Data\WhereClauseBuilder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Web\MailMessageCodeWizard.cs">
+    <Compile Include="Web\MailMessageCodeWizard.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Web\MailMessageCodeWizardForm.cs">
+    <Compile Include="Web\MailMessageCodeWizardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Plugins.CodeWizards.Web\MailMessageWizardPanel.cs">
+    <Compile Include="Web\MailMessageWizardPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

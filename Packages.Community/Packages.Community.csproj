@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{6A8BC502-CBBD-484B-8A99-7B645B894DC0}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -147,28 +147,28 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Community.UserInterface\BuddyCommunityTab.cs">
+    <Compile Include="UserInterface\BuddyCommunityTab.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Community.UserInterface\CommunityTab.cs">
+    <Compile Include="UserInterface\CommunityTab.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Community.UserInterface\CommunityToolWindow.cs">
+    <Compile Include="UserInterface\CommunityToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Community.UserInterface\HomeCommunityTab.cs">
+    <Compile Include="UserInterface\HomeCommunityTab.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Community.UserInterface\LinksCommunityTab.cs">
+    <Compile Include="UserInterface\LinksCommunityTab.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Community\CommunityPackage.cs">
+    <Compile Include="CommunityPackage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Community\CommunitySectionHandler.cs">
+    <Compile Include="CommunitySectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.Community\Interop.cs">
+    <Compile Include="Interop.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

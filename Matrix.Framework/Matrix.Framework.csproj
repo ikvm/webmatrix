@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{276B7F71-3D40-4FF1-B549-6064529B402A}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,8 +11,7 @@
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>Microsoft.Matrix.Framework</AssemblyName>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>WebMatrix.snk</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
@@ -42,6 +41,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>..\output\Framework\</OutputPath>
@@ -138,160 +138,160 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\AccessDataSourceControlDesigner.cs">
+    <Compile Include="Web.UI.Design\AccessDataSourceControlDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\DataBoundControlDesigner.cs">
+    <Compile Include="Web.UI.Design\DataBoundControlDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\DataColumns.cs">
+    <Compile Include="Web.UI.Design\DataColumns.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\DataColumnSchema.cs">
+    <Compile Include="Web.UI.Design\DataColumnSchema.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\DataControlDesigner.cs">
+    <Compile Include="Web.UI.Design\DataControlDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\DataSourceControlIDConverter.cs">
+    <Compile Include="Web.UI.Design\DataSourceControlIDConverter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\DataSourceSchema.cs">
+    <Compile Include="Web.UI.Design\DataSourceSchema.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\DataTables.cs">
+    <Compile Include="Web.UI.Design\DataTables.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\DataTableSchema.cs">
+    <Compile Include="Web.UI.Design\DataTableSchema.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\MxDataGridDesigner.cs">
+    <Compile Include="Web.UI.Design\MxDataGridDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\MxDataGridFieldCollectionEditor.cs">
+    <Compile Include="Web.UI.Design\MxDataGridFieldCollectionEditor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI.Design\SqlDataSourceControlDesigner.cs">
+    <Compile Include="Web.UI.Design\SqlDataSourceControlDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\AccessDataSourceControl.cs">
+    <Compile Include="Web.UI\AccessDataSourceControl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\BoundField.cs">
+    <Compile Include="Web.UI\BoundField.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\ButtonField.cs">
+    <Compile Include="Web.UI\ButtonField.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\DataBoundControl.cs">
+    <Compile Include="Web.UI\DataBoundControl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\DataControl.cs">
+    <Compile Include="Web.UI\DataControl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\DataSourceHelper.cs">
+    <Compile Include="Web.UI\DataSourceHelper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\DummyDataSource.cs">
+    <Compile Include="Web.UI\DummyDataSource.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\EditCommandField.cs">
+    <Compile Include="Web.UI\EditCommandField.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\HyperLinkField.cs">
+    <Compile Include="Web.UI\HyperLinkField.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\ListParameters.cs">
+    <Compile Include="Web.UI\ListParameters.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGrid.cs">
+    <Compile Include="Web.UI\MxDataGrid.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridCancelEventArgs.cs">
+    <Compile Include="Web.UI\MxDataGridCancelEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridCancelEventHandler.cs">
+    <Compile Include="Web.UI\MxDataGridCancelEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridCommandEventArgs.cs">
+    <Compile Include="Web.UI\MxDataGridCommandEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridCommandEventHandler.cs">
+    <Compile Include="Web.UI\MxDataGridCommandEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridField.cs">
+    <Compile Include="Web.UI\MxDataGridField.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridFieldCollection.cs">
+    <Compile Include="Web.UI\MxDataGridFieldCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridItem.cs">
+    <Compile Include="Web.UI\MxDataGridItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridItemCollection.cs">
+    <Compile Include="Web.UI\MxDataGridItemCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridItemEventArgs.cs">
+    <Compile Include="Web.UI\MxDataGridItemEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridItemEventHandler.cs">
+    <Compile Include="Web.UI\MxDataGridItemEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridLinkButton.cs">
+    <Compile Include="Web.UI\MxDataGridLinkButton.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridPageChangedEventArgs.cs">
+    <Compile Include="Web.UI\MxDataGridPageChangedEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridPageChangedEventHandler.cs">
+    <Compile Include="Web.UI\MxDataGridPageChangedEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridPagerStyle.cs">
+    <Compile Include="Web.UI\MxDataGridPagerStyle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridSortCommandEventArgs.cs">
+    <Compile Include="Web.UI\MxDataGridSortCommandEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridSortCommandEventHandler.cs">
+    <Compile Include="Web.UI\MxDataGridSortCommandEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridStatusEventArgs.cs">
+    <Compile Include="Web.UI\MxDataGridStatusEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridStatusEventHandler.cs">
+    <Compile Include="Web.UI\MxDataGridStatusEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridTable.cs">
+    <Compile Include="Web.UI\MxDataGridTable.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridUpdateEventArgs.cs">
+    <Compile Include="Web.UI\MxDataGridUpdateEventArgs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\MxDataGridUpdateEventHandler.cs">
+    <Compile Include="Web.UI\MxDataGridUpdateEventHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\SqlDataSourceControl.cs">
+    <Compile Include="Web.UI\SqlDataSourceControl.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\StringArrayConverter.cs">
+    <Compile Include="Web.UI\StringArrayConverter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\TemplateField.cs">
+    <Compile Include="Web.UI\TemplateField.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\WebCategoryAttribute.cs">
+    <Compile Include="Web.UI\WebCategoryAttribute.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework.Web.UI\WebSysDescriptionAttribute.cs">
+    <Compile Include="Web.UI\WebSysDescriptionAttribute.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework\SR.cs">
+    <Compile Include="SR.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework\SRCategoryAttribute.cs">
+    <Compile Include="SRCategoryAttribute.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Framework\SRDescriptionAttribute.cs">
+    <Compile Include="SRDescriptionAttribute.cs">
       <SubType>Code</SubType>
     </Compile>
     <EmbeddedResource Include="Microsoft.Matrix.Framework.resx">
@@ -317,6 +317,9 @@
       <ProductName>.NET Framework 3.5</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WebMatrix.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

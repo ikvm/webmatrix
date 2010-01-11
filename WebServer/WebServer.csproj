@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E69E3850-33C5-4CE1-A567-D6DB26C4C80A}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -126,19 +126,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs">
+    <Compile Include="AssemblyInfo3.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.WebServer\WebServerApp.cs">
+    <Compile Include="WebServerApp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.WebServer\WebServerForm.cs">
+    <Compile Include="WebServerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="WebServer.WebServerForm.bmp" />
     <EmbeddedResource Include="WebServer.WebServerForm.ico" />
     <EmbeddedResource Include="WebServer.WebServerTray.ico" />
-    <EmbeddedResource Include="Microsoft.Matrix.WebServer\WebServerForm.resx">
+    <EmbeddedResource Include="WebServerForm.resx">
       <DependentUpon>WebServerForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{486DDE87-177A-4268-957C-A09C1EDFE23A}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -147,151 +147,151 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Core\ReferenceSearchMode.cs">
+    <Compile Include="Core\ReferenceSearchMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Core\TypeBaseTypeSearchTask.cs">
+    <Compile Include="Core\TypeBaseTypeSearchTask.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Core\TypeImplementsSearchTask.cs">
+    <Compile Include="Core\TypeImplementsSearchTask.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Core\TypeMemberNameSearchTask.cs">
+    <Compile Include="Core\TypeMemberNameSearchTask.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Core\TypeMemberTypeSearchTask.cs">
+    <Compile Include="Core\TypeMemberTypeSearchTask.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Core\TypeNameSearchTask.cs">
+    <Compile Include="Core\TypeNameSearchTask.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Core\TypeSearchTask.cs">
+    <Compile Include="Core\TypeSearchTask.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Documents\EventItem.cs">
+    <Compile Include="Documents\EventItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Documents\FieldItem.cs">
+    <Compile Include="Documents\FieldItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Documents\MethodItem.cs">
+    <Compile Include="Documents\MethodItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Documents\PropertyItem.cs">
+    <Compile Include="Documents\PropertyItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Documents\TypeDocument.cs">
+    <Compile Include="Documents\TypeDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Documents\TypeDocumentFactory.cs">
+    <Compile Include="Documents\TypeDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Documents\TypeDocumentFilter.cs">
+    <Compile Include="Documents\TypeDocumentFilter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Documents\TypeDocumentItem.cs">
+    <Compile Include="Documents\TypeDocumentItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Documents\TypeDocumentStorage.cs">
+    <Compile Include="Documents\TypeDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\AssemblyProjectItem.cs">
+    <Compile Include="Projects\AssemblyProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\BaseTypeProjectItem.cs">
+    <Compile Include="Projects\BaseTypeProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\BaseTypesProjectItem.cs">
+    <Compile Include="Projects\BaseTypesProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\ClassBrowserProjectItem.cs">
+    <Compile Include="Projects\ClassBrowserProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\ClassViewProject.cs">
+    <Compile Include="Projects\ClassViewProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\ClassViewProjectData.cs">
+    <Compile Include="Projects\ClassViewProjectData.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\ClassViewProjectFactory.cs">
+    <Compile Include="Projects\ClassViewProjectFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\ClassViewProjectItemIcon.cs">
+    <Compile Include="Projects\ClassViewProjectItemIcon.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\ClassViewProjectSortMode.cs">
+    <Compile Include="Projects\ClassViewProjectSortMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\ClassViewProjectViewMode.cs">
+    <Compile Include="Projects\ClassViewProjectViewMode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\ClassViewSectionHandler.cs">
+    <Compile Include="Projects\ClassViewSectionHandler.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\GroupProjectItem.cs">
+    <Compile Include="Projects\GroupProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\NamespaceProjectItem.cs">
+    <Compile Include="Projects\NamespaceProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\OpenTypeProjectItem.cs">
+    <Compile Include="Projects\OpenTypeProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\TypeProjectItem.cs">
+    <Compile Include="Projects\TypeProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\TypeProjectItemClassType.cs">
+    <Compile Include="Projects\TypeProjectItemClassType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.Projects\TypeProjectItemVisibility.cs">
+    <Compile Include="Projects\TypeProjectItemVisibility.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\ClassSearchToolWindow.cs">
+    <Compile Include="UserInterface\ClassSearchToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\ClassViewPage.cs">
+    <Compile Include="UserInterface\ClassViewPage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\ClassViewPageBuilder.cs">
+    <Compile Include="UserInterface\ClassViewPageBuilder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\ClassViewToolWindow.cs">
+    <Compile Include="UserInterface\ClassViewToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\ClassViewToolWindowBase.cs">
+    <Compile Include="UserInterface\ClassViewToolWindowBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\DescriptionView.cs">
+    <Compile Include="UserInterface\DescriptionView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\LabelElement.cs">
+    <Compile Include="UserInterface\LabelElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\MemberPage.cs">
+    <Compile Include="UserInterface\MemberPage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\MemberPageBuilder.cs">
+    <Compile Include="UserInterface\MemberPageBuilder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\OutlineView.cs">
+    <Compile Include="UserInterface\OutlineView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\ToggleImageElement.cs">
+    <Compile Include="UserInterface\ToggleImageElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\TypeDocumentWindow.cs">
+    <Compile Include="UserInterface\TypeDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\TypePageBuilder.cs">
+    <Compile Include="UserInterface\TypePageBuilder.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView.UserInterface\TypeView.cs">
+    <Compile Include="UserInterface\TypeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView\ClassViewCommands.cs">
+    <Compile Include="ClassViewCommands.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.ClassView\ClassViewPackage.cs">
+    <Compile Include="ClassViewPackage.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

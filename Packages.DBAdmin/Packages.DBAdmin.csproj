@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{54C5619D-85DD-4FE5-B770-4F47A80BEFDB}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -149,226 +149,226 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Access\AccessColumn.cs">
+    <Compile Include="DBEngine.Access\AccessColumn.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Access\AccessConnectionSettings.cs">
+    <Compile Include="DBEngine.Access\AccessConnectionSettings.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Access\AccessDatabase.cs">
+    <Compile Include="DBEngine.Access\AccessDatabase.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Access\AccessDataType.cs">
+    <Compile Include="DBEngine.Access\AccessDataType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Access\AccessHelper.cs">
+    <Compile Include="DBEngine.Access\AccessHelper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Access\AccessTable.cs">
+    <Compile Include="DBEngine.Access\AccessTable.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Access\AccessTableCollection.cs">
+    <Compile Include="DBEngine.Access\AccessTableCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Access\Interop.cs">
+    <Compile Include="DBEngine.Access\Interop.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\Interop.cs">
+    <Compile Include="DBEngine.Sql\Interop.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\SqlColumn.cs">
+    <Compile Include="DBEngine.Sql\SqlColumn.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\SqlConnectionSettings.cs">
+    <Compile Include="DBEngine.Sql\SqlConnectionSettings.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\SqlDatabase.cs">
+    <Compile Include="DBEngine.Sql\SqlDatabase.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\SqlDataType.cs">
+    <Compile Include="DBEngine.Sql\SqlDataType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\SqlHelper.cs">
+    <Compile Include="DBEngine.Sql\SqlHelper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\SqlStoredProcedure.cs">
+    <Compile Include="DBEngine.Sql\SqlStoredProcedure.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\SqlStoredProcedureCollection.cs">
+    <Compile Include="DBEngine.Sql\SqlStoredProcedureCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\SqlTable.cs">
+    <Compile Include="DBEngine.Sql\SqlTable.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine.Sql\SqlTableCollection.cs">
+    <Compile Include="DBEngine.Sql\SqlTableCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\Column.cs">
+    <Compile Include="DBEngine\Column.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\Database.cs">
+    <Compile Include="DBEngine\Database.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\DataTypeConverter.cs">
+    <Compile Include="DBEngine\DataTypeConverter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\DBObject.cs">
+    <Compile Include="DBEngine\DBObject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\DBObjectCollection.cs">
+    <Compile Include="DBEngine\DBObjectCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\IDataProviderDatabase.cs">
+    <Compile Include="DBEngine\IDataProviderDatabase.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\Key.cs">
+    <Compile Include="DBEngine\Key.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\KeyType.cs">
+    <Compile Include="DBEngine\KeyType.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\StoredProcedure.cs">
+    <Compile Include="DBEngine\StoredProcedure.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\StoredProcedureCollection.cs">
+    <Compile Include="DBEngine\StoredProcedureCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\Table.cs">
+    <Compile Include="DBEngine\Table.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.DBEngine\TableCollection.cs">
+    <Compile Include="DBEngine\TableCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents.Design\StoredProcedureDocumentDesigner.cs">
+    <Compile Include="Documents.Design\StoredProcedureDocumentDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents.Design\TableDocumentDesigner.cs">
+    <Compile Include="Documents.Design\TableDocumentDesigner.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\SqlDocument.cs">
+    <Compile Include="Documents\SqlDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\SqlDocumentFactory.cs">
+    <Compile Include="Documents\SqlDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\SqlDocumentStorage.cs">
+    <Compile Include="Documents\SqlDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\SqlLanguage.cs">
+    <Compile Include="Documents\SqlLanguage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\StoredProcedureDocument.cs">
+    <Compile Include="Documents\StoredProcedureDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\StoredProcedureDocumentFactory.cs">
+    <Compile Include="Documents\StoredProcedureDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\StoredProcedureDocumentStorage.cs">
+    <Compile Include="Documents\StoredProcedureDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\TableDocument.cs">
+    <Compile Include="Documents\TableDocument.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\TableDocumentFactory.cs">
+    <Compile Include="Documents\TableDocumentFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Documents\TableDocumentStorage.cs">
+    <Compile Include="Documents\TableDocumentStorage.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects.Access\AccessDatabaseProject.cs">
+    <Compile Include="Projects.Access\AccessDatabaseProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects.Access\AccessDatabaseProjectItem.cs">
+    <Compile Include="Projects.Access\AccessDatabaseProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects.Access\AccessProjectFactory.cs">
+    <Compile Include="Projects.Access\AccessProjectFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects.Sql\SqlDatabaseProject.cs">
+    <Compile Include="Projects.Sql\SqlDatabaseProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects.Sql\SqlDatabaseProjectItem.cs">
+    <Compile Include="Projects.Sql\SqlDatabaseProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects.Sql\SqlProjectFactory.cs">
+    <Compile Include="Projects.Sql\SqlProjectFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects\DatabaseProject.cs">
+    <Compile Include="Projects\DatabaseProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects\DatabaseProjectItem.cs">
+    <Compile Include="Projects\DatabaseProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects\IDataProviderDatabaseProject.cs">
+    <Compile Include="Projects\IDataProviderDatabaseProject.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects\StoredProcedureGroupProjectItem.cs">
+    <Compile Include="Projects\StoredProcedureGroupProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects\StoredProcedureProjectItem.cs">
+    <Compile Include="Projects\StoredProcedureProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects\TableGroupProjectItem.cs">
+    <Compile Include="Projects\TableGroupProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Projects\TableProjectItem.cs">
+    <Compile Include="Projects\TableProjectItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Services\DatabaseManager.cs">
+    <Compile Include="Services\DatabaseManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.Services\IDatabaseManager.cs">
+    <Compile Include="Services\IDatabaseManager.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface.Access\AccessDatabaseLoginForm.cs">
+    <Compile Include="UserInterface.Access\AccessDatabaseLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface.Sql\SqlDatabaseLoginForm.cs">
+    <Compile Include="UserInterface.Sql\SqlDatabaseLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\DatabaseProjectTreeNode.cs">
+    <Compile Include="UserInterface\DatabaseProjectTreeNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\DataCommand.cs">
+    <Compile Include="UserInterface\DataCommand.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\DataToolWindow.cs">
+    <Compile Include="UserInterface\DataToolWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\DataTreeNode.cs">
+    <Compile Include="UserInterface\DataTreeNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\DummyTreeNode.cs">
+    <Compile Include="UserInterface\DummyTreeNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\StoredProcedureDocumentWindow.cs">
+    <Compile Include="UserInterface\StoredProcedureDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\StoredProcedureGroupTreeNode.cs">
+    <Compile Include="UserInterface\StoredProcedureGroupTreeNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\StoredProcedureSourceView.cs">
+    <Compile Include="UserInterface\StoredProcedureSourceView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\StoredProcedureTreeNode.cs">
+    <Compile Include="UserInterface\StoredProcedureTreeNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\TableDataView.cs">
+    <Compile Include="UserInterface\TableDataView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\TableDocumentWindow.cs">
+    <Compile Include="UserInterface\TableDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\TableGroupTreeNode.cs">
+    <Compile Include="UserInterface\TableGroupTreeNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\TableTreeNode.cs">
+    <Compile Include="UserInterface\TableTreeNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin.UserInterface\TableView.cs">
+    <Compile Include="UserInterface\TableView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Microsoft.Matrix.Packages.DBAdmin\DBAdminPackage.cs">
+    <Compile Include="DBAdminPackage.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

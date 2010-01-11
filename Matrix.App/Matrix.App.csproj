@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B5D45BDB-37C1-4E36-B27C-427CA7944C8B}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -18,7 +18,7 @@
     <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Microsoft.Matrix</RootNamespace>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
     <StartupObject>
     </StartupObject>
     <FileUpgradeFlags>
@@ -144,7 +144,7 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="Resources\WebMatrix\Templates\cs\C#\NewFile.cs" />
+    <Content Include="Data\WebMatrix\Templates\cs\C#\NewFile.cs" />
     <Compile Include="WebIDE\AboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,114 +234,113 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Resources\WebMatrix\Templates\ashx\C#\NewFile.ashx" />
-    <None Include="Resources\WebMatrix\Templates\ashx\VB\NewFile.ashx" />
-    <None Include="Resources\WebMatrix\Templates\ashx\VJ#\NewFile.ashx" />
-    <None Include="Resources\WebMatrix\Templates\config\NewFile.config" />
-    <None Include="Resources\WebMatrix\Templates\Security\Config File\NewFile.config" />
-    <None Include="Resources\WebMatrix\Templates\sql\NewFile.sql" />
-    <None Include="Resources\WebMatrix\Templates\xsd\NewFile.xsd" />
+    <None Include="Data\WebMatrix\Templates\ashx\C#\NewFile.ashx" />
+    <None Include="Data\WebMatrix\Templates\ashx\VB\NewFile.ashx" />
+    <None Include="Data\WebMatrix\Templates\ashx\VJ#\NewFile.ashx" />
+    <None Include="Data\WebMatrix\Templates\config\NewFile.config" />
+    <None Include="Data\WebMatrix\Templates\Security\Config File\NewFile.config" />
+    <None Include="Data\WebMatrix\Templates\sql\NewFile.sql" />
+    <None Include="Data\WebMatrix\Templates\xsd\NewFile.xsd" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\WebMatrix\Help\About.htm" />
-    <Content Include="Resources\WebMatrix\Help\Arrow.gif" />
-    <Content Include="Resources\WebMatrix\Help\Background.jpg" />
-    <Content Include="Resources\WebMatrix\Help\ReleaseNotes.htm" />
-    <Content Include="Resources\WebMatrix\Help\StartHere.htm" />
-    <Content Include="Resources\WebMatrix\Help\Title.gif" />
-    <Content Include="Resources\WebMatrix\Templates\asax\AsaxFileLarge.ico" />
-    <Content Include="Resources\WebMatrix\Templates\asax\AsaxFileSmall.ico" />
-    <Content Include="Resources\WebMatrix\Templates\asax\C#\NewFile.asax" />
-    <Content Include="Resources\WebMatrix\Templates\asax\VB\NewFile.asax" />
-    <Content Include="Resources\WebMatrix\Templates\asax\VJ#\NewFile.asax" />
-    <Content Include="Resources\WebMatrix\Templates\ascx\C#\NewFile.ascx" />
-    <Content Include="Resources\WebMatrix\Templates\ascx\VB\NewFile.ascx" />
-    <Content Include="Resources\WebMatrix\Templates\ascx\VJ#\NewFile.ascx" />
-    <Content Include="Resources\WebMatrix\Templates\asmx\C#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\asmx\VB\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\asmx\VJ#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\aspx\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\aspx\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\aspx\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\config\WebConfigFileLarge.ico" />
-    <Content Include="Resources\WebMatrix\Templates\config\WebConfigFileSmall.ico" />
-    <Content Include="Resources\WebMatrix\Templates\css\CSSFileLarge.ico" />
-    <Content Include="Resources\WebMatrix\Templates\css\CSSFileSmall.ico" />
-    <Content Include="Resources\WebMatrix\Templates\css\NewFile.css" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Data Report with Paging and Sorting\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Data Report with Paging and Sorting\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Data Report with Paging and Sorting\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Data Report with Paging\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Data Report with Paging\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Data Report with Paging\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Editable Data Grid\C#\newfile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Editable Data Grid\VB\newfile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Editable Data Grid\VJ#\newfile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Filtered Data Report\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Filtered Data Report\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Filtered Data Report\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Master - Detail Grids\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Master - Detail Grids\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Master - Detail Grids\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Simple Data Report\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Simple Data Report\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Simple Data Report\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Simple Stored Procedure\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Simple Stored Procedure\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Data Pages\Simple Stored Procedure\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\htm\NewFile.htm" />
-    <Content Include="Resources\WebMatrix\Templates\jsl\VJ#\NewFile.jsl" />
-    <Content Include="Resources\WebMatrix\Templates\Mobile Pages\Mobile Page\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Mobile Pages\Mobile Page\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Mobile Pages\Mobile Page\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Mobile Pages\Mobile UserControl\C#\NewFile.ascx" />
-    <Content Include="Resources\WebMatrix\Templates\Mobile Pages\Mobile UserControl\VB\NewFile.ascx" />
-    <Content Include="Resources\WebMatrix\Templates\Mobile Pages\Mobile UserControl\VJ#\NewFile.ascx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary By None\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary By None\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary By None\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary Cache By Browser\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary Cache By Browser\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary Cache By Browser\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary Cache By Headers\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary Cache By Headers\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary Cache By Headers\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary Cache By Parameters\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary Cache By Parameters\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Output Caching\Vary Cache By Parameters\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Security\Login Page\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Security\Login Page\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Security\Login Page\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Security\Logout Page\C#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Security\Logout Page\VB\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\Security\Logout Page\VJ#\NewFile.aspx" />
-    <Content Include="Resources\WebMatrix\Templates\vb\VB\NewFile.vb" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\Custom Class\C#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\Custom Class\VB\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\Custom Class\VJ#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\Output Caching\C#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\Output Caching\VB\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\Output Caching\VJ#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\Simple\C#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\Simple\VB\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\Simple\VJ#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\SOAP Headers\C#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\SOAP Headers\VB\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\Web Services\SOAP Headers\VJ#\NewFile.asmx" />
-    <Content Include="Resources\WebMatrix\Templates\xml\NewFile.xml" />
-    <Content Include="Resources\WebMatrix\Templates\xml\XMLFileLarge.ico" />
-    <Content Include="Resources\WebMatrix\Templates\xml\XMLFileSmall.ico" />
-    <Content Include="Resources\WebMatrix\Templates\xsd\XSDFileLarge.ico" />
-    <Content Include="Resources\WebMatrix\Templates\xsd\XSDFileSmall.ico" />
-    <Content Include="Resources\WebMatrix\Templates\xslt\NewFile.xslt" />
-    <Content Include="Resources\WebMatrix\Templates\xslt\XsltFileLarge.ico" />
-    <Content Include="Resources\WebMatrix\Templates\xslt\XsltFileSmall.ico" />
+    <Content Include="Data\WebMatrix\Help\About.htm" />
+    <Content Include="Data\WebMatrix\Help\Arrow.gif" />
+    <Content Include="Data\WebMatrix\Help\Background.jpg" />
+    <Content Include="Data\WebMatrix\Help\ReleaseNotes.htm" />
+    <Content Include="Data\WebMatrix\Help\StartHere.htm" />
+    <Content Include="Data\WebMatrix\Help\Title.gif" />
+    <Content Include="Data\WebMatrix\Templates\asax\AsaxFileLarge.ico" />
+    <Content Include="Data\WebMatrix\Templates\asax\AsaxFileSmall.ico" />
+    <Content Include="Data\WebMatrix\Templates\asax\C#\NewFile.asax" />
+    <Content Include="Data\WebMatrix\Templates\asax\VB\NewFile.asax" />
+    <Content Include="Data\WebMatrix\Templates\asax\VJ#\NewFile.asax" />
+    <Content Include="Data\WebMatrix\Templates\ascx\C#\NewFile.ascx" />
+    <Content Include="Data\WebMatrix\Templates\ascx\VB\NewFile.ascx" />
+    <Content Include="Data\WebMatrix\Templates\ascx\VJ#\NewFile.ascx" />
+    <Content Include="Data\WebMatrix\Templates\asmx\C#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\asmx\VB\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\asmx\VJ#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\aspx\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\aspx\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\aspx\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\config\WebConfigFileLarge.ico" />
+    <Content Include="Data\WebMatrix\Templates\config\WebConfigFileSmall.ico" />
+    <Content Include="Data\WebMatrix\Templates\css\CSSFileLarge.ico" />
+    <Content Include="Data\WebMatrix\Templates\css\CSSFileSmall.ico" />
+    <Content Include="Data\WebMatrix\Templates\css\NewFile.css" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Data Report with Paging and Sorting\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Data Report with Paging and Sorting\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Data Report with Paging and Sorting\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Data Report with Paging\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Data Report with Paging\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Data Report with Paging\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Editable Data Grid\C#\newfile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Editable Data Grid\VB\newfile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Editable Data Grid\VJ#\newfile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Filtered Data Report\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Filtered Data Report\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Filtered Data Report\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Master - Detail Grids\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Master - Detail Grids\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Master - Detail Grids\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Simple Data Report\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Simple Data Report\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Simple Data Report\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Simple Stored Procedure\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Simple Stored Procedure\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Data Pages\Simple Stored Procedure\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\htm\NewFile.htm" />
+    <Content Include="Data\WebMatrix\Templates\jsl\VJ#\NewFile.jsl" />
+    <Content Include="Data\WebMatrix\Templates\Mobile Pages\Mobile Page\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Mobile Pages\Mobile Page\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Mobile Pages\Mobile Page\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Mobile Pages\Mobile UserControl\C#\NewFile.ascx" />
+    <Content Include="Data\WebMatrix\Templates\Mobile Pages\Mobile UserControl\VB\NewFile.ascx" />
+    <Content Include="Data\WebMatrix\Templates\Mobile Pages\Mobile UserControl\VJ#\NewFile.ascx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary By None\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary By None\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary By None\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary Cache By Browser\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary Cache By Browser\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary Cache By Browser\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary Cache By Headers\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary Cache By Headers\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary Cache By Headers\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary Cache By Parameters\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary Cache By Parameters\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Output Caching\Vary Cache By Parameters\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Security\Login Page\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Security\Login Page\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Security\Login Page\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Security\Logout Page\C#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Security\Logout Page\VB\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\Security\Logout Page\VJ#\NewFile.aspx" />
+    <Content Include="Data\WebMatrix\Templates\vb\VB\NewFile.vb" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\Custom Class\C#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\Custom Class\VB\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\Custom Class\VJ#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\Output Caching\C#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\Output Caching\VB\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\Output Caching\VJ#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\Simple\C#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\Simple\VB\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\Simple\VJ#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\SOAP Headers\C#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\SOAP Headers\VB\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\Web Services\SOAP Headers\VJ#\NewFile.asmx" />
+    <Content Include="Data\WebMatrix\Templates\xml\NewFile.xml" />
+    <Content Include="Data\WebMatrix\Templates\xml\XMLFileLarge.ico" />
+    <Content Include="Data\WebMatrix\Templates\xml\XMLFileSmall.ico" />
+    <Content Include="Data\WebMatrix\Templates\xsd\XSDFileLarge.ico" />
+    <Content Include="Data\WebMatrix\Templates\xsd\XSDFileSmall.ico" />
+    <Content Include="Data\WebMatrix\Templates\xslt\NewFile.xslt" />
+    <Content Include="Data\WebMatrix\Templates\xslt\XsltFileLarge.ico" />
+    <Content Include="Data\WebMatrix\Templates\xslt\XsltFileSmall.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)data\WebMatrix" "$(ProjectDir)$(OutDir)WebMatrix\" /e /h /r /q /y</PostBuildEvent>
   </PropertyGroup>
 </Project>
