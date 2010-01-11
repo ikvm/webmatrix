@@ -7,7 +7,7 @@ namespace Microsoft.Matrix.UIComponents
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
     using System.Windows.Forms.Design;
-using System.Diagnostics;
+    using System.Diagnostics;
 
     public class MxForm : Form
     {

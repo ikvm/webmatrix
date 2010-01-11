@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B5D45BDB-37C1-4E36-B27C-427CA7944C8B}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -145,6 +145,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Content Include="Data\WebMatrix\Templates\cs\C#\NewFile.cs" />
+    <Content Include="CmdID.cs" />
     <Compile Include="WebIDE\AboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>

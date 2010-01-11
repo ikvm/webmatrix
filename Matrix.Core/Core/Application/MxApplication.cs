@@ -143,6 +143,8 @@ namespace Microsoft.Matrix.Core.Application
 
         protected abstract IPackage CreateApplicationPackage();
         protected abstract MxApplicationWindow CreateApplicationWindow();
+
+        //init services
         private void InitializeApplication()
         {
             ServiceCreatorCallback callback = new ServiceCreatorCallback(this.OnCreateService);
@@ -159,7 +161,7 @@ namespace Microsoft.Matrix.Core.Application
             this._serviceContainer.AddService(typeof(IWebBrowsingService), callback);
             this._serviceContainer.AddService(typeof(IComponentGalleryService), callback);
             this._serviceContainer.AddService(typeof(IDataObjectMappingService), callback);
-            if ((this.ApplicationType & Microsoft.Matrix.Core.Application.ApplicationType.Workspace) != Microsoft.Matrix.Core.Application.ApplicationType.Generic)
+            if ((this.ApplicationType & ApplicationType.Workspace) != ApplicationType.Generic)
             {
                 this._projectManager = new ProjectManager(this._serviceContainer);
                 this._serviceContainer.AddService(typeof(IProjectManager), this._projectManager);
@@ -167,7 +169,7 @@ namespace Microsoft.Matrix.Core.Application
                 this._serviceContainer.AddService(typeof(ILanguageManager), this._languageManager);
                 this._docTypeManager = new DocumentTypeManager(this._serviceContainer);
                 this._serviceContainer.AddService(typeof(IDocumentTypeManager), this._docTypeManager);
-                this._docManager = new DocumentManager(this._serviceContainer, (this.ApplicationType & Microsoft.Matrix.Core.Application.ApplicationType.Debugger) != Microsoft.Matrix.Core.Application.ApplicationType.Generic);
+                this._docManager = new DocumentManager(this._serviceContainer, (this.ApplicationType & ApplicationType.Debugger) != ApplicationType.Generic);
                 this._serviceContainer.AddService(typeof(IDocumentManager), this._docManager);
                 this._serviceContainer.AddService(typeof(IDesignerEventService), this._docManager);
                 this._toolboxService = new ToolboxService(this._serviceContainer);
@@ -238,7 +240,7 @@ namespace Microsoft.Matrix.Core.Application
 
         private void OnApplicationWindowActivated(object sender, EventArgs e)
         {
-            if ((this.ApplicationType & Microsoft.Matrix.Core.Application.ApplicationType.Workspace) != Microsoft.Matrix.Core.Application.ApplicationType.Generic)
+            if ((this.ApplicationType & ApplicationType.Workspace) != ApplicationType.Generic)
             {
                 this._projectManager.Initialize();
             }
@@ -246,7 +248,7 @@ namespace Microsoft.Matrix.Core.Application
 
         private void OnApplicationWindowClosing(object sender, CancelEventArgs e)
         {
-            if (((this.ApplicationType & Microsoft.Matrix.Core.Application.ApplicationType.Workspace) != Microsoft.Matrix.Core.Application.ApplicationType.Generic) && !this._projectManager.Close())
+            if (((this.ApplicationType & ApplicationType.Workspace) != ApplicationType.Generic) && !this._projectManager.Close())
             {
                 e.Cancel = true;
             }
@@ -310,7 +312,9 @@ namespace Microsoft.Matrix.Core.Application
                 this._appWindow = this.CreateApplicationWindow();
                 this._appWindow.InitialActivated += new EventHandler(this.OnApplicationWindowActivated);
                 this._appWindow.Closing += new CancelEventHandler(this.OnApplicationWindowClosing);
-                bool flag = (this.ApplicationType & Microsoft.Matrix.Core.Application.ApplicationType.Workspace) != Microsoft.Matrix.Core.Application.ApplicationType.Generic;
+                bool flag = (this.ApplicationType & ApplicationType.Workspace) != ApplicationType.Generic;
+
+                //TODO: 上次研究到这里, 有时间继续 2010.10.12 02:20
                 this._packageManager.LoadPackages(this.CreateApplicationPackage());
                 if (flag)
                 {

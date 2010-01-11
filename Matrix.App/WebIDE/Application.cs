@@ -94,11 +94,11 @@ namespace Microsoft.Matrix.WebIDE
             font.Dispose();
         }
 
-        protected override Microsoft.Matrix.Core.Application.ApplicationType ApplicationType
+        protected override ApplicationType ApplicationType
         {
             get
             {
-                return Microsoft.Matrix.Core.Application.ApplicationType.Workspace;
+                return ApplicationType.Workspace;
             }
         }
 

@@ -20,7 +20,7 @@ namespace Microsoft.Matrix.WebIDE
         private ClassViewToolWindow _classViewTool;
         private CommunityToolWindow _communityTool;
         private DataToolWindow _dataTool;
-        private DockingContainer _leftContainer;
+        private DockingContainer leftContainer;
         private OpenDocumentsToolWindow _openDocsTool;
         private PropertyBrowserToolWindow _propBrowserTool;
         private ToolboxToolWindow _toolboxTool;
@@ -45,71 +45,6 @@ namespace Microsoft.Matrix.WebIDE
                 }
             }
             base.Dispose(disposing);
-        }
-
-        protected override bool HandleCommand(Microsoft.Matrix.UIComponents.Command command)
-        {
-            bool flag = false;
-            bool flag2 = false;
-            if (command.CommandGroup == typeof(GlobalCommands))
-            {
-                int commandID = command.CommandID;
-                if (commandID != 5)
-                {
-                    switch (commandID)
-                    {
-                        case 400:
-                            base.LayoutMdi(MdiLayout.Cascade);
-                            flag = true;
-                            goto Label_00B5;
-
-                        case 0x191:
-                            base.LayoutMdi(MdiLayout.TileHorizontal);
-                            flag = true;
-                            goto Label_00B5;
-
-                        case 0x192:
-                            base.LayoutMdi(MdiLayout.TileVertical);
-                            flag = true;
-                            goto Label_00B5;
-
-                        case 0x193:
-                        {
-                            Form[] mdiChildren = base.MdiChildren;
-                            if ((mdiChildren != null) && (mdiChildren.Length != 0))
-                            {
-                                for (int i = mdiChildren.Length - 1; i >= 0; i--)
-                                {
-                                    mdiChildren[i].Close();
-                                }
-                            }
-                            flag = true;
-                            goto Label_00B5;
-                        }
-                        case 0xd6:
-                            this.OnCommandViewToolbox();
-                            flag = true;
-                            flag2 = true;
-                            goto Label_00B5;
-                    }
-                }
-                else
-                {
-                    base.ActiveMdiChild.Close();
-                    flag = true;
-                    flag2 = true;
-                }
-            }
-        Label_00B5:
-            if (!flag)
-            {
-                return base.HandleCommand(command);
-            }
-            if (flag2)
-            {
-                ((ICommandManager) this.GetService(typeof(ICommandManager))).UpdateCommands(false);
-            }
-            return flag;
         }
 
         private void InitializeCommandBar()
@@ -137,79 +72,79 @@ namespace Microsoft.Matrix.WebIDE
             this._classViewTool = new ClassViewToolWindow(base.ServiceProvider);
             this._communityTool = new CommunityToolWindow(base.ServiceProvider);
             ImageList list = new ImageList();
-            CommandBar bar = new CommandBar();
-            MxToolBar bar2 = new MxToolBar();
-            MxToolBar bar3 = new MxToolBar();
-            MxToolBar bar4 = new MxToolBar();
-            MxStatusBar bar5 = new MxStatusBar();
-            this._leftContainer = new DockingContainer();
-            DockingContainer container = new DockingContainer();
+            CommandBar commandBar = new CommandBar();
+            MxToolBar mainToolBar = new MxToolBar();
+            MxToolBar helpToolBar = new MxToolBar();
+            MxToolBar documentToolBar = new MxToolBar();
+            MxStatusBar statusBar = new MxStatusBar();
+            this.leftContainer = new DockingContainer();
+            DockingContainer rightContainer = new DockingContainer();
             Splitter splitter = new Splitter();
             Splitter splitter2 = new Splitter();
-            MainMenu menu = new MainMenu();
+            MainMenu mainMenu = new MainMenu();
             MxStatusBarPanel panel = new MxStatusBarPanel();
             ProgressStatusBarPanel panel2 = new ProgressStatusBarPanel();
             EditorStatusBarPanel panel3 = new EditorStatusBarPanel();
             MxStatusBarPanel panel4 = new MxStatusBarPanel();
             MxStatusBarPanel panel5 = new MxStatusBarPanel();
-            bar.SuspendLayout();
+            commandBar.SuspendLayout();
             base.SuspendLayout();
-            ((ISupportInitialize) bar5).BeginInit();
+            ((ISupportInitialize) statusBar).BeginInit();
             list.ImageSize = new Size(0x10, 0x10);
             list.TransparentColor = Color.Lime;
             list.ColorDepth = ColorDepth.Depth32Bit;
             list.Images.AddStrip(new Bitmap(typeof(ApplicationWindow), "Commands.bmp"));
-            bar2.Appearance = ToolBarAppearance.Flat;
-            bar2.Divider = false;
-            bar2.DropDownArrows = true;
-            bar2.ShowToolTips = true;
-            bar2.TabIndex = 1;
-            bar2.TabStop = false;
-            bar2.TextAlign = ToolBarTextAlign.Right;
-            bar2.Wrappable = false;
-            bar2.ImageList = list;
-            bar3.Appearance = ToolBarAppearance.Flat;
-            bar3.Divider = false;
-            bar3.DropDownArrows = true;
-            bar3.ShowToolTips = true;
-            bar3.TabIndex = 1;
-            bar3.TabStop = false;
-            bar3.TextAlign = ToolBarTextAlign.Right;
-            bar3.Wrappable = false;
-            bar3.ImageList = list;
+            mainToolBar.Appearance = ToolBarAppearance.Flat;
+            mainToolBar.Divider = false;
+            mainToolBar.DropDownArrows = true;
+            mainToolBar.ShowToolTips = true;
+            mainToolBar.TabIndex = 1;
+            mainToolBar.TabStop = false;
+            mainToolBar.TextAlign = ToolBarTextAlign.Right;
+            mainToolBar.Wrappable = false;
+            mainToolBar.ImageList = list;
+            helpToolBar.Appearance = ToolBarAppearance.Flat;
+            helpToolBar.Divider = false;
+            helpToolBar.DropDownArrows = true;
+            helpToolBar.ShowToolTips = true;
+            helpToolBar.TabIndex = 1;
+            helpToolBar.TabStop = false;
+            helpToolBar.TextAlign = ToolBarTextAlign.Right;
+            helpToolBar.Wrappable = false;
+            helpToolBar.ImageList = list;
             Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
-            bar3.Width = (((int) graphics.MeasureString(new string('_', 30), this.Font).Width) + 0x18) + 6;
+            helpToolBar.Width = (((int) graphics.MeasureString(new string('_', 50), this.Font).Width) + 0x18) + 6;
             graphics.Dispose();
-            bar4.Appearance = ToolBarAppearance.Flat;
-            bar4.Divider = false;
-            bar4.DropDownArrows = true;
-            bar4.ShowToolTips = true;
-            bar4.TabIndex = 0;
-            bar4.TabStop = false;
-            bar4.TextAlign = ToolBarTextAlign.Right;
-            bar4.Wrappable = false;
-            bar4.ImageList = list;
-            bar.Dock = DockStyle.Top;
-            bar.MenuBar = menu;
-            bar.TabIndex = 1;
-            bar.TabStop = false;
-            bar.Controls.Add(bar2);
-            bar.Controls.Add(bar3);
-            bar.Controls.Add(bar4);
-            bar.TopRightToolBar = bar3;
-            this._leftContainer.AssociatedSplitter = splitter;
-            this._leftContainer.Dock = DockStyle.Left;
-            this._leftContainer.Size = new Size(0x7d, 0x1fb);
-            this._leftContainer.TabIndex = 3;
-            this._leftContainer.TabStop = false;
+            documentToolBar.Appearance = ToolBarAppearance.Flat;
+            documentToolBar.Divider = false;
+            documentToolBar.DropDownArrows = true;
+            documentToolBar.ShowToolTips = true;
+            documentToolBar.TabIndex = 0;
+            documentToolBar.TabStop = false;
+            documentToolBar.TextAlign = ToolBarTextAlign.Right;
+            documentToolBar.Wrappable = false;
+            documentToolBar.ImageList = list;
+            commandBar.Dock = DockStyle.Top;
+            commandBar.MenuBar = mainMenu;
+            commandBar.TabIndex = 1;
+            commandBar.TabStop = false;
+            commandBar.Controls.Add(mainToolBar);
+            commandBar.Controls.Add(helpToolBar);
+            commandBar.Controls.Add(documentToolBar);
+            commandBar.TopRightToolBar = helpToolBar;
+            this.leftContainer.AssociatedSplitter = splitter;
+            this.leftContainer.Dock = DockStyle.Left;
+            this.leftContainer.Size = new Size(0x7d, 0x1fb);
+            this.leftContainer.TabIndex = 3;
+            this.leftContainer.TabStop = false;
             splitter.Size = new Size(4, 4);
             splitter.TabIndex = 4;
             splitter.TabStop = false;
-            container.AssociatedSplitter = splitter2;
-            container.Dock = DockStyle.Right;
-            container.Size = new Size(230, 0x1fb);
-            container.TabIndex = 5;
-            container.TabStop = false;
+            rightContainer.AssociatedSplitter = splitter2;
+            rightContainer.Dock = DockStyle.Right;
+            rightContainer.Size = new Size(230, 0x1fb);
+            rightContainer.TabIndex = 5;
+            rightContainer.TabStop = false;
             splitter2.Dock = DockStyle.Right;
             splitter2.Size = new Size(4, 4);
             splitter2.TabIndex = 6;
@@ -224,23 +159,23 @@ namespace Microsoft.Matrix.WebIDE
             panel4.Width = 0x23;
             panel5.Alignment = HorizontalAlignment.Center;
             panel5.Width = 0x23;
-            bar5.Size = new Size(0x318, 20);
-            bar5.TabIndex = 2;
-            bar5.TabStop = false;
-            bar5.ShowPanels = true;
-            bar5.Panels.AddRange(new StatusBarPanel[] { panel, panel2, panel3, panel4, panel5 });
+            statusBar.Size = new Size(0x318, 20);
+            statusBar.TabIndex = 2;
+            statusBar.TabStop = false;
+            statusBar.ShowPanels = true;
+            statusBar.Panels.AddRange(new StatusBarPanel[] { panel, panel2, panel3, panel4, panel5 });
             this.AutoScaleBaseSize = new Size(5, 13);
             base.Icon = new Icon(typeof(ApplicationWindow), "WebIDE.ico");
             base.IsMdiContainer = true;
-            base.Menu = menu;
-            base.StatusBar = bar5;
-            base.CommandBar = bar;
+            base.Menu = mainMenu;
+            base.StatusBar = statusBar;
+            base.CommandBar = commandBar;
             base.MinimumSize = new Size(640, 480);
             this.Text = "Microsoft ASP.NET Web Matrix";
-            base.Controls.AddRange(new Control[] { splitter2, container, splitter, this._leftContainer, bar5, bar });
+            base.Controls.AddRange(new Control[] { splitter2, rightContainer, splitter, this.leftContainer, statusBar, commandBar });
             this._windowManager = new MdiWindowManager(this);
-            this._windowManager.EnableDocking(DockStyle.Left, this._leftContainer);
-            this._windowManager.EnableDocking(DockStyle.Right, container);
+            this._windowManager.EnableDocking(DockStyle.Left, this.leftContainer);
+            this._windowManager.EnableDocking(DockStyle.Right, rightContainer);
             IWindowManager manager = this._windowManager;
             manager.AddToolWindow(this._toolboxTool, DockStyle.Left);
             manager.AddToolWindow(this._propBrowserTool, DockStyle.Right);
@@ -249,8 +184,8 @@ namespace Microsoft.Matrix.WebIDE
             manager.AddToolWindow(this._workspaceTool, DockStyle.Right, -1);
             manager.AddToolWindow(this._dataTool, DockStyle.Right, 1);
             manager.AddToolWindow(this._openDocsTool, DockStyle.Right, 1);
-            ((ISupportInitialize) bar5).EndInit();
-            bar.ResumeLayout(false);
+            ((ISupportInitialize) statusBar).EndInit();
+            commandBar.ResumeLayout(false);
             base.ResumeLayout(false);
         }
 
@@ -264,15 +199,15 @@ namespace Microsoft.Matrix.WebIDE
             base.SuspendLayout();
             try
             {
-                if (this._leftContainer.Visible)
+                if (this.leftContainer.Visible)
                 {
-                    this._leftContainer.AssociatedSplitter.Visible = false;
-                    this._leftContainer.Visible = false;
+                    this.leftContainer.AssociatedSplitter.Visible = false;
+                    this.leftContainer.Visible = false;
                 }
                 else
                 {
-                    this._leftContainer.AssociatedSplitter.Visible = true;
-                    this._leftContainer.Visible = true;
+                    this.leftContainer.AssociatedSplitter.Visible = true;
+                    this.leftContainer.Visible = true;
                 }
             }
             finally
@@ -320,6 +255,71 @@ namespace Microsoft.Matrix.WebIDE
             return false;
         }
 
+        protected override bool HandleCommand(Microsoft.Matrix.UIComponents.Command command)
+        {
+            bool commandHandled = false;
+            bool needUpdateClient = false;
+            if (command.CommandGroup == typeof(GlobalCommands))
+            {
+                int commandID = command.CommandID;
+                if (commandID != 5)
+                {
+                    switch (commandID)
+                    {
+                        case 400:
+                            base.LayoutMdi(MdiLayout.Cascade);
+                            commandHandled = true;
+                            goto Label_00B5;
+
+                        case 0x191:
+                            base.LayoutMdi(MdiLayout.TileHorizontal);
+                            commandHandled = true;
+                            goto Label_00B5;
+
+                        case 0x192:
+                            base.LayoutMdi(MdiLayout.TileVertical);
+                            commandHandled = true;
+                            goto Label_00B5;
+
+                        case 0x193:
+                        {
+                            Form[] mdiChildren = base.MdiChildren;
+                            if ((mdiChildren != null) && (mdiChildren.Length != 0))
+                            {
+                                for (int i = mdiChildren.Length - 1; i >= 0; i--)
+                                {
+                                    mdiChildren[i].Close();
+                                }
+                            }
+                            commandHandled = true;
+                            goto Label_00B5;
+                        }
+                        case 0xd6:
+                            this.OnCommandViewToolbox();
+                            commandHandled = true;
+                            needUpdateClient = true;
+                            goto Label_00B5;
+                    }
+                }
+                else
+                {
+                    base.ActiveMdiChild.Close();
+                    commandHandled = true;
+                    needUpdateClient = true;
+                }
+            }
+        Label_00B5:
+            if (!commandHandled)
+            {
+                return base.HandleCommand(command);
+            }
+            if (needUpdateClient)
+            {
+                ((ICommandManager) this.GetService(typeof(ICommandManager))).UpdateCommands(false);
+            }
+            return commandHandled;
+        }
+
         protected override bool UpdateCommand(Microsoft.Matrix.UIComponents.Command command)
         {
             bool flag = false;
@@ -337,7 +337,7 @@ namespace Microsoft.Matrix.WebIDE
                         break;
 
                     case 0xd6:
-                        command.Checked = this._leftContainer.Visible;
+                        command.Checked = this.leftContainer.Visible;
                         flag = true;
                         break;
                 }
@@ -352,10 +352,24 @@ namespace Microsoft.Matrix.WebIDE
         private sealed class TempCommandUI
         {
             public CommandManager cm;
+            public MxToolBar documentToolBar;
             public ImageList.ImageCollection commandImages;
+            public MxToolBar helpToolBar;
+            public ApplicationWindow mainForm;
+            public MxStatusBar mainStatusBar;
+            public MxToolBar mainToolBar;
+            public MainMenu menuBar;
+            private Hashtable globalCommandTable;
+            private Hashtable webCommandTable;
+            private Hashtable contextCommandTable;
+            private Hashtable htmlDesignerContextMenuTable;
+            private Hashtable htmlDesignerTableDesignerContextMenuTable;
+            private Hashtable toolBarButtonTable1;
+            private Hashtable toolBarButtonTable2;
+
+            #region ImageIndex constants members
             private const int DeleteTableColumnImageIndex = 0x47;
             private const int DeleteTableRowImageIndex = 70;
-            public MxToolBar documentToolBar;
             private const int EditCopyImageIndex = 7;
             private const int EditCutImageIndex = 6;
             private const int EditEditTagImageIndex = 0x36;
@@ -389,7 +403,6 @@ namespace Microsoft.Matrix.WebIDE
             private const int HelpHelpTopicsImageIndex = 0x1b;
             private const int HelpHelpUrl = 0x1c;
             private const int HelpSendFeedbackImageIndex = 0x39;
-            public MxToolBar helpToolBar;
             private const int HtmlAbsolutePositionImageIndex = 0x19;
             private const int HtmlAlignBottomImageIndex = 0x30;
             private const int HtmlAlignCenterImageIndex = 0x2c;
@@ -407,15 +420,6 @@ namespace Microsoft.Matrix.WebIDE
             private const int HtmlTableInsertImageIndex = 0x34;
             private const int InsertTableColumnImageIndex = 0x45;
             private const int InsertTableRowImageIndex = 0x44;
-            public ApplicationWindow mainForm;
-            public MxStatusBar mainStatusBar;
-            public MxToolBar mainToolBar;
-            public MainMenu menuBar;
-            private Hashtable menuItemTable1;
-            private Hashtable menuItemTable2;
-            private Hashtable menuItemTable3;
-            private Hashtable menuItemTable4;
-            private Hashtable menuItemTable5;
             private const int MergeCellDownImageIndex = 0x4b;
             private const int MergeCellLeftImageIndex = 0x48;
             private const int MergeCellRightImageIndex = 0x49;
@@ -423,8 +427,6 @@ namespace Microsoft.Matrix.WebIDE
             private const int PlaceHolderImageIndex = 0;
             private const int SplitCellHorizontalImageIndex = 0x4c;
             private const int SplitCellVerticalImageIndex = 0x4d;
-            private Hashtable toolBarButtonTable1;
-            private Hashtable toolBarButtonTable2;
             private const int ToolsOrganizeAddInsImageIndex = 0x35;
             private const int ToolsPreferencesImageIndex = 0x3f;
             private const int ViewBordersImageIndex = 0x25;
@@ -444,6 +446,7 @@ namespace Microsoft.Matrix.WebIDE
             private const int WorkspaceDeleteImageIndex = 0x3b;
             private const int WorkspaceOpenImageIndex = 0x3a;
             private const int WorkspaceRefreshImageIndex = 60;
+            #endregion
 
             private void AddMenuItem(Hashtable table, System.Type commandGroup, int commandID, string text, string helpText, Shortcut shortcut, int imageIndex)
             {
@@ -504,167 +507,167 @@ namespace Microsoft.Matrix.WebIDE
             private void CreateMenuItems()
             {
                 int num;
-                System.Type commandGroup = typeof(GlobalCommands);
-                System.Type type2 = typeof(WebCommands);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 1, "&New File...", "Create a new file", Shortcut.CtrlN, 1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 2, "&Open Files...", "Open existing files", Shortcut.CtrlO, 2);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 3, "&Save File", "Save the current file", Shortcut.CtrlS, 3);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 4, "Save File &As...", "Save the current file to a new location", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 5, "&Close", "Close the current file", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 10, "New Pro&ject...", "Create a new project", Shortcut.None, 0x37);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 6, "&Print...", "Print the current file", Shortcut.CtrlP, 0x1f);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 7, "P&rint Preview...", "Print-preview the current file", Shortcut.None, 30);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 8, "Pr&int Settings...", "Set up printer defaults and settings...", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 9, "E&xit", "Close the application", Shortcut.None, -1);
+                System.Type globalCommandGroup = typeof(GlobalCommands);
+                System.Type webCommandGroup = typeof(WebCommands);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 1, "&New File...", "Create a new file", Shortcut.CtrlN, 1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 2, "&Open Files...", "Open existing files", Shortcut.CtrlO, 2);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 3, "&Save File", "Save the current file", Shortcut.CtrlS, 3);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 4, "Save File &As...", "Save the current file to a new location", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 5, "&Close", "Close the current file", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 10, "New Pro&ject...", "Create a new project", Shortcut.None, 0x37);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 6, "&Print...", "Print the current file", Shortcut.CtrlP, 0x1f);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 7, "P&rint Preview...", "Print-preview the current file", Shortcut.None, 30);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 8, "Pr&int Settings...", "Set up printer defaults and settings...", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 9, "E&xit", "Close the application", Shortcut.None, -1);
                 for (num = 0; num < 10; num++)
                 {
-                    this.AddMenuItem(this.menuItemTable1, commandGroup, num + 20, "", "Open this file", Shortcut.None, -1);
+                    this.AddMenuItem(this.globalCommandTable, globalCommandGroup, num + 20, "", "Open this file", Shortcut.None, -1);
                 }
                 for (num = 0; num < 5; num++)
                 {
-                    this.AddMenuItem(this.menuItemTable1, commandGroup, num + 40, "", "Open this project", Shortcut.None, -1);
+                    this.AddMenuItem(this.globalCommandTable, globalCommandGroup, num + 40, "", "Open this project", Shortcut.None, -1);
                 }
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 100, "&Undo", "Undo the last change", Shortcut.CtrlZ, 4);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x65, "&Redo", "Reverse the last undo", Shortcut.CtrlY, 5);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x66, "Cu&t", "Remove the selection and place it on the clipboard", Shortcut.CtrlX, 6);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x67, "&Copy", "Copy the selection to the clipboard", Shortcut.CtrlC, 7);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x68, "&Paste", "Insert the contents of the clipboard", Shortcut.CtrlV, 8);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x6a, "Select &All", "Select everything in the file", Shortcut.CtrlA, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x6b, "&Go To...", "Go to the specific line in the current file", Shortcut.CtrlG, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x6c, "&Find...", "Search for the specified text", Shortcut.CtrlF, 40);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 180, "Find &Next", "Search for the next occurence", Shortcut.F3, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x6d, "R&eplace...", "Search for and replace the specified text", Shortcut.CtrlH, 0x22);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 120, "A&dd Snippet", "Copy the selected text as a snippet", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 250, "For&mat Document", "Format the entire document", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 260, "Ed&it Tag", "Edit the source of the selected tag", Shortcut.CtrlT, 0x36);
-                this.AddMenuItem(this.menuItemTable2, type2, 240, "Edit Temp&lates...", "Edit the templates of the selected control", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x8d, "C&omment Selection", "Comment the selected text", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x8e, "U&ncomment Selection", "Uncomment the selected text", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 100, "&Undo", "Undo the last change", Shortcut.CtrlZ, 4);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x65, "&Redo", "Reverse the last undo", Shortcut.CtrlY, 5);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x66, "Cu&t", "Remove the selection and place it on the clipboard", Shortcut.CtrlX, 6);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x67, "&Copy", "Copy the selection to the clipboard", Shortcut.CtrlC, 7);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x68, "&Paste", "Insert the contents of the clipboard", Shortcut.CtrlV, 8);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x6a, "Select &All", "Select everything in the file", Shortcut.CtrlA, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x6b, "&Go To...", "Go to the specific line in the current file", Shortcut.CtrlG, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x6c, "&Find...", "Search for the specified text", Shortcut.CtrlF, 40);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 180, "Find &Next", "Search for the next occurence", Shortcut.F3, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x6d, "R&eplace...", "Search for and replace the specified text", Shortcut.CtrlH, 0x22);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 120, "A&dd Snippet", "Copy the selected text as a snippet", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 250, "For&mat Document", "Format the entire document", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 260, "Ed&it Tag", "Edit the source of the selected tag", Shortcut.CtrlT, 0x36);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 240, "Edit Temp&lates...", "Edit the templates of the selected control", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x8d, "C&omment Selection", "Comment the selected text", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x8e, "U&ncomment Selection", "Uncomment the selected text", Shortcut.None, -1);
                 for (num = 0; num < 4; num++)
                 {
-                    this.AddMenuItem(this.menuItemTable1, commandGroup, num + 200, "", "Switch to this editor view", Shortcut.None, -1);
+                    this.AddMenuItem(this.globalCommandTable, globalCommandGroup, num + 200, "", "Switch to this editor view", Shortcut.None, -1);
                 }
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 210, "&Start...", "Run the current file", Shortcut.F5, 0x3e);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0xd6, "&Toolbox", "Toggle the Toolbox Window", Shortcut.F2, 0x43);
-                this.AddMenuItem(this.menuItemTable2, type2, 1, "&Glyphs", "Toggle glyphs in the current file", Shortcut.None, 0x26);
-                this.AddMenuItem(this.menuItemTable2, type2, 2, "&Borders", "Toggle design-time borders in the current file", Shortcut.None, 0x25);
-                this.AddMenuItem(this.menuItemTable2, type2, 3, "G&rid", "Toggle the design-time grid in the current file", Shortcut.None, 0x23);
-                this.AddMenuItem(this.menuItemTable2, type2, 4, "S&nap to Grid", "Toggle the snap to grid behavior in the current file", Shortcut.None, 0x24);
-                this.AddMenuItem(this.menuItemTable2, type2, 100, "&Bold", "Make the selected text bold", Shortcut.CtrlB, 12);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x65, "&Italic", "Make the selected text italic", Shortcut.CtrlI, 13);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x66, "&Underline", "Underline the selected text", Shortcut.CtrlU, 14);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x67, "&Superscript", "Convert the selected text into superscript text", Shortcut.None, 15);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x68, "Subscri&pt", "Convert the selected text into subscript text", Shortcut.None, 0x10);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x69, "S&trike", "Strikeout the selected text", Shortcut.None, 0x18);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x6a, "&Foreground Color...", "Select the foreground color", Shortcut.None, 0x20);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x6b, "B&ackground Color...", "Select the backgbround color", Shortcut.None, 0x21);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x6c, "Align &Left", "Align the selected text to the left", Shortcut.None, 0x11);
-                this.AddMenuItem(this.menuItemTable2, type2, 110, "Align &Center", "Center the selected text", Shortcut.None, 0x12);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x6d, "Align &Right", "Align the selected text to the right", Shortcut.None, 0x13);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x6f, "&Ordered List", "Convert the selected text into ordered numbered list", Shortcut.None, 20);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x70, "U&nordered List", "Convert the selected text into bulleted list", Shortcut.None, 0x15);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x71, "In&dent", "Indent the selected text in", Shortcut.None, 0x17);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x72, "Unind&ent", "Unindent the selected text out", Shortcut.None, 0x16);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x7b, "St&yle...", "Edit the style and formatting attributes of the selection", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 130, "&Normal", "Apply the normal format to the selected text.", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x83, "&Formatted", "Apply the formatted format to the selected text.", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x84, "Heading &1", "Apply the heading 1 format to the selected text.", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x85, "Heading &2", "Apply the heading 2 format to the selected text.", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x86, "Heading &3", "Apply the heading 3 format to the selected text.", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x87, "Heading &4", "Apply the heading 4 format to the selected text.", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x88, "Heading &5", "Apply the heading 5 format to the selected text.", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x89, "Heading &6", "Apply the heading 6 format to the selected text.", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x8a, "&Paragraph", "Apply the paragraph format to the selected text.", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 140, "&Absolute Position", "Toggle absolute positioning of the selected elements", Shortcut.None, 0x19);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x8f, "Align &Left Edges", "Align the left edges of the selected elements", Shortcut.None, 0x2b);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x90, "Align &Center", "Align the centers of the selected elements", Shortcut.None, 0x2c);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x91, "Align &Right Edges", "Align the right edges of the selected elements", Shortcut.None, 0x2d);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x92, "Align &Top Edges", "Align the top edges of the selected elements", Shortcut.None, 0x2e);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x93, "Align &Middle", "Align the middle of all the selected elements", Shortcut.None, 0x2f);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x94, "Align &Bottom Edges", "Align the bottom edges of the selected elements", Shortcut.None, 0x30);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x95, "Make Same &Width", "Make all the selected elements the same width", Shortcut.None, 0x31);
-                this.AddMenuItem(this.menuItemTable2, type2, 150, "Make Same &Height", "Make all the selected elements the same height", Shortcut.None, 50);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x97, "Make Same &Size", "Make all the selected elements elements the same size", Shortcut.None, 0x33);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x8d, "Send &Forward", "Bring the selected element forward in z-order", Shortcut.None, 0x29);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x8e, "Send Bac&kward", "Send the selected element backward in z-order", Shortcut.None, 0x2a);
-                this.AddMenuItem(this.menuItemTable2, type2, 0x98, "L&ocked", "Lock or unlock the position of the selected element", Shortcut.None, 0x27);
-                this.AddMenuItem(this.menuItemTable2, type2, 200, "Insert &HyperLink...", "Insert an hyperLink into the current file", Shortcut.None, 0x1a);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xc9, "&Remove HyperLink", "Remove the selected hyperLink", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 220, "Insert &Table...", "Insert a table into the current file", Shortcut.None, 0x34);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xca, "Wrap in &Span", "Wrap the current selection with <span> tag", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xcb, "Wrap in &Div", "Wrap the current selection with <div> tag", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xdd, "&Insert Table Row", "Insert a table row after the currently selected table cell", Shortcut.None, 0x44);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xde, "I&nsert Table Column", "Insert a table column after the currently selected table cell", Shortcut.None, 0x45);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xdf, "&Delete Table Row", "Delete the currently selected table row", Shortcut.None, 70);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xe0, "D&elete Table Column", "Delete the currently selected table column", Shortcut.None, 0x47);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xe1, "&Merge Cell Left", "Merge the currently selected table cell with the cell to the left", Shortcut.None, 0x48);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xe2, "Me&rge Cell Right", "Merge the currently selected table cell with the cell to the right", Shortcut.None, 0x49);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xe3, "Mer&ge Cell Up", "Merge the currently selected table cell with the cell above", Shortcut.None, 0x4a);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xe4, "Merge &Cell Down", "Merge the currently selected table cell with the cell below", Shortcut.None, 0x4b);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xe5, "&Split Cell Horizontally", "Split the currently selected table cell horizontally", Shortcut.None, 0x4c);
-                this.AddMenuItem(this.menuItemTable2, type2, 0xe7, "S&plit Cell Vertically", "Split the currently selected table cell vertically", Shortcut.None, 0x4d);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x145, "", "Customize the active toolbox section", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x146, "", "Customize the active toolbox section", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x147, "", "Customize the active toolbox section", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x144, "&Preferences...", "Change preferences and options", Shortcut.None, 0x3f);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 320, "&Run Add-in...", "Run a particular add-in", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x141, "&Organize Add-ins...", "Organize the add-in list", Shortcut.None, 0x35);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 210, "&Start...", "Run the current file", Shortcut.F5, 0x3e);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0xd6, "&Toolbox", "Toggle the Toolbox Window", Shortcut.F2, 0x43);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 1, "&Glyphs", "Toggle glyphs in the current file", Shortcut.None, 0x26);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 2, "&Borders", "Toggle design-time borders in the current file", Shortcut.None, 0x25);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 3, "G&rid", "Toggle the design-time grid in the current file", Shortcut.None, 0x23);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 4, "S&nap to Grid", "Toggle the snap to grid behavior in the current file", Shortcut.None, 0x24);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 100, "&Bold", "Make the selected text bold", Shortcut.CtrlB, 12);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x65, "&Italic", "Make the selected text italic", Shortcut.CtrlI, 13);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x66, "&Underline", "Underline the selected text", Shortcut.CtrlU, 14);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x67, "&Superscript", "Convert the selected text into superscript text", Shortcut.None, 15);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x68, "Subscri&pt", "Convert the selected text into subscript text", Shortcut.None, 0x10);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x69, "S&trike", "Strikeout the selected text", Shortcut.None, 0x18);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x6a, "&Foreground Color...", "Select the foreground color", Shortcut.None, 0x20);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x6b, "B&ackground Color...", "Select the backgbround color", Shortcut.None, 0x21);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x6c, "Align &Left", "Align the selected text to the left", Shortcut.None, 0x11);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 110, "Align &Center", "Center the selected text", Shortcut.None, 0x12);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x6d, "Align &Right", "Align the selected text to the right", Shortcut.None, 0x13);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x6f, "&Ordered List", "Convert the selected text into ordered numbered list", Shortcut.None, 20);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x70, "U&nordered List", "Convert the selected text into bulleted list", Shortcut.None, 0x15);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x71, "In&dent", "Indent the selected text in", Shortcut.None, 0x17);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x72, "Unind&ent", "Unindent the selected text out", Shortcut.None, 0x16);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x7b, "St&yle...", "Edit the style and formatting attributes of the selection", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 130, "&Normal", "Apply the normal format to the selected text.", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x83, "&Formatted", "Apply the formatted format to the selected text.", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x84, "Heading &1", "Apply the heading 1 format to the selected text.", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x85, "Heading &2", "Apply the heading 2 format to the selected text.", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x86, "Heading &3", "Apply the heading 3 format to the selected text.", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x87, "Heading &4", "Apply the heading 4 format to the selected text.", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x88, "Heading &5", "Apply the heading 5 format to the selected text.", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x89, "Heading &6", "Apply the heading 6 format to the selected text.", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x8a, "&Paragraph", "Apply the paragraph format to the selected text.", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 140, "&Absolute Position", "Toggle absolute positioning of the selected elements", Shortcut.None, 0x19);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x8f, "Align &Left Edges", "Align the left edges of the selected elements", Shortcut.None, 0x2b);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x90, "Align &Center", "Align the centers of the selected elements", Shortcut.None, 0x2c);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x91, "Align &Right Edges", "Align the right edges of the selected elements", Shortcut.None, 0x2d);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x92, "Align &Top Edges", "Align the top edges of the selected elements", Shortcut.None, 0x2e);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x93, "Align &Middle", "Align the middle of all the selected elements", Shortcut.None, 0x2f);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x94, "Align &Bottom Edges", "Align the bottom edges of the selected elements", Shortcut.None, 0x30);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x95, "Make Same &Width", "Make all the selected elements the same width", Shortcut.None, 0x31);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 150, "Make Same &Height", "Make all the selected elements the same height", Shortcut.None, 50);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x97, "Make Same &Size", "Make all the selected elements elements the same size", Shortcut.None, 0x33);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x8d, "Send &Forward", "Bring the selected element forward in z-order", Shortcut.None, 0x29);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x8e, "Send Bac&kward", "Send the selected element backward in z-order", Shortcut.None, 0x2a);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0x98, "L&ocked", "Lock or unlock the position of the selected element", Shortcut.None, 0x27);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 200, "Insert &HyperLink...", "Insert an hyperLink into the current file", Shortcut.None, 0x1a);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xc9, "&Remove HyperLink", "Remove the selected hyperLink", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 220, "Insert &Table...", "Insert a table into the current file", Shortcut.None, 0x34);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xca, "Wrap in &Span", "Wrap the current selection with <span> tag", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xcb, "Wrap in &Div", "Wrap the current selection with <div> tag", Shortcut.None, -1);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xdd, "&Insert Table Row", "Insert a table row after the currently selected table cell", Shortcut.None, 0x44);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xde, "I&nsert Table Column", "Insert a table column after the currently selected table cell", Shortcut.None, 0x45);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xdf, "&Delete Table Row", "Delete the currently selected table row", Shortcut.None, 70);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xe0, "D&elete Table Column", "Delete the currently selected table column", Shortcut.None, 0x47);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xe1, "&Merge Cell Left", "Merge the currently selected table cell with the cell to the left", Shortcut.None, 0x48);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xe2, "Me&rge Cell Right", "Merge the currently selected table cell with the cell to the right", Shortcut.None, 0x49);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xe3, "Mer&ge Cell Up", "Merge the currently selected table cell with the cell above", Shortcut.None, 0x4a);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xe4, "Merge &Cell Down", "Merge the currently selected table cell with the cell below", Shortcut.None, 0x4b);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xe5, "&Split Cell Horizontally", "Split the currently selected table cell horizontally", Shortcut.None, 0x4c);
+                this.AddMenuItem(this.webCommandTable, webCommandGroup, 0xe7, "S&plit Cell Vertically", "Split the currently selected table cell vertically", Shortcut.None, 0x4d);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x145, "", "Customize the active toolbox section", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x146, "", "Customize the active toolbox section", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x147, "", "Customize the active toolbox section", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x144, "&Preferences...", "Change preferences and options", Shortcut.None, 0x3f);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 320, "&Run Add-in...", "Run a particular add-in", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x141, "&Organize Add-ins...", "Organize the add-in list", Shortcut.None, 0x35);
                 for (num = 0; num < 10; num++)
                 {
-                    this.AddMenuItem(this.menuItemTable1, commandGroup, num + 300, "", "Run this add-in", (Shortcut) (0x30070 + num), -1);
+                    this.AddMenuItem(this.globalCommandTable, globalCommandGroup, num + 300, "", "Run this add-in", (Shortcut) (0x30070 + num), -1);
                 }
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 400, "&Cascade", "Arrange the current windows diagonally starting from the left top", Shortcut.None, 9);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x191, "Tile &Horizontal", "Tile the current windows horizontally", Shortcut.None, 10);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x192, "Tile &Vertical", "Tile the current windows vertically", Shortcut.None, 11);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x193, "Close &All", "Close all open windows", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 600, "&Help Topics", "View help topics", Shortcut.F1, 0x1b);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x25e, "Send &Feedback...", "Submit suggestions, bug reports or general feedback", Shortcut.None, 0x39);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x25a, "Application &Information...", "Information about this application and process", Shortcut.None, 0x38);
-                this.AddMenuItem(this.menuItemTable1, commandGroup, 0x259, "About Microsoft ASP.NET &Web Matrix...", "About this application", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 400, "&Cascade", "Arrange the current windows diagonally starting from the left top", Shortcut.None, 9);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x191, "Tile &Horizontal", "Tile the current windows horizontally", Shortcut.None, 10);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x192, "Tile &Vertical", "Tile the current windows vertically", Shortcut.None, 11);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x193, "Close &All", "Close all open windows", Shortcut.None, -1);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 600, "&Help Topics", "View help topics", Shortcut.F1, 0x1b);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x25e, "Send &Feedback...", "Submit suggestions, bug reports or general feedback", Shortcut.None, 0x39);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x25a, "Application &Information...", "Information about this application and process", Shortcut.None, 0x38);
+                this.AddMenuItem(this.globalCommandTable, globalCommandGroup, 0x259, "About Microsoft ASP.NET &Web Matrix...", "About this application", Shortcut.None, -1);
                 for (num = 0; num < 10; num++)
                 {
-                    this.AddMenuItem(this.menuItemTable1, commandGroup, num + 610, "", "Browse this help URL", Shortcut.None, 0x1c);
+                    this.AddMenuItem(this.globalCommandTable, globalCommandGroup, num + 610, "", "Browse this help URL", Shortcut.None, 0x1c);
                 }
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x2c7, "Add New File...", "", Shortcut.None, 1, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x2c8, "Add New Folder...", "", Shortcut.None, 0x3d, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x2c9, "Delete", "", Shortcut.None, 0x3b, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 710, "Open Files", "", Shortcut.None, 0x3a, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x2ca, "Refresh", "", Shortcut.None, 60, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 10, "New Project...", "", Shortcut.None, 0x37, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x2c7, "Add New File...", "", Shortcut.None, 1, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x2c8, "Add New Folder...", "", Shortcut.None, 0x3d, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x2c9, "Delete", "", Shortcut.None, 0x3b, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x2c6, "Open Files", "", Shortcut.None, 0x3a, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x2ca, "Refresh", "", Shortcut.None, 60, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 10, "New Project...", "", Shortcut.None, 0x37, true);
                 for (num = 0; num < 8; num++)
                 {
-                    this.AddMenuItem(this.menuItemTable3, commandGroup, num + 720, "", "", Shortcut.None, -1, true);
+                    this.AddMenuItem(this.contextCommandTable, globalCommandGroup, num + 720, "", "", Shortcut.None, -1, true);
                 }
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x145, "Customize...", "", Shortcut.None, -1, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x146, "Customize...", "", Shortcut.None, -1, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x147, "Customize...", "", Shortcut.None, -1, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x148, "Rename", "", Shortcut.None, -1, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x149, "Remove", "", Shortcut.None, -1, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x14b, "Sort by Name", "", Shortcut.None, -1, true);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 330, "Reset Toolbox", "", Shortcut.None, -1, true);
-                this.AddMenuItem(this.menuItemTable4, type2, 260, "&Edit Tag", "Edit the source of the selected tag", Shortcut.CtrlT, 0x36);
-                this.AddMenuItem(this.menuItemTable4, type2, 240, "Edit Temp&lates...", "Edit the templates of the selected control", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable4, commandGroup, 0x66, "Cu&t", "Remove the selection and place it on the clipboard", Shortcut.CtrlX, 6);
-                this.AddMenuItem(this.menuItemTable4, commandGroup, 0x67, "&Copy", "Copy the selection to the clipboard", Shortcut.CtrlC, 7);
-                this.AddMenuItem(this.menuItemTable4, commandGroup, 0x68, "&Paste", "Insert the contents of the clipboard", Shortcut.CtrlV, 8);
-                this.AddMenuItem(this.menuItemTable5, type2, 260, "&Edit Tag", "Edit the source of the selected tag", Shortcut.CtrlT, 0x36);
-                this.AddMenuItem(this.menuItemTable5, commandGroup, 0x66, "Cu&t", "Remove the selection and place it on the clipboard", Shortcut.CtrlX, 6);
-                this.AddMenuItem(this.menuItemTable5, commandGroup, 0x67, "&Copy", "Copy the selection to the clipboard", Shortcut.CtrlC, 7);
-                this.AddMenuItem(this.menuItemTable5, commandGroup, 0x68, "&Paste", "Insert the contents of the clipboard", Shortcut.CtrlV, 8);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xdd, "&Insert Table Row", "Insert a table row after the currently selected table cell", Shortcut.None, 0x44);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xde, "I&nsert Table Column", "Insert a table column after the currently selected table cell", Shortcut.None, 0x45);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xdf, "&Delete Table Row", "Delete the currently selected table row", Shortcut.None, 70);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xe0, "D&elete Table Column", "Delete the currently selected table column", Shortcut.None, 0x47);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xe1, "&Merge Cell Left", "Merge the currently selected table cell with the cell to the left", Shortcut.None, 0x48);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xe2, "Me&rge Cell Right", "Merge the currently selected table cell with the cell to the right", Shortcut.None, 0x49);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xe3, "Mer&ge Cell Up", "Merge the currently selected table cell with the cell above", Shortcut.None, 0x4a);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xe4, "Merge &Cell Down", "Merge the currently selected table cell with the cell below", Shortcut.None, 0x4b);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xe5, "Spli&t Cell Horizontally", "Split the currently selected table cell horizontally", Shortcut.None, 0x4c);
-                this.AddMenuItem(this.menuItemTable5, type2, 0xe7, "S&plit Cell Vertically", "Split the currently selected table cell vertically", Shortcut.None, 0x4d);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 120, "A&dd Snippet", "Copy the selected text as a snippet", Shortcut.None, -1);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x66, "Cu&t", "Remove the selection and place it on the clipboard", Shortcut.CtrlX, 6);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x67, "&Copy", "Copy the selection to the clipboard", Shortcut.CtrlC, 7);
-                this.AddMenuItem(this.menuItemTable3, commandGroup, 0x68, "&Paste", "Insert the contents of the clipboard", Shortcut.CtrlV, 8);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x145, "Customize...", "", Shortcut.None, -1, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x146, "Customize...", "", Shortcut.None, -1, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x147, "Customize...", "", Shortcut.None, -1, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x148, "Rename", "", Shortcut.None, -1, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x149, "Remove", "", Shortcut.None, -1, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x14b, "Sort by Name", "", Shortcut.None, -1, true);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 330, "Reset Toolbox", "", Shortcut.None, -1, true);
+                this.AddMenuItem(this.htmlDesignerContextMenuTable, webCommandGroup, 260, "&Edit Tag", "Edit the source of the selected tag", Shortcut.CtrlT, 0x36);
+                this.AddMenuItem(this.htmlDesignerContextMenuTable, webCommandGroup, 240, "Edit Temp&lates...", "Edit the templates of the selected control", Shortcut.None, -1);
+                this.AddMenuItem(this.htmlDesignerContextMenuTable, globalCommandGroup, 0x66, "Cu&t", "Remove the selection and place it on the clipboard", Shortcut.CtrlX, 6);
+                this.AddMenuItem(this.htmlDesignerContextMenuTable, globalCommandGroup, 0x67, "&Copy", "Copy the selection to the clipboard", Shortcut.CtrlC, 7);
+                this.AddMenuItem(this.htmlDesignerContextMenuTable, globalCommandGroup, 0x68, "&Paste", "Insert the contents of the clipboard", Shortcut.CtrlV, 8);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 260, "&Edit Tag", "Edit the source of the selected tag", Shortcut.CtrlT, 0x36);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, globalCommandGroup, 0x66, "Cu&t", "Remove the selection and place it on the clipboard", Shortcut.CtrlX, 6);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, globalCommandGroup, 0x67, "&Copy", "Copy the selection to the clipboard", Shortcut.CtrlC, 7);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, globalCommandGroup, 0x68, "&Paste", "Insert the contents of the clipboard", Shortcut.CtrlV, 8);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xdd, "&Insert Table Row", "Insert a table row after the currently selected table cell", Shortcut.None, 0x44);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xde, "I&nsert Table Column", "Insert a table column after the currently selected table cell", Shortcut.None, 0x45);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xdf, "&Delete Table Row", "Delete the currently selected table row", Shortcut.None, 70);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xe0, "D&elete Table Column", "Delete the currently selected table column", Shortcut.None, 0x47);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xe1, "&Merge Cell Left", "Merge the currently selected table cell with the cell to the left", Shortcut.None, 0x48);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xe2, "Me&rge Cell Right", "Merge the currently selected table cell with the cell to the right", Shortcut.None, 0x49);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xe3, "Mer&ge Cell Up", "Merge the currently selected table cell with the cell above", Shortcut.None, 0x4a);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xe4, "Merge &Cell Down", "Merge the currently selected table cell with the cell below", Shortcut.None, 0x4b);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xe5, "Spli&t Cell Horizontally", "Split the currently selected table cell horizontally", Shortcut.None, 0x4c);
+                this.AddMenuItem(this.htmlDesignerTableDesignerContextMenuTable, webCommandGroup, 0xe7, "S&plit Cell Vertically", "Split the currently selected table cell vertically", Shortcut.None, 0x4d);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 120, "A&dd Snippet", "Copy the selected text as a snippet", Shortcut.None, -1);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x66, "Cu&t", "Remove the selection and place it on the clipboard", Shortcut.CtrlX, 6);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x67, "&Copy", "Copy the selection to the clipboard", Shortcut.CtrlC, 7);
+                this.AddMenuItem(this.contextCommandTable, globalCommandGroup, 0x68, "&Paste", "Insert the contents of the clipboard", Shortcut.CtrlV, 8);
             }
 
             private ToolBarButton CreateSeparatorButton()
@@ -719,11 +722,11 @@ namespace Microsoft.Matrix.WebIDE
 
             public void InitializeCommandUI()
             {
-                this.menuItemTable1 = new Hashtable(100);
-                this.menuItemTable2 = new Hashtable(50);
-                this.menuItemTable3 = new Hashtable(50);
-                this.menuItemTable4 = new Hashtable(50);
-                this.menuItemTable5 = new Hashtable(50);
+                this.globalCommandTable = new Hashtable(100);
+                this.webCommandTable = new Hashtable(50);
+                this.contextCommandTable = new Hashtable(50);
+                this.htmlDesignerContextMenuTable = new Hashtable(50);
+                this.htmlDesignerTableDesignerContextMenuTable = new Hashtable(50);
                 this.toolBarButtonTable1 = new Hashtable(0x19);
                 this.toolBarButtonTable2 = new Hashtable(0x19);
                 this.CreateMenuItems();
@@ -772,87 +775,87 @@ namespace Microsoft.Matrix.WebIDE
                 MenuItem[] items = new MenuItem[10];
                 for (num = 0; num < 10; num++)
                 {
-                    items[num] = (MenuItem) this.menuItemTable1[num + 20];
+                    items[num] = (MenuItem) this.globalCommandTable[num + 20];
                 }
                 MxMenuItem item = new MxMenuItem("Recent &Files", items);
                 this.cm.AddMenu(item);
                 MenuItem[] itemArray2 = new MenuItem[5];
                 for (num = 0; num < 5; num++)
                 {
-                    itemArray2[num] = (MenuItem) this.menuItemTable1[num + 40];
+                    itemArray2[num] = (MenuItem) this.globalCommandTable[num + 40];
                 }
                 MxMenuItem item2 = new MxMenuItem("Recent &Projects", itemArray2);
                 this.cm.AddMenu(item2);
-                MenuItem[] itemArray3 = new MenuItem[] { (MenuItem) this.menuItemTable1[1], (MenuItem) this.menuItemTable1[2], (MenuItem) this.menuItemTable1[3], (MenuItem) this.menuItemTable1[4], (MenuItem) this.menuItemTable1[5], new MxMenuItem("-"), (MenuItem) this.menuItemTable1[10], new MxMenuItem("-"), (MenuItem) this.menuItemTable1[6], (MenuItem) this.menuItemTable1[7], (MenuItem) this.menuItemTable1[8], new MxMenuItem("-"), item, new MxMenuItem("-"), (MenuItem) this.menuItemTable1[9] };
+                MenuItem[] itemArray3 = new MenuItem[] { (MenuItem) this.globalCommandTable[1], (MenuItem) this.globalCommandTable[2], (MenuItem) this.globalCommandTable[3], (MenuItem) this.globalCommandTable[4], (MenuItem) this.globalCommandTable[5], new MxMenuItem("-"), (MenuItem) this.globalCommandTable[10], new MxMenuItem("-"), (MenuItem) this.globalCommandTable[6], (MenuItem) this.globalCommandTable[7], (MenuItem) this.globalCommandTable[8], new MxMenuItem("-"), item, new MxMenuItem("-"), (MenuItem) this.globalCommandTable[9] };
                 MxMenuItem item3 = new MxMenuItem("&File", itemArray3, false);
                 this.cm.AddMenu(item3);
                 MenuItem[] itemArray4 = new MenuItem[] { 
-                    (MenuItem) this.menuItemTable1[100], (MenuItem) this.menuItemTable1[0x65], new MxMenuItem("-"), (MenuItem) this.menuItemTable1[0x66], (MenuItem) this.menuItemTable1[0x67], (MenuItem) this.menuItemTable1[0x68], (MenuItem) this.menuItemTable1[0x6a], (MenuItem) this.menuItemTable1[120], new MxMenuItem("-"), (MenuItem) this.menuItemTable1[0x6b], (MenuItem) this.menuItemTable1[0x6c], (MenuItem) this.menuItemTable1[180], (MenuItem) this.menuItemTable1[0x6d], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[260], (MenuItem) this.menuItemTable2[240], 
-                    new MxMenuItem("-"), (MenuItem) this.menuItemTable2[250], (MenuItem) this.menuItemTable1[0x8d], (MenuItem) this.menuItemTable1[0x8e]
+                    (MenuItem) this.globalCommandTable[100], (MenuItem) this.globalCommandTable[0x65], new MxMenuItem("-"), (MenuItem) this.globalCommandTable[0x66], (MenuItem) this.globalCommandTable[0x67], (MenuItem) this.globalCommandTable[0x68], (MenuItem) this.globalCommandTable[0x6a], (MenuItem) this.globalCommandTable[120], new MxMenuItem("-"), (MenuItem) this.globalCommandTable[0x6b], (MenuItem) this.globalCommandTable[0x6c], (MenuItem) this.globalCommandTable[180], (MenuItem) this.globalCommandTable[0x6d], new MxMenuItem("-"), (MenuItem) this.webCommandTable[260], (MenuItem) this.webCommandTable[240], 
+                    new MxMenuItem("-"), (MenuItem) this.webCommandTable[250], (MenuItem) this.globalCommandTable[0x8d], (MenuItem) this.globalCommandTable[0x8e]
                  };
                 MxMenuItem item4 = new MxMenuItem("&Edit", itemArray4, false);
                 this.cm.AddMenu(item4);
-                MenuItem[] itemArray5 = new MenuItem[] { (MenuItem) this.menuItemTable1[200], (MenuItem) this.menuItemTable1[0xc9], (MenuItem) this.menuItemTable1[0xca], (MenuItem) this.menuItemTable1[0xcb], new MxMenuItem("-"), (MenuItem) this.menuItemTable1[210], new MxMenuItem("-"), (MenuItem) this.menuItemTable1[0xd6], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[1], (MenuItem) this.menuItemTable2[2], (MenuItem) this.menuItemTable2[3], (MenuItem) this.menuItemTable2[4] };
+                MenuItem[] itemArray5 = new MenuItem[] { (MenuItem) this.globalCommandTable[200], (MenuItem) this.globalCommandTable[0xc9], (MenuItem) this.globalCommandTable[0xca], (MenuItem) this.globalCommandTable[0xcb], new MxMenuItem("-"), (MenuItem) this.globalCommandTable[210], new MxMenuItem("-"), (MenuItem) this.globalCommandTable[0xd6], new MxMenuItem("-"), (MenuItem) this.webCommandTable[1], (MenuItem) this.webCommandTable[2], (MenuItem) this.webCommandTable[3], (MenuItem) this.webCommandTable[4] };
                 MxMenuItem item5 = new MxMenuItem("&View", itemArray5, false);
                 this.cm.AddMenu(item5);
                 MenuItem[] itemArray6 = new MenuItem[9];
                 for (num = 0; num < 9; num++)
                 {
-                    itemArray6[num] = (MenuItem) this.menuItemTable2[num + 130];
+                    itemArray6[num] = (MenuItem) this.webCommandTable[num + 130];
                 }
                 MxMenuItem item6 = new MxMenuItem("Bloc&k Format", itemArray6);
                 this.cm.AddMenu(item6);
                 MenuItem[] itemArray7 = new MenuItem[] { 
-                    (MenuItem) this.menuItemTable2[100], (MenuItem) this.menuItemTable2[0x65], (MenuItem) this.menuItemTable2[0x66], (MenuItem) this.menuItemTable2[0x67], (MenuItem) this.menuItemTable2[0x68], (MenuItem) this.menuItemTable2[0x69], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0x6a], (MenuItem) this.menuItemTable2[0x6b], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0x6c], (MenuItem) this.menuItemTable2[110], (MenuItem) this.menuItemTable2[0x6d], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0x6f], (MenuItem) this.menuItemTable2[0x70], 
-                    (MenuItem) this.menuItemTable2[0x71], (MenuItem) this.menuItemTable2[0x72], item6, new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0x7b]
+                    (MenuItem) this.webCommandTable[100], (MenuItem) this.webCommandTable[0x65], (MenuItem) this.webCommandTable[0x66], (MenuItem) this.webCommandTable[0x67], (MenuItem) this.webCommandTable[0x68], (MenuItem) this.webCommandTable[0x69], new MxMenuItem("-"), (MenuItem) this.webCommandTable[0x6a], (MenuItem) this.webCommandTable[0x6b], new MxMenuItem("-"), (MenuItem) this.webCommandTable[0x6c], (MenuItem) this.webCommandTable[110], (MenuItem) this.webCommandTable[0x6d], new MxMenuItem("-"), (MenuItem) this.webCommandTable[0x6f], (MenuItem) this.webCommandTable[0x70], 
+                    (MenuItem) this.webCommandTable[0x71], (MenuItem) this.webCommandTable[0x72], item6, new MxMenuItem("-"), (MenuItem) this.webCommandTable[0x7b]
                  };
                 MxMenuItem item7 = new MxMenuItem("F&ormat", itemArray7, false);
                 this.cm.AddMenu(item7);
                 MenuItem[] itemArray8 = new MenuItem[] { 
-                    (MenuItem) this.menuItemTable2[140], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0x8f], (MenuItem) this.menuItemTable2[0x90], (MenuItem) this.menuItemTable2[0x91], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0x92], (MenuItem) this.menuItemTable2[0x93], (MenuItem) this.menuItemTable2[0x94], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0x95], (MenuItem) this.menuItemTable2[150], (MenuItem) this.menuItemTable2[0x97], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0x8d], (MenuItem) this.menuItemTable2[0x8e], 
-                    new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0x98]
+                    (MenuItem) this.webCommandTable[140], new MxMenuItem("-"), (MenuItem) this.webCommandTable[0x8f], (MenuItem) this.webCommandTable[0x90], (MenuItem) this.webCommandTable[0x91], new MxMenuItem("-"), (MenuItem) this.webCommandTable[0x92], (MenuItem) this.webCommandTable[0x93], (MenuItem) this.webCommandTable[0x94], new MxMenuItem("-"), (MenuItem) this.webCommandTable[0x95], (MenuItem) this.webCommandTable[150], (MenuItem) this.webCommandTable[0x97], new MxMenuItem("-"), (MenuItem) this.webCommandTable[0x8d], (MenuItem) this.webCommandTable[0x8e], 
+                    new MxMenuItem("-"), (MenuItem) this.webCommandTable[0x98]
                  };
                 MxMenuItem item8 = new MxMenuItem("&Layout", itemArray8, false);
                 this.cm.AddMenu(item8);
-                MenuItem[] itemArray9 = new MenuItem[] { (MenuItem) this.menuItemTable2[0xdd], (MenuItem) this.menuItemTable2[0xde], (MenuItem) this.menuItemTable2[0xdf], (MenuItem) this.menuItemTable2[0xe0], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0xe1], (MenuItem) this.menuItemTable2[0xe2], (MenuItem) this.menuItemTable2[0xe3], (MenuItem) this.menuItemTable2[0xe4], (MenuItem) this.menuItemTable2[0xe5], (MenuItem) this.menuItemTable2[0xe7] };
+                MenuItem[] itemArray9 = new MenuItem[] { (MenuItem) this.webCommandTable[0xdd], (MenuItem) this.webCommandTable[0xde], (MenuItem) this.webCommandTable[0xdf], (MenuItem) this.webCommandTable[0xe0], new MxMenuItem("-"), (MenuItem) this.webCommandTable[0xe1], (MenuItem) this.webCommandTable[0xe2], (MenuItem) this.webCommandTable[0xe3], (MenuItem) this.webCommandTable[0xe4], (MenuItem) this.webCommandTable[0xe5], (MenuItem) this.webCommandTable[0xe7] };
                 MxMenuItem item9 = new MxMenuItem("Edit &Table", itemArray9);
                 this.cm.AddMenu(item9);
-                MenuItem[] itemArray10 = new MenuItem[] { (MenuItem) this.menuItemTable2[200], (MenuItem) this.menuItemTable2[0xc9], new MxMenuItem("-"), (MenuItem) this.menuItemTable2[220], item9, new MxMenuItem("-"), (MenuItem) this.menuItemTable2[0xca], (MenuItem) this.menuItemTable2[0xcb] };
+                MenuItem[] itemArray10 = new MenuItem[] { (MenuItem) this.webCommandTable[200], (MenuItem) this.webCommandTable[0xc9], new MxMenuItem("-"), (MenuItem) this.webCommandTable[220], item9, new MxMenuItem("-"), (MenuItem) this.webCommandTable[0xca], (MenuItem) this.webCommandTable[0xcb] };
                 MxMenuItem item10 = new MxMenuItem("HT&ML", itemArray10, false);
                 this.cm.AddMenu(item10);
                 MenuItem[] itemArray11 = new MenuItem[] { 
-                    (MenuItem) this.menuItemTable1[300], (MenuItem) this.menuItemTable1[0x12d], (MenuItem) this.menuItemTable1[0x12e], (MenuItem) this.menuItemTable1[0x12f], (MenuItem) this.menuItemTable1[0x130], (MenuItem) this.menuItemTable1[0x131], (MenuItem) this.menuItemTable1[0x132], (MenuItem) this.menuItemTable1[0x133], (MenuItem) this.menuItemTable1[0x134], (MenuItem) this.menuItemTable1[0x135], (MenuItem) this.menuItemTable1[320], (MenuItem) this.menuItemTable1[0x141], new MxMenuItem("-"), (MenuItem) this.menuItemTable1[0x145], (MenuItem) this.menuItemTable1[0x146], (MenuItem) this.menuItemTable1[0x147], 
-                    new MxMenuItem("-"), (MenuItem) this.menuItemTable1[0x144]
+                    (MenuItem) this.globalCommandTable[300], (MenuItem) this.globalCommandTable[0x12d], (MenuItem) this.globalCommandTable[0x12e], (MenuItem) this.globalCommandTable[0x12f], (MenuItem) this.globalCommandTable[0x130], (MenuItem) this.globalCommandTable[0x131], (MenuItem) this.globalCommandTable[0x132], (MenuItem) this.globalCommandTable[0x133], (MenuItem) this.globalCommandTable[0x134], (MenuItem) this.globalCommandTable[0x135], (MenuItem) this.globalCommandTable[320], (MenuItem) this.globalCommandTable[0x141], new MxMenuItem("-"), (MenuItem) this.globalCommandTable[0x145], (MenuItem) this.globalCommandTable[0x146], (MenuItem) this.globalCommandTable[0x147], 
+                    new MxMenuItem("-"), (MenuItem) this.globalCommandTable[0x144]
                  };
                 MxMenuItem item11 = new MxMenuItem("&Tools", itemArray11, false);
                 this.cm.AddMenu(item11);
-                MenuItem[] itemArray12 = new MenuItem[] { (MenuItem) this.menuItemTable1[400], (MenuItem) this.menuItemTable1[0x191], (MenuItem) this.menuItemTable1[0x192], (MenuItem) this.menuItemTable1[0x193] };
+                MenuItem[] itemArray12 = new MenuItem[] { (MenuItem) this.globalCommandTable[400], (MenuItem) this.globalCommandTable[0x191], (MenuItem) this.globalCommandTable[0x192], (MenuItem) this.globalCommandTable[0x193] };
                 MxMenuItem item12 = new MxMenuItem("&Window", itemArray12, false);
                 item12.MdiList = true;
                 this.cm.AddMenu(item12);
-                MenuItem[] itemArray13 = new MenuItem[] { (MenuItem) this.menuItemTable1[600], (MenuItem) this.menuItemTable1[610], (MenuItem) this.menuItemTable1[0x263], (MenuItem) this.menuItemTable1[0x264], (MenuItem) this.menuItemTable1[0x265], (MenuItem) this.menuItemTable1[0x266], (MenuItem) this.menuItemTable1[0x267], (MenuItem) this.menuItemTable1[0x268], (MenuItem) this.menuItemTable1[0x269], (MenuItem) this.menuItemTable1[0x26a], (MenuItem) this.menuItemTable1[0x26b], new MxMenuItem("-"), (MenuItem) this.menuItemTable1[0x25e], new MxMenuItem("-"), (MenuItem) this.menuItemTable1[0x25a], (MenuItem) this.menuItemTable1[0x259] };
+                MenuItem[] itemArray13 = new MenuItem[] { (MenuItem) this.globalCommandTable[600], (MenuItem) this.globalCommandTable[610], (MenuItem) this.globalCommandTable[0x263], (MenuItem) this.globalCommandTable[0x264], (MenuItem) this.globalCommandTable[0x265], (MenuItem) this.globalCommandTable[0x266], (MenuItem) this.globalCommandTable[0x267], (MenuItem) this.globalCommandTable[0x268], (MenuItem) this.globalCommandTable[0x269], (MenuItem) this.globalCommandTable[0x26a], (MenuItem) this.globalCommandTable[0x26b], new MxMenuItem("-"), (MenuItem) this.globalCommandTable[0x25e], new MxMenuItem("-"), (MenuItem) this.globalCommandTable[0x25a], (MenuItem) this.globalCommandTable[0x259] };
                 MxMenuItem item13 = new MxMenuItem("&Help", itemArray13, false);
                 this.cm.AddMenu(item13);
                 this.menuBar.MenuItems.AddRange(new MenuItem[] { item3, item4, item5, item7, item8, item10, item11, item12, item13 });
                 MenuItem[] menuItems = new MenuItem[] { 
-                    (MenuItem) this.menuItemTable3[710], new MxMenuItem("-"), (MenuItem) this.menuItemTable3[0x2c7], (MenuItem) this.menuItemTable3[0x2c8], new MxMenuItem("-"), (MenuItem) this.menuItemTable3[0x2c9], (MenuItem) this.menuItemTable3[0x2ca], new MxMenuItem("-"), (MenuItem) this.menuItemTable3[720], (MenuItem) this.menuItemTable3[0x2d1], (MenuItem) this.menuItemTable3[0x2d2], (MenuItem) this.menuItemTable3[0x2d3], (MenuItem) this.menuItemTable3[0x2d4], (MenuItem) this.menuItemTable3[0x2d5], (MenuItem) this.menuItemTable3[0x2d6], (MenuItem) this.menuItemTable3[0x2d7], 
-                    new MxMenuItem("-"), (MenuItem) this.menuItemTable3[10]
+                    (MenuItem) this.contextCommandTable[710], new MxMenuItem("-"), (MenuItem) this.contextCommandTable[0x2c7], (MenuItem) this.contextCommandTable[0x2c8], new MxMenuItem("-"), (MenuItem) this.contextCommandTable[0x2c9], (MenuItem) this.contextCommandTable[0x2ca], new MxMenuItem("-"), (MenuItem) this.contextCommandTable[720], (MenuItem) this.contextCommandTable[0x2d1], (MenuItem) this.contextCommandTable[0x2d2], (MenuItem) this.contextCommandTable[0x2d3], (MenuItem) this.contextCommandTable[0x2d4], (MenuItem) this.contextCommandTable[0x2d5], (MenuItem) this.contextCommandTable[0x2d6], (MenuItem) this.contextCommandTable[0x2d7], 
+                    new MxMenuItem("-"), (MenuItem) this.contextCommandTable[10]
                  };
                 MxContextMenu menu = new MxContextMenu(menuItems);
                 this.cm.AddMenu(menu, typeof(GlobalCommands), 1);
-                MenuItem[] itemArray15 = new MenuItem[] { (MenuItem) this.menuItemTable3[0x145], (MenuItem) this.menuItemTable3[0x146], (MenuItem) this.menuItemTable3[0x147], new MxMenuItem("-"), (MenuItem) this.menuItemTable3[0x148], (MenuItem) this.menuItemTable3[0x149], (MenuItem) this.menuItemTable3[0x14b], new MxMenuItem("-"), (MenuItem) this.menuItemTable3[330] };
+                MenuItem[] itemArray15 = new MenuItem[] { (MenuItem) this.contextCommandTable[0x145], (MenuItem) this.contextCommandTable[0x146], (MenuItem) this.contextCommandTable[0x147], new MxMenuItem("-"), (MenuItem) this.contextCommandTable[0x148], (MenuItem) this.contextCommandTable[0x149], (MenuItem) this.contextCommandTable[0x14b], new MxMenuItem("-"), (MenuItem) this.contextCommandTable[330] };
                 MxContextMenu menu2 = new MxContextMenu(itemArray15);
                 this.cm.AddMenu(menu2, typeof(GlobalCommands), 2);
-                MenuItem[] itemArray16 = new MenuItem[] { (MenuItem) this.menuItemTable4[0x66], (MenuItem) this.menuItemTable4[0x67], (MenuItem) this.menuItemTable4[0x68], new MxMenuItem("-"), (MenuItem) this.menuItemTable4[260], (MenuItem) this.menuItemTable4[240] };
+                MenuItem[] itemArray16 = new MenuItem[] { (MenuItem) this.htmlDesignerContextMenuTable[0x66], (MenuItem) this.htmlDesignerContextMenuTable[0x67], (MenuItem) this.htmlDesignerContextMenuTable[0x68], new MxMenuItem("-"), (MenuItem) this.htmlDesignerContextMenuTable[260], (MenuItem) this.htmlDesignerContextMenuTable[240] };
                 MxContextMenu menu3 = new MxContextMenu(itemArray16);
                 this.cm.AddMenu(menu3, typeof(WebCommands), 1);
                 MenuItem[] itemArray17 = new MenuItem[] { 
-                    (MenuItem) this.menuItemTable5[0x66], (MenuItem) this.menuItemTable5[0x67], (MenuItem) this.menuItemTable5[0x68], new MxMenuItem("-"), (MenuItem) this.menuItemTable5[260], new MxMenuItem("-"), (MenuItem) this.menuItemTable5[0xdd], (MenuItem) this.menuItemTable5[0xde], (MenuItem) this.menuItemTable5[0xdf], (MenuItem) this.menuItemTable5[0xe0], new MxMenuItem("-"), (MenuItem) this.menuItemTable5[0xe1], (MenuItem) this.menuItemTable5[0xe2], (MenuItem) this.menuItemTable5[0xe3], (MenuItem) this.menuItemTable5[0xe4], (MenuItem) this.menuItemTable5[0xe5], 
-                    (MenuItem) this.menuItemTable5[0xe7]
+                    (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0x66], (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0x67], (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0x68], new MxMenuItem("-"), (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[260], new MxMenuItem("-"), (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xdd], (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xde], (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xdf], (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xe0], new MxMenuItem("-"), (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xe1], (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xe2], (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xe3], (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xe4], (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xe5], 
+                    (MenuItem) this.htmlDesignerTableDesignerContextMenuTable[0xe7]
                  };
                 MxContextMenu menu4 = new MxContextMenu(itemArray17);
                 this.cm.AddMenu(menu4, typeof(WebCommands), 2);
-                MenuItem[] itemArray18 = new MenuItem[] { (MenuItem) this.menuItemTable3[0x66], (MenuItem) this.menuItemTable3[0x67], (MenuItem) this.menuItemTable3[0x68], new MxMenuItem("-"), (MenuItem) this.menuItemTable3[120] };
+                MenuItem[] itemArray18 = new MenuItem[] { (MenuItem) this.contextCommandTable[0x66], (MenuItem) this.contextCommandTable[0x67], (MenuItem) this.contextCommandTable[0x68], new MxMenuItem("-"), (MenuItem) this.contextCommandTable[120] };
                 MxContextMenu menu5 = new MxContextMenu(itemArray18);
                 this.cm.AddMenu(menu5, typeof(GlobalCommands), 3);
             }
