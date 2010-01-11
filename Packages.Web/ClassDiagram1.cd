@@ -1,0 +1,1579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Microsoft.Matrix.Packages.Web.Interop" Collapsed="true">
+    <Position X="80.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hbYE/7/t1hIV4Cda1ypP5xFyDr1chRrwWs5SwyGKhvg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web\Interop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.WebCommands" Collapsed="true">
+    <Position X="76.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kACQCYC0qEACCACAd9gAIAEBABElBQAEJIKtRCIEBIA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web\WebCommands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.WebPackage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="80.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAgAAAAAAAEAIAAAAIIAAEIQSABAAQBAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web\WebPackage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.CustomControlsToolboxSection" Collapsed="true">
+    <Position X="19.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\CustomControlsToolboxSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.HtmlElementToolboxDataItem" Collapsed="true">
+    <Position X="87.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAFAAAIKAAAAAAAAABAgQAACJAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\HtmlElementToolboxDataItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.HtmlElementToolboxSection" Collapsed="true">
+    <Position X="71.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\HtmlElementToolboxSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.MxUserControlDesigner" Collapsed="true">
+    <Position X="83.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACAABAAAACQAAAAACAAACAAAEAAAACEABAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\MxUserControlDesigner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.UserControlDesignTimeHtmlGenerator" Collapsed="true">
+    <Position X="75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAEIAAASAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\UserControlDesignTimeHtmlGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.WebFormsDesignerHost" Collapsed="true">
+    <Position X="83.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\WebFormsDesignerHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.WebFormsReferenceManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="85.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAAAAAAAAAAAAAAAgABAAAAhAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\WebFormsReferenceManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.WebFormsRootDesigner" Collapsed="true">
+    <Position X="87.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\WebFormsRootDesigner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.WebFormsToolboxDataItem" Collapsed="true">
+    <Position X="75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\WebFormsToolboxDataItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Designer.WebFormsToolboxSection" Collapsed="true">
+    <Position X="19.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAQAAAAAgAAAAAQCAAAAAQAAAQAAAAAAAg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Designer\WebFormsToolboxSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AscxDocument" Collapsed="true">
+    <Position X="8.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAEAAAAAAABAAAAAAAAAAAAgABAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AscxDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AscxDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIA4AAAIhAAEAAQAAIAAAAgAAAAQo=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AscxDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AshxDocument" Collapsed="true">
+    <Position X="14.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AshxDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AshxDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIAwAAAIhAAEAAQAAAAAAAgAAAAQg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AshxDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AsmxDocument" Collapsed="true">
+    <Position X="16.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AsmxDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AsmxDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIAwAAAIhAAEAAQAAAAAAAgAAAAQg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AsmxDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AspNetDocument" Collapsed="true">
+    <Position X="15.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAATCAAAgAAAgAAAAAABAgAQAACAAAAAAQBAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AspNetDocument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AspNetDocumentLanguage" Collapsed="true">
+    <Position X="78.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAACAAABAAAAAAAAEABAAAAEAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AspNetDocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AspxDocument" Collapsed="true">
+    <Position X="6.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAgAAApQAAABAAAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AspxDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.AspxDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="83.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIA4AAAIhAAEAAQAAIAAAAgAAAAQo=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\AspxDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.ControlDirective" Collapsed="true">
+    <Position X="7.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\ControlDirective.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.Directive" Collapsed="true">
+    <Position X="6.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAEAAAAQAQAAAAABAAAACBAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\Directive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.DirectiveEventArgs" Collapsed="true">
+    <Position X="78.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\DirectiveEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.DocumentDirective" Collapsed="true">
+    <Position X="8.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACICAAIAAAAAAAgAAAAAAgAIAIAIAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\DocumentDirective.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.HtmlDocument" Collapsed="true">
+    <Position X="7.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAACAAAAgAAAoAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\HtmlDocument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.HtmlDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="85.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIAwAAAIhAAEAAQAAAAAAAgAAAAQg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\HtmlDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.HtmlDocumentLanguage" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAABAAAAAAQAAAAAAAAECAAQAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\HtmlDocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.HtmlDocumentStorage" Collapsed="true">
+    <Position X="17.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\HtmlDocumentStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.ImageDocument" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="82" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABIAAAAAAAAgAABAAAAAAACAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\ImageDocument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.ImageDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="83.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIAwAAAIhAAEAAQAAAAAAAgAAAAAg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\ImageDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.ImageDocumentStorage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="85.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAgAQAAAAAAgAQBAAAAABAAIAAEA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\ImageDocumentStorage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.ImagePrintDocument" Collapsed="true">
+    <Position X="71.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\ImagePrintDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.PageDirective" Collapsed="true">
+    <Position X="5.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAQAoQAAABAAAAAAAQAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\PageDirective.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.RegisterDirective" Collapsed="true">
+    <Position X="1" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAgQCQAAAAAAAAAAAAAAgCAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\RegisterDirective.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.RegisterDirectiveCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAACAIBA0CIAAEAQAAEAAAAAAQAAAAADAIIE=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\RegisterDirectiveCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.UnknownDirective" Collapsed="true">
+    <Position X="3.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\UnknownDirective.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.WebFormsDocument" Collapsed="true">
+    <Position X="7.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAgATKCAAIAAEIAAAgIABAgAxEIKIAIiigQFIAI=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\WebFormsDocument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.WebFormsDocumentLanguage" Collapsed="true">
+    <Position X="18.5" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAACAAABAAAAAAAAEABAAAAEAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\WebFormsDocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.WebFormsDocumentStorage" Collapsed="true">
+    <Position X="17.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\WebFormsDocumentStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.WebHandlerDirective" Collapsed="true">
+    <Position X="10" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\WebHandlerDirective.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.WebServiceDirective" Collapsed="true">
+    <Position X="12.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\WebServiceDirective.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.Design.HtmlDocumentDesigner" Collapsed="true">
+    <Position X="9.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents.Design\HtmlDocumentDesigner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Documents.Design.WebFormsDocumentDesigner" Collapsed="true">
+    <Position X="9.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAEEAICAAAQAEAAAAoIAAAEAAAAiABAIAAEABAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents.Design\WebFormsDocumentDesigner.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.BatchedUndoUnit" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="87.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACIQQEIAAAAAAAiAAAAAAAAAAEAACAABA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\BatchedUndoUnit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.DataObjectConverter" Collapsed="true">
+    <Position X="75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\DataObjectConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.EditorDocument" Collapsed="true">
+    <Position X="83.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEEAgIAAAAgBAAgAAACABIAAgAAAAAQgAABAAAAAQAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\EditorDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.EditorGlyph" Collapsed="true">
+    <Position X="85.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQABBBACgAAQAAAAAAEAAABABAAAIAQAgAAAAAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\EditorGlyph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.EditorGlyphTable" Collapsed="true">
+    <Position X="87.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIAAAAAAgAAgBAAAAABAAAAAAAAGAAAAAAAAAgAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\EditorGlyphTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.EditorGrid" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQBAAAgACAAAAAAAAIAAQAACQIAAAAAEAhBAIEAQA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\EditorGrid.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.EditorSelection" Collapsed="true">
+    <Position X="17.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABgFwBREBMgQGAQgX1iQAEBDIRBQEAFaAABAy6ADAgA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\EditorSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.EditorTable" Collapsed="true">
+    <Position X="73.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEQAABglAAqwAYFAAAACAAAAAhAQAAABBEggAAUA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\EditorTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.EditorTextFormatting" Collapsed="true">
+    <Position X="75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ioRAAQAgAkgEUAAAAAIgggAAAAAIBAiABAAQAJArGAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\EditorTextFormatting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.HtmlControl" Collapsed="true">
+    <Position X="11.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YEQQRDCIFCUUBIAgAgAAQAItBzSIQlCNCQEuIhEJCNE=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\HtmlControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.HtmlEditor" Collapsed="true">
+    <Position X="11.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICEAhgqIIAAGAIUAAICACDIAACQQEiAOACZBAgIMQHQ=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\HtmlEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.MshtmlSite" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="82" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIBUCDAkQVjKQEjAAKNAU/KADFkoAaTBACIiEgGIcAQ=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\MshtmlSite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.ProtocolHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="87.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAEAAgAAAAAAAAAAACBAAgAgAAACCAgACA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\ProtocolHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.ProtocolRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIEAAADAABAAMAEAAiAAAAAAAAAAAABAAIAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\ProtocolRequest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Css.BackgroundCssAttributes" Collapsed="true">
+    <Position X="15.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAACAAAAAAIAQCAIBAAAAAAAAACAIggAAAAwI=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\BackgroundCssAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Css.BackgroundPositionConverter" Collapsed="true">
+    <Position X="85.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAgAAAAAABAAAAAAAAAAAAAAAAACAAAAIAAAAAAAE=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\BackgroundPositionConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Css.CssAttribute" Collapsed="true">
+    <Position X="73.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgIAAAAEAAAAAAAAAAAQQCAgAAAAAAAAhAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\CssAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Css.CssAttributes" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAZAAAAwAACAQAAAIAYAgAAAAAAAAACIAAQAwg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\CssAttributes.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Css.FontCssAttributes" Collapsed="true">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAIUACCCAAACQBAAAgCECAwA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\FontCssAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Css.FontEditor" Collapsed="true">
+    <Position X="82" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\FontEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Css.InlineStyle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAYAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\InlineStyle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.AnchorElement" Collapsed="true">
+    <Position X="19.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAIAAAAAAAAAAgAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\AnchorElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.BodyElement" Collapsed="true">
+    <Position X="60" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAIAAAJAAAAAAAAACAIAAAAAAEIIEY=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\BodyElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.ButtonElement" Collapsed="true">
+    <Position X="30.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ButtonElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.DivElement" Collapsed="true">
+    <Position X="64.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAABAAAAAAQAAAAAAAQEAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\DivElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.Element" Collapsed="true">
+    <Position X="36.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgICCACAKIAAGAiIAAAAgAICAEAIEQAEgQAQACAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.ElementStyleEditor" Collapsed="true">
+    <Position X="76.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ElementStyleEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.ElementWrapperTable" Collapsed="true">
+    <Position X="78.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ElementWrapperTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.FieldSetElement" Collapsed="true">
+    <Position X="12.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAIAAAAAAAAAAAAQAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\FieldSetElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.FontElement" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAQAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\FontElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.FontFaceTypeConverter" Collapsed="true">
+    <Position X="83.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAIAAABAQAAAAAAAAAAAAAAACAAAAAAAAAAAAE=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\FontFaceTypeConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.FormElement" Collapsed="true">
+    <Position X="46.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIABAIAIAAAACACIAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\FormElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.HorizontalRuleElement" Collapsed="true">
+    <Position X="69" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAIAAAAAAAAQAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\HorizontalRuleElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.IFrameElement" Collapsed="true">
+    <Position X="21.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgAAAAAAAAAAQJQAIAAAFAAAQAIgAQAAAFAAAAgAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\IFrameElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.ImageElement" Collapsed="true">
+    <Position X="26.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgAAAAAAAAAAQIQAAAAABAAAQgAiAAAAAAAACAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ImageElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputButtonElement" Collapsed="true">
+    <Position X="40.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputButtonElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputCheckboxElement" Collapsed="true">
+    <Position X="44.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAGAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputCheckboxElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputElement" Collapsed="true">
+    <Position X="38.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAIAEAAAAAAAAAAAFACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputFileElement" Collapsed="true">
+    <Position X="33" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputFileElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputHiddenElement" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAEAAAAAAAAAAAEACAAAAQAAAAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputHiddenElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputImageElement" Collapsed="true">
+    <Position X="35.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAIAAAAAAAAAAABAgAAAAAAAACAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputImageElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputPasswordElement" Collapsed="true">
+    <Position X="37.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputPasswordElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputRadioElement" Collapsed="true">
+    <Position X="44.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputRadioElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputResetElement" Collapsed="true">
+    <Position X="39.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputResetElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputSubmitElement" Collapsed="true">
+    <Position X="42" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputSubmitElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.InputTextElement" Collapsed="true">
+    <Position X="37.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAABABAAAAAAAAAACAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\InputTextElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.LabelElement" Collapsed="true">
+    <Position X="48.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\LabelElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.LegendElement" Collapsed="true">
+    <Position X="51" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\LegendElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.ListBoxElement" Collapsed="true">
+    <Position X="15" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ListBoxElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.ListItemElement" Collapsed="true">
+    <Position X="55.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ListItemElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.OrderedListElement" Collapsed="true">
+    <Position X="62.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\OrderedListElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.PanelElement" Collapsed="true">
+    <Position X="64.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\PanelElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.ParagraphElement" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAQAAAAAgAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ParagraphElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.PreformattedElement" Collapsed="true">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\PreformattedElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.SelectableElement" Collapsed="true">
+    <Position X="28.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAEAAQAQAAAgAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\SelectableElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.SelectElement" Collapsed="true">
+    <Position X="15" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\SelectElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.SpanElement" Collapsed="true">
+    <Position X="17.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\SpanElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.StyledElement" Collapsed="true">
+    <Position X="37.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQAAAAAAAAAAIAAAAAAAEAgAAABAAAAAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\StyledElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.TableCellElement" Collapsed="true">
+    <Position X="53.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACBAAAQAQAKBAABAAAQAAAAAAAAAAAEAIAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\TableCellElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.TableElement" Collapsed="true">
+    <Position X="24" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAABAAAQAQAIAAABAAAQAAAAAAAEAAAEAIAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\TableElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.TableRowElement" Collapsed="true">
+    <Position X="57.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\TableRowElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.TextAreaElement" Collapsed="true">
+    <Position X="28.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAIAAAABAAAAAAACEAAAAAAAEAAAACAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\TextAreaElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.ToolboxHtmlAttribute" Collapsed="true">
+    <Position X="71.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAgAAAIAQAAAAABIAQAAAAAAgAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ToolboxHtmlAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.Elements.UnorderedListElement" Collapsed="true">
+    <Position X="66.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\UnorderedListElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.WebForms.Behavior" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQwCGOhAqABAgARgiISYASQAACAFhFAUEBIAKRQAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.WebForms\Behavior.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.WebForms.EventPropertyDescriptor" Collapsed="true">
+    <Position X="80.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAZAAQAgAQQAAAAAAAAAAAAAQAAAACAwAIACA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.WebForms\EventPropertyDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.WebForms.NamespaceManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="85.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAEAgAAAgAAAAAAACAAIAQABAAAFCAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.WebForms\NamespaceManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.WebForms.WebFormsEditor" Collapsed="true">
+    <Position X="11.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAABAAAgghAAAIAAECAQAAAQAFBAgQAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.WebForms\WebFormsEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Html.WebForms.WebFormsEditorSelection" Collapsed="true">
+    <Position X="17.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.WebForms\WebFormsEditorSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.DirectoryProjectItem" Collapsed="true">
+    <Position X="82" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\DirectoryProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FileProjectItem" Collapsed="true">
+    <Position X="20.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FileProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FtpConnection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAU8KAAEAiAAqghyUAGAYAAAAIYAEBMKSTcAAICDAQA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpConnection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FtpConnectionInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIDAAAAAAAAAAIAAgAIAAAAACgABACIQIAAIAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpConnectionInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FtpConnectionProjectItem" Collapsed="true">
+    <Position X="76.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpConnectionProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FtpEntry" Collapsed="true">
+    <Position X="78.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAIAAAARAABgAAAAAAAAAABIAAQBgAABIAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FtpException" Collapsed="true">
+    <Position X="80.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FtpProject" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="82" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgaBAgAHAAIQGpAECAAEAAAIAQAIFgJAAAAAIABkA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpProject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FtpProjectFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="83.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgICAAIAAAAAAAAAAgBAAMAAAAAAAAAAAgABAAABSRA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpProjectFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.MiscFileProjectItem" Collapsed="true">
+    <Position X="20.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAIAACAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\MiscFileProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Services.TemplateEditingFrame" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="83.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIIAACCAAIEAAAQQAAAQwAAhIAEAACAAAAAGAIAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Services\TemplateEditingFrame.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Services.TemplateEditingService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="85.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACIAAAAAAAAAAAAAAAAAAAAAAAABAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Services\TemplateEditingService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Services.WebDocumentRunService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="78.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAIAAgAAABAAAAAAAAAAAAAAAAAAAAAAABAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Services\WebDocumentRunService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.AscxDocumentWindow" Collapsed="true">
+    <Position X="0.5" Y="16.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\AscxDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.AshxDocumentWindow" Collapsed="true">
+    <Position X="12.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\AshxDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.AsmxDocumentWindow" Collapsed="true">
+    <Position X="14.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\AsmxDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.AspNetDocumentWindow" Collapsed="true">
+    <Position X="13.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\AspNetDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.AspNetSourceView" Collapsed="true">
+    <Position X="80.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\AspNetSourceView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.AspNetTextControlHost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="82" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACQAACAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\AspNetTextControlHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.AspxDocumentWindow" Collapsed="true">
+    <Position X="3.25" Y="16.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\AspxDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.DataTableDataObjectMapper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAACAACAAAAAAABAgAAAAAAAAAAAAAAIIAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\DataTableDataObjectMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.FontPicker" Collapsed="true">
+    <Position X="85.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYCoABABAAkABAETgFAABAAGgrAACCYAAAQBUACAABA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\FontPicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.FtpConnectionDialog" Collapsed="true">
+    <Position X="73.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACgAAAAAAAAEKSBAAAIgDAIgEAAVAKACAAAJAFhA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\FtpConnectionDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.HtmlDesignView" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JQABAWhQMnk0giOCwEBJBQBQSCAQPoKggYhDSEFRABA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\HtmlDesignView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.HtmlDocumentWindow" Collapsed="true">
+    <Position X="1.75" Y="13.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgYAAAAAABAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\HtmlDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.HtmlPreviewView" Collapsed="true">
+    <Position X="17.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BQAAAUBAMgk0AiACQEAABABACAAAAoKgAQADQEEBAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\HtmlPreviewView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.HtmlSourceView" Collapsed="true">
+    <Position X="3.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAQAAAAAAAAAAAAAAAAQAAAAAKAAAACAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\HtmlSourceView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.HtmlTextControlHost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACQAAAAAAAAAAQAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\HtmlTextControlHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.HtmlTextViewCommandHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="78.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAIAAAAiAAAABAACAAAACAACAAAAAgAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\HtmlTextViewCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.ImageDocumentWindow" Collapsed="true">
+    <Position X="87.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAABAIAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\ImageDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.ImageView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQAAAGEwACAAAEBAAABAAAAAAAIiAAAAAEEBEAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\ImageView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.InsertHyperlinkDialog" Collapsed="true">
+    <Position X="76.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAgAgAAAAAAABAAACiIAAAAAACAAAAAAAIBA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\InsertHyperlinkDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.InsertTableDialog" Collapsed="true">
+    <Position X="78.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAQAAAAAAAAQACAAAAkAAACQIEEAAAAAAAACAAAIDA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\InsertTableDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.QuickTagEditDialog" Collapsed="true">
+    <Position X="73.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAQEAAACAIAAIAAAAEAAAAAAABA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\QuickTagEditDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.StartWebAppDialog" Collapsed="true">
+    <Position X="78.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAEAAgQBCgBAGKpUAQIAAACIAQAAABCAkAAAAAIBA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\StartWebAppDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.StyleBuilderDialog" Collapsed="true">
+    <Position X="80.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAyAAAAAgFEChAEAgCACAIAAAAgIBBBACCIAABA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\StyleBuilderDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.TemplateDesignView" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAAAAAAgAAAAAAAAAAAAAAAAAAQAAAAAAAQAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\TemplateDesignView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.TemplateEditingDialog" Collapsed="true">
+    <Position X="82" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARERAAAARiCAAAIEQEBEgQECAoQAAAAEAACDAACAMBE=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\TemplateEditingDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.UserControlDataObjectMapper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\UserControlDataObjectMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebFormsAllView" Collapsed="true">
+    <Position X="80.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgEBEAQABAQEAEAAAAAAAAAQAAAAACAAIAgCAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebFormsAllView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebFormsCodeBehindView" Collapsed="true">
+    <Position X="82" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebFormsCodeBehindView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebFormsDesignView" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABREAAEgEECEKAgIABEAAASAAQDICAAAABCAAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebFormsDesignView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebFormsDocumentWindow" Collapsed="true">
+    <Position X="1.75" Y="15" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAgYAAAAAABAAAAACA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebFormsDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebFormsPreviewView" Collapsed="true">
+    <Position X="17.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAIAAAAAAAAAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebFormsPreviewView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebFormsSourceView" Collapsed="true">
+    <Position X="3.5" Y="19.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebFormsSourceView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebFormsTextControlHost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACQAACAAAAAAAQAAAAABAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebFormsTextControlHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebFormsTextViewCommandHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAiAAAABAAAAAAACAACAAAAAgAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebFormsTextViewCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebFormsToolboxDataObjectMapper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebFormsToolboxDataObjectMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.UserInterface.WebOptionsPage" Collapsed="true">
+    <Position X="78.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABAEAAQACEEAAAAAgEQAAACAAAAgACAAAABFABAVAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\WebOptionsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.AspNetColorizer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAADAACAABBAAAAAACAAQAEABCAAAAAABAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\AspNetColorizer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.DirectiveParser" Collapsed="true">
+    <Position X="80.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEACAgAAAAAAAgAAIAAIACBAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\DirectiveParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.HtmlColorizer" Collapsed="true">
+    <Position X="0.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAABAACAACCAAAAAAICAAAAAABAAEACCA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\HtmlColorizer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.HtmlFormatter" Collapsed="true">
+    <Position X="73.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAgAEAAgAAAAAAAIAAAAAAAAgAAIAAAgAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\HtmlFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.HtmlFormatterOptions" Collapsed="true">
+    <Position X="75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACABAIAABAAAIAgAAAIAABAAACAAAAAQAAAgBAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\HtmlFormatterOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.HtmlTokenizer" Collapsed="true">
+    <Position X="80.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAEAAAAAACAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\HtmlTokenizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.ScriptFormatter" Collapsed="true">
+    <Position X="76.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAFAAABACAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\ScriptFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Token" Collapsed="true">
+    <Position X="87.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAUSAIEEAEAAAUQQCBIAAABACKEJAIEIBQAACAACCAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\Token.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.WebFormsColorizer" Collapsed="true">
+    <Position X="0.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAABAgAAAAAAAAAAAAAAAAAAEAAEBBAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\WebFormsColorizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.FormattedTextWriter" Collapsed="true">
+    <Position X="87.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAABAAAAFgAAIAAABEgAAgAgBiAAAAAAiEAGIAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\FormattedTextWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.HtmlWriter" Collapsed="true">
+    <Position X="14.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAFAAAQAAAAAAAAAAAACAAAAAAAACEIAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\HtmlWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.LITagInfo" Collapsed="true">
+    <Position X="8.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\LITagInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.OLTagInfo" Collapsed="true">
+    <Position X="1.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\OLTagInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.PTagInfo" Collapsed="true">
+    <Position X="3" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\PTagInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.TagInfo" Collapsed="true">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABACAAAAAAAwAAAAAgBCAAgCIAAQAAUAIAADACAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\TagInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.TDTagInfo" Collapsed="true">
+    <Position X="4.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\TDTagInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.TRTagInfo" Collapsed="true">
+    <Position X="6.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\TRTagInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.XmlWriter" Collapsed="true">
+    <Position X="14.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAgABAAAEAAAAAAAAAAGAAAAAAEAAAAEACAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\XmlWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.DocumentProjectItem" Collapsed="true">
+    <Position X="20.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.SourceView" Collapsed="true">
+    <Position X="24.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="Microsoft.Matrix.Packages.Web.Html.Css.BackgroundPosition" Collapsed="true">
+    <Position X="71.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBgAAAAAAAAAAYEoAIAAAAAAAAAAIAAAQAAAACIAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\BackgroundPosition.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Microsoft.Matrix.Packages.Web.Html.Css.IStyle" Collapsed="true">
+    <Position X="71.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\IStyle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Packages.Web.Services.IWebDocumentRunService" Collapsed="true">
+    <Position X="75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Services\IWebDocumentRunService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Packages.Web.UserInterface.ITemplateDesignView" Collapsed="true">
+    <Position X="73.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.UserInterface\ITemplateDesignView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Alignment" Collapsed="true">
+    <Position X="71.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgCAAAAIAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\Alignment.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.BatchedUndoType" Collapsed="true">
+    <Position X="80.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\BatchedUndoType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.CommandInfo" Collapsed="true">
+    <Position X="82" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\CommandInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.DataObjectConverterInfo" Collapsed="true">
+    <Position X="83.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAIAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\DataObjectConverterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.EditorGlyphType" Collapsed="true">
+    <Position X="85.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAACAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\EditorGlyphType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.EditorSelectionType" Collapsed="true">
+    <Position X="87.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\EditorSelectionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.FontSize" Collapsed="true">
+    <Position X="75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAABgAAACAAAAAAAAAAAEAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\FontSize.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.TextFormat" Collapsed="true">
+    <Position X="82" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAEAAAABBAAAAAAIgAAAAAAAIAAAAAgAAAAACgQA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html\TextFormat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Css.BackgroundPositionType" Collapsed="true">
+    <Position X="73.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAAAAiIAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\BackgroundPositionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Css.BackgroundRepeat" Collapsed="true">
+    <Position X="76.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAIDAAgAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\BackgroundRepeat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Css.BackgroundScroll" Collapsed="true">
+    <Position X="78.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAhAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\BackgroundScroll.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Css.FontStyle" Collapsed="true">
+    <Position X="76.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAE=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\FontStyle.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Css.FontVariant" Collapsed="true">
+    <Position X="78.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\FontVariant.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Css.FontWeight" Collapsed="true">
+    <Position X="80.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAACAAAEAAAAAAAAAIAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\FontWeight.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Css.TextDecoration" Collapsed="true">
+    <Position X="80.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAAAmAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Css\TextDecoration.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Elements.BackgroundPropertyType" Collapsed="true">
+    <Position X="75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\BackgroundPropertyType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Elements.EncodingType" Collapsed="true">
+    <Position X="73.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\EncodingType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Elements.FormMethod" Collapsed="true">
+    <Position X="83.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\FormMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Elements.ListType" Collapsed="true">
+    <Position X="73.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQEAAAIAACAQgAAAAAAAAgAEAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ListType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Elements.OrderedListType" Collapsed="true">
+    <Position X="75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQEAAAIAACAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\OrderedListType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Elements.RulesType" Collapsed="true">
+    <Position X="76.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAEAAAAAAAIAAAAAAAAAAAIAAAAkAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\RulesType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Elements.ScrollType" Collapsed="true">
+    <Position X="78.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\ScrollType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.Elements.UnorderedListType" Collapsed="true">
+    <Position X="83.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAAAgAEAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.Elements\UnorderedListType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Html.WebForms.WebFormsEditorMode" Collapsed="true">
+    <Position X="85.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Html.WebForms\WebFormsEditorMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FtpEntryType" Collapsed="true">
+    <Position X="85.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpEntryType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Projects.Ftp.FtpResponseCode" Collapsed="true">
+    <Position X="87.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAAAQAAAgAAAACACACAqAAAAAIAQEAgAAIABA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Projects.Ftp\FtpResponseCode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Utility.HtmlFormatterCase" Collapsed="true">
+    <Position X="71.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAADAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility\HtmlFormatterCase.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.ElementType" Collapsed="true">
+    <Position X="71.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAAEAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\ElementType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.FormattingFlags" Collapsed="true">
+    <Position X="82" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAEAEAAAAgAAAAAAAGAAAAAAAAAAAAIAAEAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\FormattingFlags.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Packages.Web.Utility.Formatting.WhiteSpaceType" Collapsed="true">
+    <Position X="87.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAQAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Utility.Formatting\WhiteSpaceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Microsoft.Matrix.Packages.Web.Documents.DirectiveEventHandler" Collapsed="true">
+    <Position X="71.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Web.Documents\DirectiveEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>

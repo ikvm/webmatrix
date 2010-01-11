@@ -1,0 +1,2719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microsoft.JSharp.JSharpCodeGenerator" Collapsed="true">
+    <Position X="73" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>A7TYVAAKfI2TqEF4g0PcTeKtjIHTAX9hwUUyIsBQDCA=</HashCode>
+      <FileName>Microsoft.JSharp\JSharpCodeGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.JSharp.JSharpCodeProvider" Collapsed="true">
+    <Position X="74.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAABAAAAAAAAARAAAAAAQBAAAAAAAAAEEAAAAAAAA=</HashCode>
+      <FileName>Microsoft.JSharp\JSharpCodeProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Interop" Collapsed="true">
+    <Position X="71.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>qul1XvvIczNl7/m5v+P9R+Fuf1jUz8uV/sUr////v+4=</HashCode>
+      <FileName>Microsoft.Matrix\Interop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Application.GlobalExceptionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAQAAAAAAAAAAAABAAEAAAAABAAADAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Application\GlobalExceptionHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Application.MxApplication" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HAQBBEATAABCJmKAyKyAAwYAgAgAsIEAIQgIgAwUAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Application\MxApplication.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Application.WebLink" Collapsed="true">
+    <Position X="78.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAEAAAAAAAAAAAAQAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Application\WebLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Application.WebLinksSectionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Application\WebLinksSectionHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Designer.DesignerHost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="69.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>k5zFgGASjOWaEAvqXoRFsKAk1gyCQ1cAQPQRyC0TcWQ=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Designer\DesignerHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Designer.DesignSite" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAQAAAAAAAAAAAQAAAQAAAAAABAAAABAQUABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Designer\DesignSite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.ActiveDocumentEventArgs" Collapsed="true">
+    <Position X="59" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\ActiveDocumentEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.CustomizedDocumentType" Collapsed="true">
+    <Position X="3" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAhIAAAAAAAACAAAEIEQYQggAAIAAAAAAAAAAEwCSA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\CustomizedDocumentType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Document" Collapsed="true">
+    <Position X="5.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgJQACCAABAAYAIAAAAAAAAACQAEAADAFAwAIggA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\Document.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.DocumentEventArgs" Collapsed="true">
+    <Position X="74.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.DocumentInstanceArguments" Collapsed="true">
+    <Position X="76.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACCAAAQAAAAAAAAAAAAAAEAAABAAAABgAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentInstanceArguments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.DocumentLanguage" Collapsed="true">
+    <Position X="3" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAMAAAACAAAQAEAAAAAAQAAAAAAAAAAQABAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.DocumentManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="78.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAgUBQCIgAAABiCABAwAIkCEHBAAQABUJUAiDABA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.DocumentType" Collapsed="true">
+    <Position X="3" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAJAAABAAAAEAAAIEwAAQQggEAAIQAAAIgCARIUAiA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.DocumentTypeCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAgCAACAEBAACAAAEAQAEAgAAAAAAAAQAAEAKAE=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentTypeCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.DocumentTypeManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="59" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAoAIAAECAACCAAAAACAAAgAAAAAAAAQAABAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentTypeManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.DocumentTypesSectionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="60.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentTypesSectionHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.LanguageManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="60.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAQAgAAAAAAAAAAAAAEAAgAAABCBABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\LanguageManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.LanguageManagerSectionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="62.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\LanguageManagerSectionHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.TemplateDocumentType" Collapsed="true">
+    <Position X="5.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABIAARAAAAAAAAAEIAAQQwgAAAAAAAAAAAABAQACA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\TemplateDocumentType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.WizardDocumentType" Collapsed="true">
+    <Position X="0.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABIAAQAAAAEAAAAEIAAQQwgEAAAAAAAAAAABAQACA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\WizardDocumentType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Code.CodeDocument" Collapsed="true">
+    <Position X="5.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Code\CodeDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Code.CodeDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIAwAAAAhAAEAAYAAAAAAAgAAAAQg=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Code\CodeDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Code.CodeDocumentLanguage" Collapsed="true">
+    <Position X="3" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQIAACAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Code\CodeDocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Code.CodeDocumentStorage" Collapsed="true">
+    <Position X="17.5" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Code\CodeDocumentStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Design.DocumentDesigner" Collapsed="true">
+    <Position X="14.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAAAAAAAAAAAAAAAAAAAAAACAAAABAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Design\DocumentDesigner.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Text.MxTextManager" Collapsed="true">
+    <Position X="0.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAICAAAAAAAAAAAAAAAAAIAAAAAAAEQA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Text\MxTextManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Text.TextDocument" Collapsed="true">
+    <Position X="5.5" Y="27" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAABIAAAAAAAAAAAAAAAAAACCAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Text\TextDocument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Text.TextDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="67.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIAwAAAAhAAEAAYAAAAAAAgAAAAQg=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Text\TextDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Text.TextDocumentLanguage" Collapsed="true">
+    <Position X="3" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQIACAQCaAABWgAAAAQAAIBIIABECAEQBIAACAFAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Text\TextDocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Text.TextDocumentStorage" Collapsed="true">
+    <Position X="17.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgQACAAAAAAAAAQAAAAAAIAAAAAAKAAABCAIAAEA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Text\TextDocumentStorage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Text.TextOptions" Collapsed="true">
+    <Position X="73" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SABAgIIgAIAEgAgBIAAQAAIAIIQAAAAAABIAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Text\TextOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Text.TextPrintDocument" Collapsed="true">
+    <Position X="74.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAgAEAAAQAIgQADIBAACAAAAAhIAQAAAwAAABI=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Text\TextPrintDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Documents.Text.Design.TextDocumentDesigner" Collapsed="true">
+    <Position X="14.5" Y="27" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Text.Design\TextDocumentDesigner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Packages.CorePackage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCgCgABQAAAgBIAQAAQARAAAAAAEAIAAAAABAAAJAJA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Packages\CorePackage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Packages.PackageListSectionHandler" Collapsed="true">
+    <Position X="78.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Packages\PackageListSectionHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Packages.PackageManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAAAAAAAAAAAAAAAAAAAAIAAAAABAAABCAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Packages\PackageManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.AddIn" Collapsed="true">
+    <Position X="21.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\AddIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.AddInEntry" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="60.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAAAAAAgACAFAAAAAARAgACAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\AddInEntry.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.AddInForm" Collapsed="true">
+    <Position X="39" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAIAAAIAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\AddInForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.AddInHost" Collapsed="true">
+    <Position X="17.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAACAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\AddInHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.AddInListSectionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="62.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\AddInListSectionHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.AddInManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="64.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABEAAQAAACAABBBAABAAAAAAAEAAAABAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\AddInManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.CodeWizard" Collapsed="true">
+    <Position X="24" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAACAACAAAAAABACAAAAAAAAAAAAABAAAAAAAAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\CodeWizard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.CodeWizardForm" Collapsed="true">
+    <Position X="34.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAACAQAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAACgA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\CodeWizardForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.CodeWizardHost" Collapsed="true">
+    <Position X="20" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\CodeWizardHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.DocumentAddIn" Collapsed="true">
+    <Position X="21.75" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\DocumentAddIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.DocumentWizard" Collapsed="true">
+    <Position X="26.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAIIAAAACAAAAAAAAAAAAAAAAABAAAAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\DocumentWizard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.DocumentWizardForm" Collapsed="true">
+    <Position X="36.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAIAAIAAAAEAAAAAAIAAAAAABAEAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\DocumentWizardForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.DocumentWizardHost" Collapsed="true">
+    <Position X="22.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\DocumentWizardHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.Plugin" Collapsed="true">
+    <Position X="24" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAAAAAAAAAAAAQABAAABAEA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\Plugin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.PluginAttribute" Collapsed="true">
+    <Position X="67.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAABAAAgAAAEgAAAAAQAAAAACAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\PluginAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Plugins.PluginHost" Collapsed="true">
+    <Position X="20" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAASAAAAAIAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\PluginHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.DocumentProjectItem" Collapsed="true">
+    <Position X="13.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\DocumentProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FolderProjectItem" Collapsed="true">
+    <Position X="18.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\FolderProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.Project" Collapsed="true">
+    <Position X="9.75" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAChSBEEAHAAYQGhEFQAAEgAQIJRgKVgNQADAApBAEA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\Project.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.ProjectEventArgs" Collapsed="true">
+    <Position X="74.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.ProjectFactoryListSectionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectFactoryListSectionHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.ProjectItem" Collapsed="true">
+    <Position X="17" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEgUhAAAgBsABKAgAABTAAQACEAAcCATEAAAwZAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.ProjectItemCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="78.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAgAAAAACAABAACAAAEAQAAAAAAAAAAAAAAAAQIAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectItemCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.ProjectItemEventArgs" Collapsed="true">
+    <Position X="57.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectItemEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.ProjectManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="59" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAABlAAAAAARIAAAQQAAEgQAAoIkQAAECBAACBCAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.RootProjectItem" Collapsed="true">
+    <Position X="17" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAACAAAAACAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\RootProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.WorkspaceProject" Collapsed="true">
+    <Position X="9.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\WorkspaceProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.DirectoryProjectItem" Collapsed="true">
+    <Position X="20.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\DirectoryProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.FileProjectItem" Collapsed="true">
+    <Position X="13.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\FileProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.FileSystemProject" Collapsed="true">
+    <Position X="9.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASgSAAAAFAAIQChEACAAEAAAYAQAIFgBAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\FileSystemProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.MiscDirectoryProjectItem" Collapsed="true">
+    <Position X="20.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAIAACAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\MiscDirectoryProjectItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.MiscFileProjectItem" Collapsed="true">
+    <Position X="13.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAIAACAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\MiscFileProjectItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.MyComputerProject" Collapsed="true">
+    <Position X="8.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABCAQBABACAAAQAAEEEQACAAAAAAAAAAAAEEAEYAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\MyComputerProject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.MyComputerProjectFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgICAAIAAAAAAAAAAgBAAEAAAAAAAAAAAgABAAABQBA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\MyComputerProjectFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.MyComputerProjectItem" Collapsed="true">
+    <Position X="16" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\MyComputerProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.ShortcutProject" Collapsed="true">
+    <Position X="10.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAhAAACAAAQAAAEAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\ShortcutProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.ShortcutProjectFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="69.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgICAAIAAAAAAAAAAgBAAMAAAAAAAAAAAgABAAABSRA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\ShortcutProjectFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Projects.FileSystem.ShortcutProjectItem" Collapsed="true">
+    <Position X="18.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAACAAIAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\ShortcutProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Services.ComponentGalleryService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="69.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAABAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\ComponentGalleryService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Services.DataObjectMappingInfo" Collapsed="true">
+    <Position X="62.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAABABAAAAAAAAgIAAE=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\DataObjectMappingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Services.DataObjectMappingSectionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="64.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\DataObjectMappingSectionHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Services.DataObjectMappingService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAQAAAAAAAQAAAACAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\DataObjectMappingService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Services.PreferencesService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="69.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAgIABAAAAAAAAACAABAAAAAAAAAAAAAAhgAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\PreferencesService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Services.PreferencesStore" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAIAAAAgAAAAAAAAAEAACAAAAAAAAAAQBAABA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\PreferencesStore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Services.PrintService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAAAAAAAAQIAAEAAAAAAAAAABAAABAAE=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\PrintService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Services.WebBrowsingService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAABAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\WebBrowsingService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.CodeWizardToolboxDataItem" Collapsed="true">
+    <Position X="13.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAMCAAAAAgAAAAAAABAAAAACBAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\CodeWizardToolboxDataItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.CodeWizardToolboxSection" Collapsed="true">
+    <Position X="0.5" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAQCAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\CodeWizardToolboxSection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.SnippetToolboxDataItem" Collapsed="true">
+    <Position X="16" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAEIAAAAARAAQAAAABAAQAACBAAAAAAAIAAAAAABA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\SnippetToolboxDataItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.SnippetToolboxSection" Collapsed="true">
+    <Position X="2.75" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAEAAAAAAIAAAAAACkAIADAAAAAAAAEAQAACAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\SnippetToolboxSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.ToolboxDataItem" Collapsed="true">
+    <Position X="16" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAARAAQAAAABAAAAACDAAAAAAAIAAAAAAQA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\ToolboxDataItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.ToolboxSection" Collapsed="true">
+    <Position X="1.75" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgIAAAAAABMAAAAiACAAYADDDBAACgAFBQAAWQAAQ=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\ToolboxSection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.ToolboxSectionEventArgs" Collapsed="true">
+    <Position X="59" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\ToolboxSectionEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.ToolboxSectionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="60.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\ToolboxSectionHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.ToolboxService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="62.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIEAQAAgAIAIIAoEAACAAoAAABAAAAAAAABAAiJgAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\ToolboxService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.TypeToolboxDataItem" Collapsed="true">
+    <Position X="18.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAQCCQAAAAAAABAAQAACBAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\TypeToolboxDataItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.Toolbox.TypeToolboxSection" Collapsed="true">
+    <Position X="0.5" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABgAQgAAAAQIAAAAAAAAAAQCAAABBAAAEASAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\TypeToolboxSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.AboutDialogButton" Collapsed="true">
+    <Position X="57.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgDIAAAIAACAIAACAEBAAAAAwBIAAAAAIAAAAAACAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\AboutDialogButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.AboutPluginDialog" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgAAAAAAAAAAAAAABBBAADAAAAAAAAAAAAAAACABA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\AboutPluginDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.AddFileDialog" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIIAAAQABZAIACEBACgFgEAGwKQAAAUEBCBQQDECgBk=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\AddFileDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.AddInOrganizer" Collapsed="true">
+    <Position X="16.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgIAgAQAQBQAgABAADgAACFAEADQAQAEBAAAACAUA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\AddInOrganizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.AddInRunSelector" Collapsed="true">
+    <Position X="18.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEAAAkAAAQAABQAAAABAEACAIAAAAAAAAAAAAAAAFA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\AddInRunSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.AddProjectDialog" Collapsed="true">
+    <Position X="23.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAEGAACBAAACAKAAAAQEAAAAGAMCEBk=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\AddProjectDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ApplicationInfoDialog" Collapsed="true">
+    <Position X="25.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAgAAAAAgAAAEAAAAAAAEGAgAACIQAAAEAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ApplicationInfoDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ApplicationInformation" Collapsed="true">
+    <Position X="66" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAQCAAAAAgIAAAAAAABAAAAAAAAQAAAAAAAACIAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ApplicationInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.AssemblySelectionDialog" Collapsed="true">
+    <Position X="43.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAAAAQQAEEEA0EAAACAQBGJJAACAQABAEQAAEAAEA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\AssemblySelectionDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.CategoryInfo" Collapsed="true">
+    <Position X="78.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\CategoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.CodeBehindView" Collapsed="true">
+    <Position X="23.5" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAQAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\CodeBehindView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.CodeDocumentWindow" Collapsed="true">
+    <Position X="4.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\CodeDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.CodeView" Collapsed="true">
+    <Position X="23.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAQAAACAIAAAACCAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\CodeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.CommandToolWindow" Collapsed="true">
+    <Position X="19.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\CommandToolWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ComponentDescription" Collapsed="true">
+    <Position X="67.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oECCIIAAECgQgAAAgAIgAAwDCAAAAAABWCoAAQAAgCA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ComponentDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ComponentDetailsDialog" Collapsed="true">
+    <Position X="52.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EJBggkACQAAABQKwAAgARAISG4AAABCAgBBAwAACAAE=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ComponentDetailsDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ComponentGalleryDialog" Collapsed="true">
+    <Position X="41.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGBJIFEMCEgETEyAI4FhZFaDIoYkAACgMoIDAgRJGA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ComponentGalleryDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ComponentGalleryServiceProxy" Collapsed="true">
+    <Position X="71.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFEAAEABACBAAChAAkADABgAwFAAABAgAAAAACAACA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ComponentGalleryServiceProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ComponentInfo" Collapsed="true">
+    <Position X="73" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IECCAIAAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAAIAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ComponentInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ComponentTypeInfo" Collapsed="true">
+    <Position X="74.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ComponentTypeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.DocumentWindow" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EEAAAEhAAHAIAAEAAEAAjAAAoAAFIACSkgABBAJAABA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\DocumentWindow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ExportSnippetsWizard" Collapsed="true">
+    <Position X="30" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAABAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ExportSnippetsWizard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.FeedbackData" Collapsed="true">
+    <Position X="66" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAQAAAAAAAEAAAAAAAAAEAAAAAAAAACAAyAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\FeedbackData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.FontOptionsPage" Collapsed="true">
+    <Position X="8.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACCIQAAAAAAAASAAZAQAACAEAAgAEJFAABAgAABAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\FontOptionsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.GlobalCommands" Collapsed="true">
+    <Position X="74.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAsoePz/uwg7hPffFAIgwEsGQAQwIx7zR4EMIYB4IgM=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\GlobalCommands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ImportSnippetsWizard" Collapsed="true">
+    <Position X="32.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAIIAAABAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ImportSnippetsWizard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.LanguageOptionsPage" Collapsed="true">
+    <Position X="12.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAgAAAAAABAAAABAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\LanguageOptionsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ListSnippetsWizardPanel" Collapsed="true">
+    <Position X="6" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAQEBAAAQEAAAkAiAAAAAQEAAEQAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ListSnippetsWizardPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.MultiViewDocumentWindow" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Microsoft.Matrix.Core.UserInterface.MultiViewDocumentWindow.ChildViewHost" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Microsoft.Matrix.Core.UserInterface\MultiViewDocumentWindow.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="Microsoft.Matrix.Core.UserInterface.MultiViewDocumentWindow.ViewInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Microsoft.Matrix.Core.UserInterface\MultiViewDocumentWindow.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EIAAAEAIABAAQAACABAABAgIAAAAQACAABAAAAICAAQ=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\MultiViewDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.MxAboutDialog" Collapsed="true">
+    <Position X="69.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\MxAboutDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.MxApplicationWindow" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACJAAAEAQAAAhAABAAAAAACAEAAAQAAAACA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\MxApplicationWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.OpenDocumentsToolWindow" Collapsed="true">
+    <Position X="15" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAASABACIAAACAgAAAAAACAAAAAAEAAAQAAAAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\OpenDocumentsToolWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.OpenSnippetsWizardPanel" Collapsed="true">
+    <Position X="1.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAQAAAAAAQgCAAAAAAAAAAQAAAEIQAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\OpenSnippetsWizardPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.OptionsDialog" Collapsed="true">
+    <Position X="14.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAQAAIAAAAEAACAAAAACAIAAAAAAAEBAAASAIBA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\OptionsDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.OptionsPage" Collapsed="true">
+    <Position X="10.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAABAAAAAAAAgAABAAABAAAABAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\OptionsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.PrintPreviewDialog" Collapsed="true">
+    <Position X="21" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBCEAECFZEyKEBASAKCEICgAST4EAAhAQCBAAEAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\PrintPreviewDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.PropertyBrowserToolWindow" Collapsed="true">
+    <Position X="17.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAACABACCAAIAAAAgAEACACMAAAAAAAQAFAAAKCAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\PropertyBrowserToolWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ReplaceDialog" Collapsed="true">
+    <Position X="27.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAgICAAIAQASAEAQAAABDAACAgBAQAbAACAGAQQA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ReplaceDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.Review" Collapsed="true">
+    <Position X="64.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAACAAAEAAAAAAAAAAAAAAAAEBAAAAAABIAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\Review.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.SaveSnippetsWizardPanel" Collapsed="true">
+    <Position X="3.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAQAAAAAAAAAAQgCAAAAAAAAAAAAAAEIQAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\SaveSnippetsWizardPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.SearchForm" Collapsed="true">
+    <Position X="45.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAACAQAAQAAAEAAAAAATAAABABAACbAAgACgQAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\SearchForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.SendFeedbackService" Collapsed="true">
+    <Position X="67.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\SendFeedbackService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.SourceView" Collapsed="true">
+    <Position X="23.5" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQACAUxQE3EwEiISgAAIBABAQAAgHgOiiYADaEFBEBA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\SourceView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.TextDocumentWindow" Collapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\TextDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.TextLanguageOptionsPage" Collapsed="true">
+    <Position X="10.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAAAAAAoAAgAACCEAAAgAEAAAABAAAABAE=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\TextLanguageOptionsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ThreadExceptionDialog" Collapsed="true">
+    <Position X="48" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DIAAgAAAAABgAAAAAAAAAAACAAAAACAAAAEAAgAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ThreadExceptionDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.ToolboxToolWindow" Collapsed="true">
+    <Position X="21.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASEACgAACAAAIBDgAAAAAEiAAQAAQEAEAAAQBDOAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ToolboxToolWindow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.UIService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="67.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGkAAAAAAAQABABAUAEAkYAAAABYDCABAIhRAJA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\UIService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Core.UserInterface.WorkspaceToolWindow" Collapsed="true">
+    <Position X="24" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DACgCRDEQGGDAAAAACAACAAGBAQIIUAAFgCDAAxBhDA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\WorkspaceToolWindow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.CSharp.CSharpCodeDocumentLanguage" Collapsed="true">
+    <Position X="0.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAhACAAAAAAAAAAQAAAAAAAAEAAAQAAAAAAAAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.CSharp\CSharpCodeDocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.CSharp.CSharpColorizer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="78.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEBACAACAAAAAABAAAAAAAAAABCAABAAGAAAAQABA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.CSharp\CSharpColorizer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.CSharp.CSharpDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIAwAAAIhAAEAAQAAAAAAAgAAAAAg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.CSharp\CSharpDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.CSharp.CSharpTextControlHost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="59" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACQAAAAAAAAAAQAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.CSharp\CSharpTextControlHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.CSharp.CSharpTextViewCommandHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="60.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACEAIAAAAiAAAQAAACAAAACAACAAAgAgAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.CSharp\CSharpTextViewCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.JSharp.JSharpCodeDocumentLanguage" Collapsed="true">
+    <Position X="3" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAhACAAAAAAAAAAQAAAAAAAAEAAAQAAAAAAAAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.JSharp\JSharpCodeDocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.JSharp.JSharpColorizer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEBACAACAAAAAABAAAAAAAAAABCAABAAGAAAAQABA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.JSharp\JSharpColorizer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.JSharp.JSharpDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="78.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIAwAAAIhAAEAAQAAAAAAAgAAAAAg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.JSharp\JSharpDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.JSharp.JSharpTextControlHost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACQAAAAAAAAAAQAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.JSharp\JSharpTextControlHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.JSharp.JSharpTextViewCommandHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="59" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACEAIAAAAiAAAQAAACAAAACAACAAAgAgAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.JSharp\JSharpTextViewCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.VisualBasic.VisualBasicCodeDocumentLanguage" Collapsed="true">
+    <Position X="5.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAhACAAAAAAAAAAQAAAAAAAAEAAAQAAAAAAAAIA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicCodeDocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.VisualBasic.VisualBasicColorizer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="69.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAACAACAAAAAAAAAAAAAAAAABCAAAAACAAAAAABA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicColorizer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.VisualBasic.VisualBasicDocumentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="71.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAAAAAIAwAAAIhAAEAAQAAAAAAAgAAAAAg=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.VisualBasic.VisualBasicTextControlHost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACQAAAAAAAAAAQAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicTextControlHost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.Packages.Code.VisualBasic.VisualBasicTextViewCommandHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="74.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAIAAAAiAAAQAAACAAAACAACAAAAAgAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Packages.Code.VisualBasic\VisualBasicTextViewCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ComboBoxToolBarButton" Collapsed="true">
+    <Position X="23.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EkQAAAAIEBAAAAhAAAAAEAAAARAAAEAAEAABACAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ComboBoxToolBarButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.Command" Collapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAAAMAQACkoQIDgGAEACCgUAAolAEFIAAIACACAAAg=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.CommandBar" Collapsed="true">
+    <Position X="62.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oACAAFAAAAABAAACkAAAGAAAAEEAAIAAAAAQCAgAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\CommandBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.CommandManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAogAAFCCYGBBEWCQQECCAAgYiAQoFClAAoQhCBgQA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\CommandManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.DockedToolWindowHost" Collapsed="true">
+    <Position X="15.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACAAAAAAAAAAAAAAAAAABAAAAAAAAAAIIAAAAAABQA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\DockedToolWindowHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.DockingContainer" Collapsed="true">
+    <Position X="73" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAQARAAAAAAAAAAAAEAAAAAAAAAAAQEBAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\DockingContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.EditorStatusBarPanel" Collapsed="true">
+    <Position X="22.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgIAIAAAABBAAAgAAAAAAAAABAABAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\EditorStatusBarPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.EditorStatusBarPanelCommand" Collapsed="true">
+    <Position X="13.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIAACABBAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\EditorStatusBarPanelCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.FlagsEnumEditor" Collapsed="true">
+    <Position X="67.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\FlagsEnumEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.FolderBrowser" Collapsed="true">
+    <Position X="69.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAABAAAEAEAADACAAQABgAAAAAAAQA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\FolderBrowser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.FontComboBox" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAIAAAAIQAAAgACAABABAAiAAIAAAAAABAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\FontComboBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.FontComboBoxToolBarButton" Collapsed="true">
+    <Position X="23.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\FontComboBoxToolBarButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GdiLabel" Collapsed="true">
+    <Position X="73" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GdiLabel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GradientBand" Collapsed="true">
+    <Position X="78.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhCAAAAAACSgAAQEIAAQAQAIAACAUAAAYIAAgAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GradientBand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GroupLabel" Collapsed="true">
+    <Position X="57.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GroupLabel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GroupView" Collapsed="true">
+    <Position X="59" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IhCAAGsoYCFAIsBAQkCAhJRiknYAkQECoFQDAQASEeE=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GroupView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GroupViewItem" Collapsed="true">
+    <Position X="60.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAQAAABAAAAAAQBAIAAAACAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GroupViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GroupViewItemEventArgs" Collapsed="true">
+    <Position X="62.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GroupViewItemEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GroupViewListView" Collapsed="true">
+    <Position X="8.5" Y="27" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAQAAAQgAACAAABAAAAAAAAAAAQQAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GroupViewListView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GroupViewListViewItem" Collapsed="true">
+    <Position X="64.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GroupViewListViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GroupViewPanel" Collapsed="true">
+    <Position X="66" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAACAAACAAAAAAABQAAAAAAABAAABAACSAAQAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GroupViewPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.GroupViewSection" Collapsed="true">
+    <Position X="67.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAgIAACACIAAAQAAAAAgABAhAAEIAQAACQEAQAE=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GroupViewSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ImageButton" Collapsed="true">
+    <Position X="11.5" Y="27" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAIAAAAgAAAAAAAAAAQBAAAAAAAAAEAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ImageButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ImageUtility" Collapsed="true">
+    <Position X="69.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ImageUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MdiWindowManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIBAAAAAAIAAAAEQAIAAACAAAAEAQEAAQAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MdiWindowManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MenuItemCommand" Collapsed="true">
+    <Position X="20.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MenuItemCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxButton" Collapsed="true">
+    <Position X="11.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxCheckBox" Collapsed="true">
+    <Position X="73" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxCheckBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxComboBox" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IwBAAAAYAEgAIhghAgBABAAAAAAEAEQACgEESAJABEA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxComboBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxContextMenu" Collapsed="true">
+    <Position X="74.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAMAAAAAAIAAACAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxContextMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxForm" Collapsed="true">
+    <Position X="28.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCAQAgEAAgAAAAAQAAgAAQAAAQAAQAABAEA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxGroupBox" Collapsed="true">
+    <Position X="76.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxGroupBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxInfoLabel" Collapsed="true">
+    <Position X="78.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAAAAAAAAAAAAEEAAAAAAAAAAEQBAAEAICAAECBAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxInfoLabel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxLabel" Collapsed="true">
+    <Position X="57.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxLabel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxListView" Collapsed="true">
+    <Position X="8.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAERAAAAAgAAAAAABAAAAQAAIAACYAAECkA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxListView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxMainForm" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBgACAAAAEBAgQIAAAAgAQAAACAAAABAIAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxMainForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxMenuItem" Collapsed="true">
+    <Position X="59" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARAIAUAyhgBABAEAAARAAAhARCAAAEQAIAoBQJSIA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxMenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxRadioButton" Collapsed="true">
+    <Position X="60.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxRadioButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxRichTextBox" Collapsed="true">
+    <Position X="62.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAIAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxRichTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxStatusBar" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="64.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAIACBAAAAABAACAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxStatusBar.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxStatusBarPanel" Collapsed="true">
+    <Position X="23.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAABAAABABAAABAAAAAABAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxStatusBarPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxTextBox" Collapsed="true">
+    <Position X="66" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>I0BgAAAYAAAAAAChAABAAAACAAAAAAAAAAQAQABAAEA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxTheme" Collapsed="true">
+    <Position X="67.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQAAAAAAABAAAAAAAAAAAAIICAAAAAoAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxTheme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxToolBar" Collapsed="true">
+    <Position X="69.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAQAAAAAAIAAAAgIAAAAAACACAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxToolBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxToolBarButton" Collapsed="true">
+    <Position X="23.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxToolBarButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxToolBarPainter" Collapsed="true">
+    <Position X="71.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAACAAAAAAAAgAAAhABAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxToolBarPainter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxToolBarSubclasser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgACAAAAACAAAAAAACAAAABQkACAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxToolBarSubclasser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxTreeView" Collapsed="true">
+    <Position X="74.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAgAAAAAAAAABAYAAAABMAAAYAAEGEA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxTreeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.MxUserControl" Collapsed="true">
+    <Position X="12.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAQAAAAABAEA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\MxUserControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ProgressStatusBarPanel" Collapsed="true">
+    <Position X="24.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAQAIAAAAAFAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ProgressStatusBarPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.PromptDialog" Collapsed="true">
+    <Position X="50.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAQBAAAEIgAQAAAIAEAASAAAAAAAAABBA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\PromptDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.RegionToolTip" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="60.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAgACCAAAAAAAAAAggAAEAAAAAAAAAAAABCAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\RegionToolTip.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.RtfTextWriter" Collapsed="true">
+    <Position X="66" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEAKgISgCIASAMAAAgAAIBgBAAEAJIACAEgAEAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\RtfTextWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ShowContextMenuEventArgs" Collapsed="true">
+    <Position X="71.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAMAAAAAACAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ShowContextMenuEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SplashScreen" Collapsed="true">
+    <Position X="73" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAGANkAAigIAACMACAAABAoBAEQBCCCggAAAIAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\SplashScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SplashScreenSurface" Collapsed="true">
+    <Position X="74.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAACAAAAAACAAAAAAAAAgA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\SplashScreenSurface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.StatusBarPanelCommand" Collapsed="true">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\StatusBarPanelCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.TabControl" Collapsed="true">
+    <Position X="0.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACQAWAADIAoKAAAYhACYVJAgEIMKkAgIMFAACgIASA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\TabControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.TabPage" Collapsed="true">
+    <Position X="76.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAAEAAAAAAACAAAAAAAAAEAQAgQABAAQAACQEAQAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\TabPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.TaskForm" Collapsed="true">
+    <Position X="35.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQCEAIAAACgEAAAIAAAAAAAAAAAABAAAAAQBAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\TaskForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ToolBarButtonCommand" Collapsed="true">
+    <Position X="18.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ToolBarButtonCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ToolBarComboBox" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ToolBarComboBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ToolBarComboBoxButtonEventArgs" Collapsed="true">
+    <Position X="57.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ToolBarComboBoxButtonEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ToolBarComboBoxCommand" Collapsed="true">
+    <Position X="18.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQABAAAAAACAAACAAgAABAABAAAEACAIAAAAIAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ToolBarComboBoxCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ToolWindow" Collapsed="true">
+    <Position X="19.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAAQAAABAAAAAAAAAAAAAAACAAAAAAAEAAAI=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ToolWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ToolWindowHolder" Collapsed="true">
+    <Position X="0.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ToolWindowHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.ToolWindowHost" Collapsed="true">
+    <Position X="15.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAFAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ToolWindowHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.TrackButton" Collapsed="true">
+    <Position X="64.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIQBAIAAAAABCBgABAAQAAABAAAAAAIAAQAAICAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\TrackButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.TrayIcon" Collapsed="true">
+    <Position X="66" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgADAAiAEAEATARBAIAACBDABGACJIQAQKAGCCgA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\TrayIcon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.WindowHandle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="59" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\WindowHandle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.WizardForm" Collapsed="true">
+    <Position X="33.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAEEAAgAcoFAACAAACAIAAAgAAAAAAAgAAICA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\WizardForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.WizardPanel" Collapsed="true">
+    <Position X="3.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAgQwAAAUgAAAAABCAAQAAAIAKAQIAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\WizardPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.BlockElement" Collapsed="true">
+    <Position X="5.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAAAAAAAAAAAAAQAAAAAAASAEBEgAAAAAIAAAAAAIA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\BlockElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.ContentElement" Collapsed="true">
+    <Position X="1" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARAAAACAAAAAAAAQAgAEgAAEABAAAAAgBAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\ContentElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.DividerElement" Collapsed="true">
+    <Position X="7.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAAAAAIAAABAAAAAAAAAAAAAAAAAACAAAAAEAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\DividerElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.Element" Collapsed="true">
+    <Position X="4.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIRAABRGAAgEAkAAQQh4cABABAAAZAEAAQgQJQCA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.ElementCollection" Collapsed="true">
+    <Position X="8" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkIAgEAgBICAABARCIAAFCQQAgUAAAAACAIACABQIgA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\ElementCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.ElementEventArgs" Collapsed="true">
+    <Position X="62.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\ElementEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.ElementRenderData" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="64.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAABRAQAi2gQ4AIACAgAoAKSQCAIAAeAkQAgYQDgAo=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\ElementRenderData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.EmptyElementCollection" Collapsed="true">
+    <Position X="8" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\EmptyElementCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.HyperLinkElement" Collapsed="true">
+    <Position X="10" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAQAgAACAEAAAAAAAAAABAAAAQAgACAAI=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\HyperLinkElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.ImageElement" Collapsed="true">
+    <Position X="5.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgQAAEAAAAQBAAAQBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\ImageElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.LineBreakElement" Collapsed="true">
+    <Position X="14.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\LineBreakElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.Page" Collapsed="true">
+    <Position X="1" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJQAAAoAAQgAQQAABBQAAAACAAAAAAAAAAQAAEQCAAY=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\Page.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.PageBuilder" Collapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAGAATABAJCAQAAggAqCAAMLUwBAIACQlSASA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\PageBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.PageChangedEventArgs" Collapsed="true">
+    <Position X="59" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\PageChangedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.PageCreationData" Collapsed="true">
+    <Position X="60.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AISEARgAAgmBQAAAAAQAAgCCBAQAAAEQAEwAAAwDAAI=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\PageCreationData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.PageFactory" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABAAAAgBAAQAAAEAAAAgAAAAABgEAgCCAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\PageFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.PageViewer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="62.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBDAAEEIAAAQyCCAQgCAQgACAloAYgQCAAAAQAECACQ=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\PageViewer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.RenderedElements" Collapsed="true">
+    <Position X="62.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAABAAAAAAACAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\RenderedElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.SectionElement" Collapsed="true">
+    <Position X="4.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAQAAQQAAABAAAAQAAAEAAAABAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\SectionElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.SectionElementCollection" Collapsed="true">
+    <Position X="5.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\SectionElementCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.TextElement" Collapsed="true">
+    <Position X="10" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCBAAAAAAAAAIAAAAAAAAAIAAAAAAAAIAAAACAAAAEA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\TextElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.TextSpanElement" Collapsed="true">
+    <Position X="12.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCACAAAAACAAAAAAAAAAAAAAAIAAAAAIAAAACAAQAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\TextSpanElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.VisualElement" Collapsed="true">
+    <Position X="10" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gKBAAwCIAQACAIiAACAEAADAAIAAgABSABAAEAIQAgA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\VisualElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.HtmlLite.VisualElementCollection" Collapsed="true">
+    <Position X="10.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\VisualElementCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.AutoCompleteForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="74.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAQEhkQQJAEgAAAQAAAAgAACAECAAASAQKABkGAjAQA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\AutoCompleteForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.BlockIndentTextViewCommandHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAAAAAAAAAAAAACAACAAAAAgAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\BlockIndentTextViewCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.ColorInfo" Collapsed="true">
+    <Position X="59" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAACAAAAAABAABIAEAACAIAAAgAQAAAQk=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\ColorInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.ColorInfoTable" Collapsed="true">
+    <Position X="60.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAEAAAAQAgASEAAAAAAAAAAEQgAAAAgAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\ColorInfoTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.GoToLineDialog" Collapsed="true">
+    <Position X="54.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQABAAAAAAIAAAAAAAAEAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\GoToLineDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.PlainTextColorizer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="64.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\PlainTextColorizer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.PlainTextViewCommandHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AggAAEAgACAAAAAgAAAAAAAAAAAAAACAACAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\PlainTextViewCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextAutoCompletionItem" Collapsed="true">
+    <Position X="78.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAAAAAQBAIAAAACAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextAutoCompletionItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextBuffer" Collapsed="true">
+    <Position X="57.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAgAQhBgAHBQCsACQIIBQJAAAIEg0HYAASCgUIEGA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextBuffer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextBufferCommand" Collapsed="true">
+    <Position X="16" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAQAABAAAACACCAAAEAAAAAAAgBQEAAAAAAQAAAQ=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextBufferCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextBufferCommands" Collapsed="true">
+    <Position X="59" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgwEhgQABiEChgAAAzAIIDINBgYECAACAABAEABARAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextBufferCommands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextBufferEventArgs" Collapsed="true">
+    <Position X="60.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQCAAAAAAAAIAAgAEAAAQAAACEAAIAAAAAAABBAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextBufferEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextBufferLocation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="62.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAIgMCAAgQAEAACBAAAUBQAIAAAAQAAABAABkBA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextBufferLocation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextBufferSpan" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="64.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAAAAAACAAgAAEAAAAAAAAAAAAAAAAAgAACAQQAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextBufferSpan.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextControl" Collapsed="true">
+    <Position X="23.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>aI9QxObkhCUo1RHJcOQABAQDBsANAIGJqKAZeAEEyjA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextControlSite" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAQAAAAAAAAAAAAAAAQAAAAAAAAAAABAAQABAEA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextControlSite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextLanguage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="69.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAEADAAABEAAAAAAAAAAAAAAECAAQAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextLanguage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextLine" Collapsed="true">
+    <Position X="71.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>B0JAIMgiJEEABkCGCAIQUAFQCgEBKRQgBAgBAABKMBA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextManager" Collapsed="true">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>E4AAAIABgCAIAAAAAAUCAAAAJgiAAiAAIUADABUBEgA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DIzH5Lf8kLEyZVVLUhWgB2RZ5l4ZioCBNzZZVkKeVTU=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.Matrix.UIComponents.SourceEditing.TextViewEventArgs" Collapsed="true">
+    <Position X="78.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextViewEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Utility.AsyncTask" Collapsed="true">
+    <Position X="67.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABAACAQQCAQAAAAAAAAAARAAAAAAgAAAAAAAAgAAQA=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\AsyncTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Utility.AsyncTaskManager" Collapsed="true">
+    <Position X="69.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEEAAAAAAAAAAAAAAAAAAAAIAABAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\AsyncTaskManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Utility.AsyncTaskMessage" Collapsed="true">
+    <Position X="71.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgAAAAABAAAAAAAAAAAAAEAAAAAABAAAEAAAAAAFAA=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\AsyncTaskMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Utility.AsyncTaskResultPostedEventArgs" Collapsed="true">
+    <Position X="73" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAABAAAAAAAAAAAAACAAAAAABAAAAAAAAAAFAA=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\AsyncTaskResultPostedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Utility.CommandLine" Collapsed="true">
+    <Position X="64.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAQAAAAAAAAAAAAAAAgAAAAAAYAAAAABAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\CommandLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Utility.DataProtection" Collapsed="true">
+    <Position X="67.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAABAAgAAACAAIAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\DataProtection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Utility.Gac" Collapsed="true">
+    <Position X="71.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAWAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\Gac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Utility.Library" Collapsed="true">
+    <Position X="64.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IwAEIIACICCAAAAAgCAAAAQAEDQAAEAABEYCAAIAAYA=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\Library.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Matrix.Utility.MruList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="67.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgMAAAkCAIBAACAAAEAQAAAACAAAAABQAAAAAIAA=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\MruList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="Microsoft.Matrix.UIComponents.HtmlLite.BoxEdges" Collapsed="true">
+    <Position X="57.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAgAAQAAAAAAAMAYgACACAAAAAAiA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\BoxEdges.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Microsoft.Matrix.UIComponents.HtmlLite.Watermark" Collapsed="true">
+    <Position X="59" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAoAAAAAQBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\Watermark.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Microsoft.Matrix.Core.Application.IApplicationIdentity" Collapsed="true">
+    <Position X="57.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAAEAAAEIAAAAAAAYAAAAAoIAAIAgMAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Application\IApplicationIdentity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Designer.IDesignLayer" Collapsed="true">
+    <Position X="76.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Designer\IDesignLayer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Designer.IDocumentDesignerHost" Collapsed="true">
+    <Position X="57.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAACAAAAABAQAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Designer\IDocumentDesignerHost.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Designer.ILayeredDesignerHost" Collapsed="true">
+    <Position X="73" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAABAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Designer\ILayeredDesignerHost.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.IDocumentFactory" Collapsed="true">
+    <Position X="59" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiABAAAAAAAAAAAAAEAAAQQggAAAIAAAAAAAABAAACA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\IDocumentFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.IDocumentManager" Collapsed="true">
+    <Position X="60.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AggAAEABQAAQAAAAgAAAAAAIkQAAAAAAAAgAAAAAACA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\IDocumentManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.IDocumentStorage" Collapsed="true">
+    <Position X="62.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\IDocumentStorage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.IDocumentTypeManager" Collapsed="true">
+    <Position X="64.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAQAAQAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\IDocumentTypeManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.IEmbeddedDocumentStorage" Collapsed="true">
+    <Position X="69.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\IEmbeddedDocumentStorage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.ILanguageManager" Collapsed="true">
+    <Position X="71.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAgAAAAAAAAIAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\ILanguageManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.IPrintableDocument" Collapsed="true">
+    <Position X="66" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\IPrintableDocument.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.IRunnableDocument" Collapsed="true">
+    <Position X="74.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\IRunnableDocument.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.Code.ICodeBehindDocumentLanguage" Collapsed="true">
+    <Position X="62.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAQAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Code\ICodeBehindDocumentLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Documents.Code.IDocumentWithCode" Collapsed="true">
+    <Position X="67.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents.Code\IDocumentWithCode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Packages.IApplicationPackage" Collapsed="true">
+    <Position X="59" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Packages\IApplicationPackage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Packages.IPackage" Collapsed="true">
+    <Position X="60.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Packages\IPackage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Packages.IPackageManager" Collapsed="true">
+    <Position X="62.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Packages\IPackageManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Projects.IProjectFactory" Collapsed="true">
+    <Position X="69.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAQAAAAACIQQkAAAAIAAAAAAAAAAACAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\IProjectFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Projects.IProjectManager" Collapsed="true">
+    <Position X="71.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAIAAAAAAABAAAQgAEAEAAAAAAAAAACAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\IProjectManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Projects.FileSystem.ILocalFileSystemProject" Collapsed="true">
+    <Position X="74.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\ILocalFileSystemProject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Projects.FileSystem.IMiscProjectItem" Collapsed="true">
+    <Position X="76.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects.FileSystem\IMiscProjectItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Services.IClassViewService" Collapsed="true">
+    <Position X="60.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\IClassViewService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Services.IComponentGalleryService" Collapsed="true">
+    <Position X="69.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\IComponentGalleryService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Services.IDataObjectMapper" Collapsed="true">
+    <Position X="73" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\IDataObjectMapper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Services.IDataObjectMappingService" Collapsed="true">
+    <Position X="74.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\IDataObjectMappingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Services.IPreferencesService" Collapsed="true">
+    <Position X="64.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\IPreferencesService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Services.IPrintService" Collapsed="true">
+    <Position X="67.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\IPrintService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Services.IWebBrowsingService" Collapsed="true">
+    <Position X="73" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\IWebBrowsingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.Toolbox.IToolboxService" Collapsed="true">
+    <Position X="69.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAgAAAAAEAAAAAAAAAAAAAAAAAAEAAgAAAhCA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\IToolboxService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.UserInterface.IDesignView" Collapsed="true">
+    <Position X="78.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\IDesignView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.UserInterface.IDocumentView" Collapsed="true">
+    <Position X="66" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAQAABAAABAAAAAAAAAQAAAAIIAAAABCAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\IDocumentView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.UserInterface.IMultiViewDocumentWindow" Collapsed="true">
+    <Position X="78.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAABAAAAAAAAAAQAAAAAAAAAQAAAAEAAAQ=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\IMultiViewDocumentWindow.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.UserInterface.IPropertyBrowserClient" Collapsed="true">
+    <Position X="73" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\IPropertyBrowserClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.UserInterface.ISearchableDocumentView" Collapsed="true">
+    <Position X="76.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEgAAAAIAAAAAAAAAAAAgBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ISearchableDocumentView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.UserInterface.ISelectionContainer" Collapsed="true">
+    <Position X="78.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ISelectionContainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.UserInterface.ISelectionOutlineProvider" Collapsed="true">
+    <Position X="57.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\ISelectionOutlineProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.Core.UserInterface.IToolboxClient" Collapsed="true">
+    <Position X="67.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAQAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\IToolboxClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.ICommandHandler" Collapsed="true">
+    <Position X="64.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ICommandHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.ICommandHandlerWithContext" Collapsed="true">
+    <Position X="66" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ICommandHandlerWithContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.ICommandManager" Collapsed="true">
+    <Position X="67.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAQAAAAACAgBAAAABAAIAAAAACAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ICommandManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.IMxUIService" Collapsed="true">
+    <Position X="57.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAEAkAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\IMxUIService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.IStatusBar" Collapsed="true">
+    <Position X="59" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\IStatusBar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.IToolWindowManager" Collapsed="true">
+    <Position X="71.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\IToolWindowManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.IWindowManager" Collapsed="true">
+    <Position X="74.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABCAAAQAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\IWindowManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.HtmlLite.IContentElementHost" Collapsed="true">
+    <Position X="71.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAADAQA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\IContentElementHost.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.HtmlLite.INameScopeElement" Collapsed="true">
+    <Position X="59" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\INameScopeElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.SourceEditing.ITextAutoCompletionList" Collapsed="true">
+    <Position X="60.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAACAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\ITextAutoCompletionList.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.SourceEditing.ITextColorizer" Collapsed="true">
+    <Position X="62.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\ITextColorizer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.SourceEditing.ITextControlHost" Collapsed="true">
+    <Position X="64.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\ITextControlHost.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Matrix.UIComponents.SourceEditing.ITextLanguage" Collapsed="true">
+    <Position X="66" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAACAAABEAAAAAAAAAAAAAAECAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\ITextLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Microsoft.Matrix.Core.Application.ApplicationType" Collapsed="true">
+    <Position X="59" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Application\ApplicationType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.Documents.DocumentMode" Collapsed="true">
+    <Position X="60.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.Documents.DocumentViewType" Collapsed="true">
+    <Position X="62.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAACAAAABAgIAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentViewType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.Documents.TemplateFlags" Collapsed="true">
+    <Position X="62.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAECAAAAUAAAI=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\TemplateFlags.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.Plugins.AddInScope" Collapsed="true">
+    <Position X="57.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAABAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Plugins\AddInScope.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.Projects.ProjectFactorySaveMode" Collapsed="true">
+    <Position X="73" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectFactorySaveMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.Projects.ProjectItemAttributes" Collapsed="true">
+    <Position X="74.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectItemAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.Projects.ProjectItemFlags" Collapsed="true">
+    <Position X="76.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAACAAAACAQAAAAAQAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectItemFlags.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.Projects.ProjectItemStreamMode" Collapsed="true">
+    <Position X="78.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectItemStreamMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.Services.PreferenceEncryption" Collapsed="true">
+    <Position X="71.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Services\PreferenceEncryption.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.UserInterface.FindReplaceOptions" Collapsed="true">
+    <Position X="64.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAACQAAAAAAAIAAAAEEAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\FindReplaceOptions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.Core.UserInterface.WorkspaceIcon" Collapsed="true">
+    <Position X="67.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAIAgAAAAACAAABAAAgAACACAAAQEABAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.UserInterface\WorkspaceIcon.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.UIComponents.FolderBrowserLocation" Collapsed="true">
+    <Position X="66" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAQAQEAAAAAAAgAAAAAIAAAAAQADAACAAQAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\FolderBrowserLocation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.UIComponents.FolderBrowserStyles" Collapsed="true">
+    <Position X="67.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAgAAEAAAAACAAAAAAAAAIAgAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\FolderBrowserStyles.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.UIComponents.TabControlMode" Collapsed="true">
+    <Position X="59" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\TabControlMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.UIComponents.TabPlacement" Collapsed="true">
+    <Position X="60.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\TabPlacement.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.UIComponents.HtmlLite.LayoutMode" Collapsed="true">
+    <Position X="69.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQABAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\LayoutMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.UIComponents.HtmlLite.SizeMode" Collapsed="true">
+    <Position X="57.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\SizeMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.UIComponents.HtmlLite.WatermarkPlacement" Collapsed="true">
+    <Position X="64.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAIAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAIAEA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\WatermarkPlacement.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.Matrix.UIComponents.SourceEditing.WordType" Collapsed="true">
+    <Position X="66" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAgAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\WordType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Microsoft.Matrix.Core.Documents.ActiveDocumentEventHandler" Collapsed="true">
+    <Position X="57.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\ActiveDocumentEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.Core.Documents.DocumentEventHandler" Collapsed="true">
+    <Position X="60.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Documents\DocumentEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.Core.Projects.ProjectEventHandler" Collapsed="true">
+    <Position X="67.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.Core.Projects.ProjectItemEventHandler" Collapsed="true">
+    <Position X="69.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Projects\ProjectItemEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.Core.Toolbox.ToolboxSectionEventHandler" Collapsed="true">
+    <Position X="57.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Core.Toolbox\ToolboxSectionEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.UIComponents.GroupViewItemEventHandler" Collapsed="true">
+    <Position X="64.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\GroupViewItemEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.UIComponents.ShowContextMenuEventHandler" Collapsed="true">
+    <Position X="71.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ShowContextMenuEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.UIComponents.SplashScreenCustomizeCallback" Collapsed="true">
+    <Position X="73" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\SplashScreenCustomizeCallback.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.UIComponents.ToolBarComboBoxButtonEventHandler" Collapsed="true">
+    <Position X="78.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents\ToolBarComboBoxButtonEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.UIComponents.HtmlLite.ElementEventHandler" Collapsed="true">
+    <Position X="62.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\ElementEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.UIComponents.HtmlLite.PageChangedEventHandler" Collapsed="true">
+    <Position X="66" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.HtmlLite\PageChangedEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.UIComponents.SourceEditing.TextBufferEventHandler" Collapsed="true">
+    <Position X="74.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextBufferEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.UIComponents.SourceEditing.TextViewEventHandler" Collapsed="true">
+    <Position X="76.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.UIComponents.SourceEditing\TextViewEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Microsoft.Matrix.Utility.AsyncTaskResultPostedEventHandler" Collapsed="true">
+    <Position X="59" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Microsoft.Matrix.Utility\AsyncTaskResultPostedEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>
