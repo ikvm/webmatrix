@@ -113,7 +113,7 @@ namespace Microsoft.Matrix.WebIDE
             helpToolBar.Wrappable = false;
             helpToolBar.ImageList = list;
             Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
-            helpToolBar.Width = (((int) graphics.MeasureString(new string('_', 50), this.Font).Width) + 0x18) + 6;
+            helpToolBar.Width = (((int) graphics.MeasureString(new string('_', 30), this.Font).Width) + 0x18) + 6;
             graphics.Dispose();
             documentToolBar.Appearance = ToolBarAppearance.Flat;
             documentToolBar.Divider = false;

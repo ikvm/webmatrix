@@ -1,13 +1,5 @@
 namespace Microsoft.Matrix.Core.Application
 {
-    using Microsoft.Matrix.UIComponents;
-    using Microsoft.Matrix.Core.Documents;
-    using Microsoft.Matrix.Core.Packages;
-    using Microsoft.Matrix.Core.Projects;
-    using Microsoft.Matrix.Core.Services;
-    using Microsoft.Matrix.Core.Toolbox;
-    using Microsoft.Matrix.Core.UserInterface;
-    using Microsoft.Matrix.Utility;
     using System;
     using System.Collections;
     using System.ComponentModel;
@@ -15,28 +7,39 @@ namespace Microsoft.Matrix.Core.Application
     using System.Configuration;
     using System.IO;
     using System.Windows.Forms;
+    using Microsoft.Matrix.Core.Documents;
+    using Microsoft.Matrix.Core.Packages;
+    using Microsoft.Matrix.Core.Projects;
+    using Microsoft.Matrix.Core.Services;
+    using Microsoft.Matrix.Core.Toolbox;
+    using Microsoft.Matrix.Core.UserInterface;
+    using Microsoft.Matrix.Utility;
 
     public abstract class MxApplication : IServiceProvider, IApplicationIdentity
     {
+        private static MxApplication current;
         private MxApplicationWindow _appWindow;
-        private CommandLine _commandLine;
-        private ComponentGalleryService _componentGalleryService;
-        private DataObjectMappingService _dataObjectMappingService;
-        private DocumentManager _docManager;
-        private DocumentTypeManager _docTypeManager;
-        private GlobalExceptionHandler _exceptionHandler;
-        private LanguageManager _languageManager;
-        private PackageManager _packageManager;
-        private PreferencesService _prefService;
-        private PrintService _printService;
-        private ProjectManager _projectManager;
-        private ServiceContainer _serviceContainer;
-        private EventHandler _startupHandler;
+
         private ToolboxService _toolboxService;
         private WebBrowsingService _webBrowsingService;
+        private ComponentGalleryService _componentGalleryService;
+        private DataObjectMappingService _dataObjectMappingService;
+        private PreferencesService _prefService;
+        private PrintService _printService;
+
+        private ProjectManager _projectManager;
+        private LanguageManager _languageManager;
+        private PackageManager _packageManager;
+        private DocumentManager _docManager;
+        private DocumentTypeManager _docTypeManager;
+
+        private ServiceContainer _serviceContainer;
+
+        private GlobalExceptionHandler _exceptionHandler;
+        private CommandLine _commandLine;
+        private EventHandler _startupHandler;
         private IDictionary _webLinks;
         private bool _webLinksLoaded;
-        private static MxApplication current;
 
         event EventHandler IApplicationIdentity.Startup
         {
@@ -314,13 +317,13 @@ namespace Microsoft.Matrix.Core.Application
                 this._appWindow.Closing += new CancelEventHandler(this.OnApplicationWindowClosing);
                 bool flag = (this.ApplicationType & ApplicationType.Workspace) != ApplicationType.Generic;
 
-                //TODO: 上次研究到这里, 有时间继续 2010.10.12 02:20
                 this._packageManager.LoadPackages(this.CreateApplicationPackage());
                 if (flag)
                 {
                     this._toolboxService.LoadToolbox();
                     this._languageManager.LoadDocumentLanguages();
                     this._docTypeManager.LoadDocumentTypes();
+                    //TODO: 上次研究到这里, 有时间继续 2010.10.12 15:40
                     this._projectManager.LoadProjectTypes();
                 }
                 Application.Run(this._appWindow);
