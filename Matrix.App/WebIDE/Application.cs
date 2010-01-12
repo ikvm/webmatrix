@@ -30,21 +30,21 @@ namespace Microsoft.Matrix.WebIDE
         [STAThread]
         public static void Main(string[] args)
         {
-            bool flag = true;
+            bool showSplash = true;
             CommandLine commandLine = new CommandLine(args);
             if (commandLine.Options.Contains("nosplash"))
             {
-                flag = false;
+                showSplash = false;
             }
-            bool flag2 = true;
+            bool shouldLaunch = true;
             if (commandLine.ShowHelp)
             {
                 ShowUsage();
-                flag2 = false;
+                shouldLaunch = false;
             }
-            if (flag2)
+            if (shouldLaunch)
             {
-                if (flag)
+                if (showSplash)
                 {
                     SplashScreen current = SplashScreen.Current;
                     current.Image = new Bitmap(typeof(Application), "WebIDE.gif");
