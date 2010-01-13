@@ -323,9 +323,16 @@ namespace Microsoft.Matrix.Packages.Web
             {
                 if ((this.connectionPoint != null) && (this.cookie != 0))
                 {
-                    this.connectionPoint.Unadvise(this.cookie);
-                    this.cookie = 0;
-                    this.connectionPoint = null;
+                    try
+                    {
+                        this.connectionPoint.Unadvise(this.cookie);
+                        this.cookie = 0;
+                        this.connectionPoint = null;
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
                 }
             }
 
