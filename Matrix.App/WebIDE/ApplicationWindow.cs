@@ -99,7 +99,7 @@ namespace Microsoft.Matrix.WebIDE
             mainToolBar.DropDownArrows = true;
             mainToolBar.ShowToolTips = true;
             mainToolBar.TabIndex = 1;
-            mainToolBar.TabStop = false;
+            bool b = mainToolBar.TabStop = false;
             mainToolBar.TextAlign = ToolBarTextAlign.Right;
             mainToolBar.Wrappable = false;
             mainToolBar.ImageList = list;
