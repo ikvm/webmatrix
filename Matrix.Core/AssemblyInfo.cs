@@ -12,4 +12,4 @@
 [assembly: System.Reflection.AssemblyTitle("Microsoft.Matrix")]
 [assembly: System.Reflection.AssemblyDescription("Matrix IDE Components")]
 [assembly: System.Security.Permissions.SecurityPermission(System.Security.Permissions.SecurityAction.RequestMinimum, SkipVerification=true)]
-
+[assembly: System.Reflection.AssemblyKeyFile(@"..\AppMatrix.snk")]

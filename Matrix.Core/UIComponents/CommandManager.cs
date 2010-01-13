@@ -328,8 +328,8 @@ namespace Microsoft.Matrix.UIComponents
         {
             MxMenuItem menu = sender as MxMenuItem;
             MxMenuItem item = new MxMenuItem("");
-            menu.MenuItems.Add(item);
-            menu.MenuItems.Remove(item);
+            //menu.MenuItems.Add(item);
+            //menu.MenuItems.Remove(item);
             this.RunUpdateLoop(menu);
         }
 

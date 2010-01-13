@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer", "WebServer\WebS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{A8009355-0A53-4F33-97B7-374732190FED}"
 	ProjectSection(SolutionItems) = preProject
-		WebMatrix.snk = WebMatrix.snk
+		AppMatrix.snk = AppMatrix.snk
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins.CodeWizards", "Plugins.CodeWizards\Plugins.CodeWizards.csproj", "{3E39FAC6-908A-4B4E-8524-16BBE26B7538}"
