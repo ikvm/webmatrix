@@ -17,7 +17,7 @@ namespace Microsoft.Matrix.WebIDE
 
     internal sealed class ApplicationWindow : MxApplicationWindow
     {
-        private ClassViewToolWindow _classViewTool;
+        //private ClassViewToolWindow _classViewTool;
         //private CommunityToolWindow _communityTool;
         private DataToolWindow _dataTool;
         private DockingContainer leftContainer;
@@ -69,7 +69,7 @@ namespace Microsoft.Matrix.WebIDE
             this._toolboxTool = new ToolboxToolWindow(base.ServiceProvider);
             this._propBrowserTool = new PropertyBrowserToolWindow(base.ServiceProvider);
             this._dataTool = new DataToolWindow(base.ServiceProvider);
-            this._classViewTool = new ClassViewToolWindow(base.ServiceProvider);
+            //this._classViewTool = new ClassViewToolWindow(base.ServiceProvider);
             //this._communityTool = new CommunityToolWindow(base.ServiceProvider);
             ImageList list = new ImageList();
             CommandBar commandBar = new CommandBar();
@@ -179,7 +179,7 @@ namespace Microsoft.Matrix.WebIDE
             IWindowManager manager = this._windowManager;
             manager.AddToolWindow(this._toolboxTool, DockStyle.Left);
             manager.AddToolWindow(this._propBrowserTool, DockStyle.Right);
-            manager.AddToolWindow(this._classViewTool, DockStyle.Right, 0);
+            //manager.AddToolWindow(this._classViewTool, DockStyle.Right, 0);
             //manager.AddToolWindow(this._communityTool, DockStyle.Right, 0);
             manager.AddToolWindow(this._workspaceTool, DockStyle.Right, -1);
             manager.AddToolWindow(this._dataTool, DockStyle.Right, 1);
