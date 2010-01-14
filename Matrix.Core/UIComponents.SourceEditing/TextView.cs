@@ -1996,30 +1996,31 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             }
             else
             {
+                // 清空行末空间颜色
                 if ((endIndex - startIndex) >= 0)
                 {
                     Interop.RECT rect = new Interop.RECT(rectLeft + ((endIndex - startIndex) * this._fontWidth), yPos, rectRight, yPos + this._fontHeight);
                     this.ColorTable[colors[chars.Length]].SetupHdc(hdc);
                     Interop.ExtTextOutW(hdc, 0, 0, 2, ref rect, IntPtr.Zero, 0, null);
                 }
-                Interop.RECT rect2 = new Interop.RECT(rectLeft, yPos, rectLeft, yPos + this._fontHeight);
-                int index = startIndex;
-                int num2 = index;
+
+                // 开始把字符串画到控件上
+                Interop.RECT textRect = new Interop.RECT(rectLeft, yPos, rectLeft, yPos + this._fontHeight);
+                int startColumnIndex = startIndex;
+                int curColumnIndex = startColumnIndex;
                 int count = 0;
-                while (index < endIndex)
+
+                while (startColumnIndex < endIndex)
                 {
-                    int num4 = colors[index];
-                    while ((num2 < endIndex) && (colors[num2] == num4))
+                    int colorIndex = colors[startColumnIndex];
+                    while ((curColumnIndex < endIndex) && (colors[curColumnIndex] == colorIndex))
                     {
-                        num2++;
+                        curColumnIndex++;
                     }
-                    count = num2 - index;
-                    rect2.left = rect2.right;
-                    rect2.right += count * this._fontWidth;
                     IntPtr zero = IntPtr.Zero;
                     try
                     {
-                        ColorInfo info2 = this.ColorTable[num4];
+                        ColorInfo info2 = this.ColorTable[colorIndex];
                         ColorInfo info3 = info2;
                         if (selected)
                         {
@@ -2040,17 +2041,25 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         {
                             info2.SetupHdc(hdc);
                         }
+
+                        count = curColumnIndex - startColumnIndex;
+                        string text = new string(chars, startColumnIndex, count);
+                        Interop.SIZE size = new Interop.SIZE();
+                        bool ret = Interop.GetTextExtentPoint32W(hdc, text, count, ref size);
+                        textRect.left = textRect.right;
+                        textRect.right += size.x ;
+
                         fixed (char* chRef = chars)
                         {
                             char* chPtr = chRef;
-                            chPtr += index;
-                            Interop.ExtTextOutW(hdc, rect2.left, yPos, 2, ref rect2, (IntPtr) chPtr, count, null);
+                            chPtr += startColumnIndex;
+                            Interop.ExtTextOutW(hdc, textRect.left, yPos, 2, ref textRect, (IntPtr) chPtr, count, null);
                         }
                         continue;
                     }
                     finally
                     {
-                        index = num2;
+                        startColumnIndex = curColumnIndex;
                         if (zero != IntPtr.Zero)
                         {
                             Interop.SelectObject(hdc, zero);
@@ -2086,6 +2095,21 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             this._topPaintLineNumber = 0x7fffffff;
             this._bottomPaintLineNumber = -1;
             base.Invalidate(new Rectangle(0, num, base.Width - this.VerticalScrollBarWidth, y - num));
+        }
+
+        private Interop.SIZE MeasureString(IntPtr hdc, char[] chars, int startIndex, int endIndex)
+        {
+            Interop.SIZE size = new Interop.SIZE();
+            //if (chars.Length > endIndex)
+            //{ 
+                int length = endIndex - startIndex;
+                if (length > 0)
+                { 
+                    string text = new string(chars, startIndex, length);
+                    bool ret = Interop.GetTextExtentPoint32W(hdc, text, length, ref size);
+                }
+            //}
+            return size;
         }
 
         private unsafe void PaintTextLine(TextLine line, int lineNum, IntPtr hdc, int yPos, int startIndex)
@@ -2161,60 +2185,71 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     if (lineNum == this._selection.Start.LineIndex)
                     {
                         int endIndex = Math.Min(Math.Max(this.GetViewIndex(line, this._selection.Start.ColumnIndex), startIndex), chars.Length);
-                        int num9 = Math.Min(Math.Max(startIndex, this.GetViewIndex(line, this._selection.End.ColumnIndex)), chars.Length);
+                        int minLenght = Math.Min(Math.Max(startIndex, this.GetViewIndex(line, this._selection.End.ColumnIndex)), chars.Length);
                         int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
-                        int num12 = Math.Max(0, endIndex - startIndex) * this._fontWidth;
-                        this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + num12, yPos, startIndex, endIndex, false);
-                        rectLeft += num12;
-                        num12 = Math.Max(0, num9 - endIndex) * this._fontWidth;
-                        this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + num12, yPos, endIndex, num9, true);
-                        rectLeft += num12;
-                        this.PaintColoredText(chars, colors, hdc, rectLeft, base.Width - this.VerticalScrollBarWidth, yPos, num9, chars.Length, false);
+                        //int textWidth = Math.Max(0, endIndex - startIndex) * this._fontWidth;
+                        int textWidth = this.MeasureString(hdc, chars, startIndex, endIndex).x;
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, endIndex, false);
+                        rectLeft += textWidth;
+                        //textWidth = Math.Max(0, minLenght - endIndex) * this._fontWidth;
+                        textWidth = this.MeasureString(hdc, chars, endIndex, minLenght).x;
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, endIndex, minLenght, true);
+                        rectLeft += textWidth;
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, base.Width - this.VerticalScrollBarWidth, yPos, minLenght, chars.Length, false);
                         return;
                     }
                 }
                 else
                 {
+                    // 已选择文本中的第一行
                     if (lineNum == this._selection.Start.LineIndex)
                     {
-                        int num13 = Math.Min(Math.Max(this.GetViewIndex(line, this._selection.Start.ColumnIndex), startIndex), chars.Length);
-                        int num14 = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
-                        int num16 = Math.Max(0, num13 - startIndex) * this._fontWidth;
-                        this.PaintColoredText(chars, colors, hdc, num14, num14 + num16, yPos, startIndex, num13, false);
-                        num14 += num16;
-                        int num15 = Math.Max(0, chars.Length - num13);
+                        int endIndex = Math.Min(Math.Max(this.GetViewIndex(line, this._selection.Start.ColumnIndex), startIndex), chars.Length);
+                        int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
+
+                        // 先画出行前未选中的文本
+                        int textWidth = this.MeasureString(hdc, chars, startIndex, endIndex).x;
+                        //int textWidth = Math.Max(0, endIndex - startIndex) * this._fontWidth;
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, endIndex, false);
+                        rectLeft += textWidth;
+
+                        // 然后画出选中的文本
+                        textWidth = this.MeasureString(hdc, chars, endIndex, chars.Length).x;
                         if (startIndex <= chars.Length)
                         {
-                            num15++;
+                            textWidth += this._fontWidth;
                         }
-                        num16 = num15 * this._fontWidth;
-                        this.PaintColoredText(chars, colors, hdc, num14, num14 + num16, yPos, num13, chars.Length, true);
-                        num14 += num16;
-                        this.PaintColoredText(chars, colors, hdc, num14, base.Width - this.VerticalScrollBarWidth, yPos, 0, 0, false);
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, endIndex, chars.Length, true);
+                        rectLeft += textWidth;
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, base.Width - this.VerticalScrollBarWidth, yPos, 0, 0, false);
                         return;
                     }
+
+                    // 已选择文本中的最后一行
                     if (lineNum == this._selection.End.LineIndex)
                     {
-                        int num17 = Math.Min(Math.Max(this.GetViewIndex(line, this._selection.End.ColumnIndex), startIndex), chars.Length);
-                        int num18 = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
-                        int num20 = Math.Max(0, num17 - startIndex) * this._fontWidth;
-                        this.PaintColoredText(chars, colors, hdc, num18, num18 + num20, yPos, startIndex, num17, true);
-                        num18 += num20;
-                        this.PaintColoredText(chars, colors, hdc, num18, base.Width - this.VerticalScrollBarWidth, yPos, num17, chars.Length, false);
+                        int endIndex = Math.Min(Math.Max(this.GetViewIndex(line, this._selection.End.ColumnIndex), startIndex), chars.Length);
+                        int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
+                        //int num20 = Math.Max(0, num17 - startIndex) * this._fontWidth;
+                        int textWidth = this.MeasureString(hdc, chars, startIndex, endIndex).x;
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, endIndex, true);
+                        rectLeft += textWidth;
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, base.Width - this.VerticalScrollBarWidth, yPos, endIndex, chars.Length, false);
                         return;
                     }
+
+                    // 选中文本的中间行
                     if ((lineNum > this._selection.Start.LineIndex) && (lineNum < this._selection.End.LineIndex))
                     {
-                        int num21 = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
-                        int num22 = Math.Max(0, chars.Length - startIndex);
+                        int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
+                        int textWidth = this.MeasureString(hdc, chars, startIndex, chars.Length).x;
                         if (startIndex <= chars.Length)
                         {
-                            num22++;
+                            textWidth += this._fontWidth;
                         }
-                        int num23 = num22 * this._fontWidth;
-                        this.PaintColoredText(chars, colors, hdc, num21, num21 + num23, yPos, startIndex, chars.Length, true);
-                        num21 += num23;
-                        this.PaintColoredText(chars, colors, hdc, num21, base.Width - this.VerticalScrollBarWidth, yPos, 0, 0, false);
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, chars.Length, true);
+                        rectLeft += textWidth;
+                        this.PaintColoredText(chars, colors, hdc, rectLeft, base.Width - this.VerticalScrollBarWidth, yPos, 0, 0, false);
                         return;
                     }
                 }
@@ -2631,7 +2666,22 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                 {
                     this._location.ColumnIndex = this._location.Line.Length;
                 }
-                int x = (((this._fontWidth * (this.GetViewIndex(this._location) - this.ViewLeftIndex)) + this.MarginPadding) + this.MarginWidth) + this._lineNumbersWidth;
+
+                //NOTE: 修改了更新光标位置的算法, 使其支持多字节文字
+                //int x = (((this._fontWidth * (this.GetViewIndex(this._location) - this.ViewLeftIndex)) + this.MarginPadding) + this.MarginWidth) + this._lineNumbersWidth;
+                ////////////////////////////////////////////////////////////////////////////////////// added code begin
+                TextLine line = _location.Line;
+                string str = new string(line.ToCharArray(this.ViewLeftIndex, (this.GetViewIndex(this._location) - this.ViewLeftIndex)));
+                IntPtr fontPtr = this.Font.ToHfont();
+                Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
+                IntPtr hdc = graphics.GetHdc();
+                Interop.SelectObject(hdc, fontPtr);
+                Interop.SIZE size = new Interop.SIZE();
+                bool ret = Interop.GetTextExtentPoint32W(hdc, str, str.Length, ref size);
+                graphics.ReleaseHdc(hdc);
+                int x = size.x +  + this.MarginPadding + this.MarginWidth + this._lineNumbersWidth;
+                ////////////////////////////////////////////////////////////////////////////////////// added code end
+
                 int y = (this._location.LineIndex - this.ViewTopLineNumber) * this._fontHeight;
                 Interop.SetCaretPos(x, y);
             }
@@ -2761,27 +2811,27 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             {
                 if (this._selectionExists)
                 {
-                    int num3 = this._selection.Start.LineIndex;
-                    int num4 = this._selection.End.LineIndex;
-                    if ((lineIndex != num3) && (num != num4))
+                    int startLineIndex = this._selection.Start.LineIndex;
+                    int endLineIndex = this._selection.End.LineIndex;
+                    if ((lineIndex != startLineIndex) && (num != endLineIndex))
                     {
-                        this.AddDirtyLines(Math.Min(num3, lineIndex), Math.Max(num4, num) + 1);
+                        this.AddDirtyLines(Math.Min(startLineIndex, lineIndex), Math.Max(endLineIndex, num) + 1);
                     }
-                    else if (lineIndex < num3)
+                    else if (lineIndex < startLineIndex)
                     {
-                        this.AddDirtyLines(lineIndex, num3 + 1);
+                        this.AddDirtyLines(lineIndex, startLineIndex + 1);
                     }
-                    else if (lineIndex > num3)
+                    else if (lineIndex > startLineIndex)
                     {
-                        this.AddDirtyLines(num3, lineIndex + 1);
+                        this.AddDirtyLines(startLineIndex, lineIndex + 1);
                     }
-                    else if (num < num4)
+                    else if (num < endLineIndex)
                     {
-                        this.AddDirtyLines(num, num4 + 1);
+                        this.AddDirtyLines(num, endLineIndex + 1);
                     }
-                    else if (num > num4)
+                    else if (num > endLineIndex)
                     {
-                        this.AddDirtyLines(num4, num + 1);
+                        this.AddDirtyLines(endLineIndex, num + 1);
                     }
                     else
                     {
