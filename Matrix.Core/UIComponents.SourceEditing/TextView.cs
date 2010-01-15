@@ -2111,6 +2111,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
         }
         private Interop.SIZE MeasureString(char[] chars, int startIndex, int length)
         {
+            //NOTE: 使用这种方法的话, 反复选中文本会导致程序崩溃
             //IntPtr fontPtr = this.Font.ToHfont();
             //Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
             //IntPtr hdc = graphics.GetHdc();
@@ -2121,6 +2122,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             //graphics.Dispose();
             //return size;
 
+            //直接使用Graphics对象的MeasureString就没问题, 但是我觉得效率可能会比较低, 哪位童鞋比较了解这方面的请赐教!!
             Graphics g = this.CreateGraphics();
             SizeF s = g.MeasureString(new string(chars, startIndex, length), this.Font);
             g.Dispose();
@@ -2128,6 +2130,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             Interop.SIZE size = new Interop.SIZE();
             size.x = (int)s.Width;
             size.y = (int)s.Height;
+
             return size;
         }
 
