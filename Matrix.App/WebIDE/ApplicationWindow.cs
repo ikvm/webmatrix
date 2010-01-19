@@ -71,7 +71,7 @@ namespace Microsoft.Matrix.WebIDE
             this._propBrowserTool = new PropertyBrowserToolWindow(base.ServiceProvider);
             this._openDocsTabControl = new OpenDocumentsTabControl(base.ServiceProvider);
             _openDocsTabControl.Dock = DockStyle.Top;
-            _openDocsTabControl.BringToFront();
+            _openDocsTabControl.Mode = TabControlMode.TextOnly;
 
             //this._dataTool = new DataToolWindow(base.ServiceProvider);
             //this._classViewTool = new ClassViewToolWindow(base.ServiceProvider);
@@ -130,6 +130,7 @@ namespace Microsoft.Matrix.WebIDE
             documentToolBar.Wrappable = false;
             documentToolBar.ImageList = list;
             commandBar.Dock = DockStyle.Top;
+            commandBar.SendToBack();
             commandBar.MenuBar = mainMenu;
             commandBar.TabIndex = 1;
             commandBar.TabStop = false;
@@ -177,7 +178,7 @@ namespace Microsoft.Matrix.WebIDE
             base.CommandBar = commandBar;
             base.MinimumSize = new Size(640, 480);
             this.Text = "Microsoft ASP.NET Web Matrix";
-            base.Controls.AddRange(new Control[] { splitter2, rightContainer, splitter, this.leftContainer, statusBar, commandBar, _openDocsTabControl });
+            base.Controls.AddRange(new Control[] { splitter2, rightContainer, splitter, this.leftContainer, statusBar, this._openDocsTabControl, commandBar});
             this._windowManager = new MdiWindowManager(this);
             this._windowManager.EnableDocking(DockStyle.Left, this.leftContainer);
             this._windowManager.EnableDocking(DockStyle.Right, rightContainer);

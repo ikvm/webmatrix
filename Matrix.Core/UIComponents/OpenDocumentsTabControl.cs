@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.Matrix.Core.Documents;
+using Microsoft.Matrix.Core.UserInterface;
 
 namespace Microsoft.Matrix.UIComponents
 {
@@ -22,6 +23,8 @@ namespace Microsoft.Matrix.UIComponents
             }
 
             this.TabPlacement = TabPlacement.Top;
+            this.Height = this.TabWellHeight + 2;
+            this.AwaysShowTab = true;
         }
 
         private DocumentTabPage GetAssociateTabPage(Document doc)
@@ -42,7 +45,7 @@ namespace Microsoft.Matrix.UIComponents
             DocumentTabPage page = this.GetAssociateTabPage(e.NewDocument);
             if (page != null)
             {
-                this.SelectedIndex = page.TabIndex;
+                this.SelectedTabPage = page;
             }
         }
 
@@ -67,9 +70,20 @@ namespace Microsoft.Matrix.UIComponents
         void OnDocumentOpened(object sender, DocumentEventArgs e)
         {
             DocumentTabPage page = new DocumentTabPage(e.Document);
+            page.ToolTipText = e.Document.DocumentPath;
             this.Tabs.Add(page);
         }
 
+        protected override void OnSelectedIndexChanged(EventArgs e)
+        {
+            base.OnSelectedIndexChanged(e);
+            DocumentTabPage page = this.SelectedTabPage as DocumentTabPage;
+            DocumentWindow window = page.Document.Site.GetService(typeof(DocumentWindow)) as DocumentWindow;
+            if (window != null)
+            {
+                window.Activate();
+            }
+        }
 
         protected IServiceProvider ServiceProvider
         {
@@ -119,13 +133,13 @@ namespace Microsoft.Matrix.UIComponents
             this._document = document;
         }
 
-        public new string Text
+        public override string Text
         {
             get
             {
                 return this._document == null ? "" : this._document.DocumentName;
             }
-            //set { base.Text = this._document.DocumentName; }
+            set {}
         }
     }
 }
