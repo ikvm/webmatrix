@@ -911,7 +911,8 @@ namespace Microsoft.Matrix.UIComponents
         {
             private TabControl _owner;
 
-            internal ControlCollection(TabControl owner) : base(owner)
+            internal ControlCollection(TabControl owner)
+                : base(owner)
             {
                 this._owner = owner;
             }

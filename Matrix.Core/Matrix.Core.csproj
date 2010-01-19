@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{BF18EE70-9F39-4D99-AD14-7098D35BED0A}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -133,6 +133,7 @@
       <Name>System</Name>
       <HintPath>System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data" />
     <Reference Include="System.Design">
       <Name>System.Design</Name>
       <HintPath>System.Design.dll</HintPath>
@@ -1163,6 +1164,9 @@
     </Compile>
     <Compile Include="UIComponents\MxUserControl.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\OpenDocumentsTabControl.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UIComponents\ProgressStatusBarPanel.cs">
       <SubType>Component</SubType>

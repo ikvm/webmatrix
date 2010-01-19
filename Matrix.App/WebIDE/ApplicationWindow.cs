@@ -19,13 +19,14 @@ namespace Microsoft.Matrix.WebIDE
     {
         //private ClassViewToolWindow _classViewTool;
         //private CommunityToolWindow _communityTool;
-        private DataToolWindow _dataTool;
+        //private DataToolWindow _dataTool;
         private DockingContainer leftContainer;
         private OpenDocumentsToolWindow _openDocsTool;
         private PropertyBrowserToolWindow _propBrowserTool;
         private ToolboxToolWindow _toolboxTool;
         private MdiWindowManager _windowManager;
         private WorkspaceToolWindow _workspaceTool;
+        private OpenDocumentsTabControl _openDocsTabControl;
 
         public ApplicationWindow(System.IServiceProvider serviceProvider) : base(serviceProvider)
         {
@@ -68,7 +69,11 @@ namespace Microsoft.Matrix.WebIDE
             this._openDocsTool = new OpenDocumentsToolWindow(base.ServiceProvider);
             this._toolboxTool = new ToolboxToolWindow(base.ServiceProvider);
             this._propBrowserTool = new PropertyBrowserToolWindow(base.ServiceProvider);
-            this._dataTool = new DataToolWindow(base.ServiceProvider);
+            this._openDocsTabControl = new OpenDocumentsTabControl(base.ServiceProvider);
+            _openDocsTabControl.Dock = DockStyle.Top;
+            _openDocsTabControl.BringToFront();
+
+            //this._dataTool = new DataToolWindow(base.ServiceProvider);
             //this._classViewTool = new ClassViewToolWindow(base.ServiceProvider);
             //this._communityTool = new CommunityToolWindow(base.ServiceProvider);
             ImageList list = new ImageList();
@@ -172,7 +177,7 @@ namespace Microsoft.Matrix.WebIDE
             base.CommandBar = commandBar;
             base.MinimumSize = new Size(640, 480);
             this.Text = "Microsoft ASP.NET Web Matrix";
-            base.Controls.AddRange(new Control[] { splitter2, rightContainer, splitter, this.leftContainer, statusBar, commandBar });
+            base.Controls.AddRange(new Control[] { splitter2, rightContainer, splitter, this.leftContainer, statusBar, commandBar, _openDocsTabControl });
             this._windowManager = new MdiWindowManager(this);
             this._windowManager.EnableDocking(DockStyle.Left, this.leftContainer);
             this._windowManager.EnableDocking(DockStyle.Right, rightContainer);
@@ -182,7 +187,7 @@ namespace Microsoft.Matrix.WebIDE
             //manager.AddToolWindow(this._classViewTool, DockStyle.Right, 0);
             //manager.AddToolWindow(this._communityTool, DockStyle.Right, 0);
             manager.AddToolWindow(this._workspaceTool, DockStyle.Right, -1);
-            manager.AddToolWindow(this._dataTool, DockStyle.Right, 1);
+            //manager.AddToolWindow(this._dataTool, DockStyle.Right, 1);
             manager.AddToolWindow(this._openDocsTool, DockStyle.Right, 1);
             ((ISupportInitialize) statusBar).EndInit();
             commandBar.ResumeLayout(false);
