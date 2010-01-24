@@ -7,6 +7,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
     using System.IO;
     using System.Text;
     using System.Windows.Forms;
+    using System.Diagnostics;
 
     public class TextView : Control, ICommandHandler
     {
@@ -334,7 +335,6 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             int length = line.Length;
             char[] data = line.Data;
             int textWidth;
-            Interop.SIZE size;
             while (index < length)
             {
                 if (data[index] == '\t')
@@ -346,8 +346,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     num2++;
                 }
 
-                size = this.MeasureString(data, this.ViewLeftIndex, num2 - this.ViewLeftIndex);
-                textWidth = size.x - (this._fontWidth / 2);
+                textWidth = this.MeasureString(data, this.ViewLeftIndex, num2 - this.ViewLeftIndex) - (this._fontWidth / 2);
                 //textWidth = (((num2 - this.ViewLeftIndex) * this._fontWidth) - (this._fontWidth / 2));
                 if (xPos < (((textWidth + this.MarginPadding) + this._lineNumbersWidth) + this.MarginWidth))
                 {
@@ -1952,6 +1951,14 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     {
                         this._viewMaxLineLength = viewIndex;
                     }
+                    
+                    int realWidth = this.MeasureString(location.Line.Data, 0, location.Line.Length);
+                    if (realWidth >= this._viewMaxLineWidth)
+                    {
+                        this._viewMaxLineWidth = realWidth + 0.1;
+                        this._viewMaxLineWidthLineIndex = location.LineIndex;
+                    }
+
                     if (location.MoveDown(1) == 0)
                     {
                         goto Label_008A;
@@ -1959,7 +1966,15 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                 }
             }
         Label_008A:
-            this._horizontalScrollBar.Maximum = this._viewMaxLineLength;
+            if (this._fontWidth != 0)
+            {
+                this._horizontalScrollBar.Maximum = (int)((this._viewMaxLineWidth / ((double)this._fontWidth)) + 0.5);
+            }
+            else
+            {
+                this._horizontalScrollBar.Maximum = (int)this._viewMaxLineWidth;
+            }
+
             this.UpdateScrollBarVisibility();
             if ((this.ViewTopLineNumber + this.VisibleLines) > (this._buffer.LineCount - 1))
             {
@@ -2105,45 +2120,96 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             base.Invalidate(new Rectangle(0, num, base.Width - this.VerticalScrollBarWidth, y - num));
         }
 
-        private Interop.SIZE MeasureString(char[] chars)
+        private int MeasureString(char[] chars)
         {
             return this.MeasureString(chars, 0, chars.Length);
         }
-        private Interop.SIZE MeasureString(char[] chars, int startIndex, int length)
+        //private Interop.SIZE MeasureString(char[] chars, int startIndex, int length)
+        //{
+        //    //NOTE: 使用这种方法的话, 反复选中文本会导致程序崩溃
+        //    //IntPtr fontPtr = this.Font.ToHfont();
+        //    //Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
+        //    //IntPtr hdc = graphics.GetHdc();
+        //    //Interop.SelectObject(hdc, fontPtr);
+        //    //Interop.SIZE size = this.MeasureString(chars, startIndex, length);
+        //    //Interop.SelectObject(hdc, IntPtr.Zero);
+        //    //graphics.ReleaseHdc(hdc);
+        //    //graphics.Dispose();
+        //    //return size;
+
+        //    //直接使用Graphics对象的MeasureString就没问题, 但是我觉得效率可能会比较低, 哪位童鞋比较了解这方面的请赐教!!
+        //    Graphics g = this.CreateGraphics();
+        //    SizeF s = g.MeasureString(new string(chars, startIndex, length), this.Font);
+        //    g.Dispose();
+
+        //    Interop.SIZE size = new Interop.SIZE();
+        //    size.x = (int)s.Width;
+        //    size.y = (int)s.Height;
+
+        //    return size;
+        //}
+
+
+        private int MeasureString(char[] chars, int start, int length)
         {
-            //NOTE: 使用这种方法的话, 反复选中文本会导致程序崩溃
-            //IntPtr fontPtr = this.Font.ToHfont();
-            //Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
-            //IntPtr hdc = graphics.GetHdc();
-            //Interop.SelectObject(hdc, fontPtr);
-            //Interop.SIZE size = this.MeasureString(hdc, chars, startIndex, length);
-            //Interop.SelectObject(hdc, IntPtr.Zero);
-            //graphics.ReleaseHdc(hdc);
-            //graphics.Dispose();
-            //return size;
-
-            //直接使用Graphics对象的MeasureString就没问题, 但是我觉得效率可能会比较低, 哪位童鞋比较了解这方面的请赐教!!
-            Graphics g = this.CreateGraphics();
-            SizeF s = g.MeasureString(new string(chars, startIndex, length), this.Font);
-            g.Dispose();
-
-            Interop.SIZE size = new Interop.SIZE();
-            size.x = (int)s.Width;
-            size.y = (int)s.Height;
-
-            return size;
-        }
-
-        private Interop.SIZE MeasureString(IntPtr hdc, char[] chars, int startIndex, int length)
-        {
-            Interop.SIZE size = new Interop.SIZE();
-            if (length > 0)
-            { 
-                string text = new string(chars, startIndex, length);
-                bool ret = Interop.GetTextExtentPoint32W(hdc, text, length, ref size);
+            int end = start + length;
+            double realWidth;
+            double width = 0.0;
+            if (chars == null)
+            {
+                return (int)width;
             }
-            return size;
+            char[] chArray = chars;
+            //if (!this._owner.ConvertTabsToSpaces)
+            //{
+            //    chArray = this.test(chars);
+            //}
+            //else
+            //{
+            //    chArray = chars;
+            //}
+            Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
+            IntPtr zero = IntPtr.Zero;
+            try
+            {
+                zero = graphics.GetHdc();
+                Interop.SelectObject(zero, this._fontPtr);
+                for (int i = start; i < end; i++)
+                {
+                    Interop.SIZE size = new Interop.SIZE();
+                    Interop.GetTextExtentPoint32W(zero, new string(chArray[i], 1), 1, ref size);
+                    width += size.x;
+                }
+                realWidth = width;
+            }
+            catch (Exception exception)
+            {
+                StackFrame frame = new StackFrame(1);
+                StreamWriter writer = new StreamWriter(@"c:\temp\log.txt");
+                writer.Write(frame.GetMethod().Name);
+                writer.WriteLine("---" + exception.ToString());
+                writer.Close();
+                realWidth = width;
+            }
+            finally
+            {
+                graphics.ReleaseHdc(zero);
+            }
+
+            return (int)realWidth;
         }
+
+
+        //private Interop.SIZE MeasureString(IntPtr hdc, char[] chars, int startIndex, int length)
+        //{
+        //    Interop.SIZE size = new Interop.SIZE();
+        //    if (length > 0)
+        //    { 
+        //        string text = new string(chars, startIndex, length);
+        //        bool ret = Interop.GetTextExtentPoint32W(hdc, text, length, ref size);
+        //    }
+        //    return size;
+        //}
 
         private unsafe void PaintTextLine(TextLine line, int lineNum, IntPtr hdc, int yPos, int startIndex)
         {
@@ -2223,12 +2289,12 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                             int minLenght = Math.Min(Math.Max(startIndex, this.GetViewIndex(line, this._selection.End.ColumnIndex)), chars.Length);
                             int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
                             //int textWidth = Math.Max(0, endIndex - startIndex) * this._fontWidth;
-                            int textWidth = this.MeasureString(hdc, chars, startIndex, endIndex - startIndex).x;
+                            int textWidth = this.MeasureString(chars, startIndex, endIndex - startIndex);
                             this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, endIndex, false);
 
                             rectLeft += textWidth;
                             //textWidth = Math.Max(0, minLenght - endIndex) * this._fontWidth;
-                            textWidth = this.MeasureString(hdc, chars, endIndex, minLenght - endIndex).x;
+                            textWidth = this.MeasureString(chars, endIndex, minLenght - endIndex);
                             this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, endIndex, minLenght, true);
                             
                             rectLeft += textWidth;
@@ -2245,13 +2311,13 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                             int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
 
                             // 先画出行前未选中的文本
-                            int textWidth = this.MeasureString(hdc, chars, startIndex, endIndex - startIndex).x;
+                            int textWidth = this.MeasureString(chars, startIndex, endIndex - startIndex);
                             //int textWidth = Math.Max(0, endIndex - startIndex) * this._fontWidth;
                             this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, endIndex, false);
                             rectLeft += textWidth;
 
                             // 然后画出选中的文本
-                            textWidth = this.MeasureString(hdc, chars, endIndex, chars.Length - endIndex).x;
+                            textWidth = this.MeasureString(chars, endIndex, chars.Length - endIndex);
                             if (startIndex <= chars.Length)
                             {
                                 textWidth += this._fontWidth;
@@ -2268,7 +2334,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                             int endIndex = Math.Min(Math.Max(this.GetViewIndex(line, this._selection.End.ColumnIndex), startIndex), chars.Length);
                             int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
                             //int num20 = Math.Max(0, num17 - startIndex) * this._fontWidth;
-                            int textWidth = this.MeasureString(hdc, chars, startIndex, endIndex - startIndex).x;
+                            int textWidth = this.MeasureString(chars, startIndex, endIndex - startIndex);
                             this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, endIndex, true);
                             rectLeft += textWidth;
                             this.PaintColoredText(chars, colors, hdc, rectLeft, base.Width - this.VerticalScrollBarWidth, yPos, endIndex, chars.Length, false);
@@ -2279,7 +2345,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         if ((lineNum > this._selection.Start.LineIndex) && (lineNum < this._selection.End.LineIndex))
                         {
                             int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
-                            int textWidth = this.MeasureString(hdc, chars, startIndex, chars.Length - startIndex).x;
+                            int textWidth = this.MeasureString(chars, startIndex, chars.Length - startIndex);
                             if (startIndex <= chars.Length)
                             {
                                 textWidth += this._fontWidth;
@@ -2724,8 +2790,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                 //NOTE: 修改了更新光标位置的算法, 使其支持多字节文字
                 //int x = (((this._fontWidth * (this.GetViewIndex(this._location) - this.ViewLeftIndex)) + this.MarginPadding) + this.MarginWidth) + this._lineNumbersWidth;
                 TextLine line = _location.Line;
-                Interop.SIZE size = this.MeasureString(line.ToCharArray(), this.ViewLeftIndex, (this.GetViewIndex(this._location) - this.ViewLeftIndex));
-                int x = size.x + this.MarginPadding + this.MarginWidth + this._lineNumbersWidth;
+                int x = this.MeasureString(line.ToCharArray(), this.ViewLeftIndex, (this.GetViewIndex(this._location) - this.ViewLeftIndex)) + this.MarginPadding + this.MarginWidth + this._lineNumbersWidth;
 
                 int y = (this._location.LineIndex - this.ViewTopLineNumber) * this._fontHeight;
                 Interop.SetCaretPos(x, y);
