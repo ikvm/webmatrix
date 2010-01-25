@@ -21,7 +21,7 @@ namespace Microsoft.Matrix.WebIDE
         //private CommunityToolWindow _communityTool;
         //private DataToolWindow _dataTool;
         private DockingContainer leftContainer;
-        private OpenDocumentsToolWindow _openDocsTool;
+        //private OpenDocumentsToolWindow _openDocsTool;
         private PropertyBrowserToolWindow _propBrowserTool;
         private ToolboxToolWindow _toolboxTool;
         private MdiWindowManager _windowManager;
@@ -55,7 +55,7 @@ namespace Microsoft.Matrix.WebIDE
             dui.cm = base.CommandManager;
             dui.mainToolBar = (MxToolBar) base.CommandBar.Controls[0];
             dui.helpToolBar = (MxToolBar) base.CommandBar.Controls[1];
-            dui.documentToolBar = (MxToolBar) base.CommandBar.Controls[2];
+            //dui.documentToolBar = (MxToolBar) base.CommandBar.Controls[2];
             dui.mainStatusBar = base.StatusBar;
             dui.menuBar = base.Menu;
             dui.commandImages = dui.mainToolBar.ImageList.Images;
@@ -66,7 +66,7 @@ namespace Microsoft.Matrix.WebIDE
         {
             //NOTE: 初始化工具窗口
             this._workspaceTool = new WorkspaceToolWindow(base.ServiceProvider);
-            this._openDocsTool = new OpenDocumentsToolWindow(base.ServiceProvider);
+            //this._openDocsTool = new OpenDocumentsToolWindow(base.ServiceProvider);
             this._toolboxTool = new ToolboxToolWindow(base.ServiceProvider);
             this._propBrowserTool = new PropertyBrowserToolWindow(base.ServiceProvider);
             this._openDocsTabControl = new OpenDocumentsTabControl(base.ServiceProvider);
@@ -80,7 +80,7 @@ namespace Microsoft.Matrix.WebIDE
             CommandBar commandBar = new CommandBar();
             MxToolBar mainToolBar = new MxToolBar();
             MxToolBar helpToolBar = new MxToolBar();
-            MxToolBar documentToolBar = new MxToolBar();
+            //MxToolBar documentToolBar = new MxToolBar();
             MxStatusBar statusBar = new MxStatusBar();
             this.leftContainer = new DockingContainer();
             DockingContainer rightContainer = new DockingContainer();
@@ -120,15 +120,15 @@ namespace Microsoft.Matrix.WebIDE
             Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
             helpToolBar.Width = (((int) graphics.MeasureString(new string('_', 30), this.Font).Width) + 0x18) + 6;
             graphics.Dispose();
-            documentToolBar.Appearance = ToolBarAppearance.Flat;
-            documentToolBar.Divider = false;
-            documentToolBar.DropDownArrows = true;
-            documentToolBar.ShowToolTips = true;
-            documentToolBar.TabIndex = 0;
-            documentToolBar.TabStop = false;
-            documentToolBar.TextAlign = ToolBarTextAlign.Right;
-            documentToolBar.Wrappable = false;
-            documentToolBar.ImageList = list;
+            //documentToolBar.Appearance = ToolBarAppearance.Flat;
+            //documentToolBar.Divider = false;
+            //documentToolBar.DropDownArrows = true;
+            //documentToolBar.ShowToolTips = true;
+            //documentToolBar.TabIndex = 0;
+            //documentToolBar.TabStop = false;
+            //documentToolBar.TextAlign = ToolBarTextAlign.Right;
+            //documentToolBar.Wrappable = false;
+            //documentToolBar.ImageList = list;
             commandBar.Dock = DockStyle.Top;
             commandBar.SendToBack();
             commandBar.MenuBar = mainMenu;
@@ -136,7 +136,7 @@ namespace Microsoft.Matrix.WebIDE
             commandBar.TabStop = false;
             commandBar.Controls.Add(mainToolBar);
             commandBar.Controls.Add(helpToolBar);
-            commandBar.Controls.Add(documentToolBar);
+            //commandBar.Controls.Add(documentToolBar);
             commandBar.TopRightToolBar = helpToolBar;
             this.leftContainer.AssociatedSplitter = splitter;
             this.leftContainer.Dock = DockStyle.Left;
@@ -189,7 +189,7 @@ namespace Microsoft.Matrix.WebIDE
             //manager.AddToolWindow(this._communityTool, DockStyle.Right, 0);
             manager.AddToolWindow(this._workspaceTool, DockStyle.Right, -1);
             //manager.AddToolWindow(this._dataTool, DockStyle.Right, 1);
-            manager.AddToolWindow(this._openDocsTool, DockStyle.Right, 1);
+            //manager.AddToolWindow(this._openDocsTool, DockStyle.Right, 1);
             ((ISupportInitialize) statusBar).EndInit();
             commandBar.ResumeLayout(false);
             base.ResumeLayout(false);
@@ -358,7 +358,7 @@ namespace Microsoft.Matrix.WebIDE
         private sealed class TempCommandUI
         {
             public CommandManager cm;
-            public MxToolBar documentToolBar;
+            //public MxToolBar documentToolBar;
             public ImageList.ImageCollection commandImages;
             public MxToolBar helpToolBar;
             public ApplicationWindow mainForm;
@@ -739,19 +739,19 @@ namespace Microsoft.Matrix.WebIDE
                 this.CreateToolBarButtons();
                 this.InitializeMainToolBar();
                 this.InitializeHelpToolBar();
-                this.InitializeDocumentToolBar();
+                //this.InitializeDocumentToolBar();
                 this.InitializeMenuBar();
                 this.InitializeStatusBar();
             }
 
-            private void InitializeDocumentToolBar()
-            {
-                this.documentToolBar.Buttons.AddRange(new ToolBarButton[] { 
-                    (ToolBarButton) this.toolBarButtonTable2[120], (ToolBarButton) this.toolBarButtonTable2[0x79], (ToolBarButton) this.toolBarButtonTable2[0x7a], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[0x6a], (ToolBarButton) this.toolBarButtonTable2[0x6b], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[100], (ToolBarButton) this.toolBarButtonTable2[0x65], (ToolBarButton) this.toolBarButtonTable2[0x66], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[0x6c], (ToolBarButton) this.toolBarButtonTable2[110], (ToolBarButton) this.toolBarButtonTable2[0x6d], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[0x6f], 
-                    (ToolBarButton) this.toolBarButtonTable2[0x70], (ToolBarButton) this.toolBarButtonTable2[0x72], (ToolBarButton) this.toolBarButtonTable2[0x71], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[260], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[140]
-                 });
-                this.cm.AddToolBar(this.documentToolBar);
-            }
+            //private void InitializeDocumentToolBar()
+            //{
+            //    this.documentToolBar.Buttons.AddRange(new ToolBarButton[] { 
+            //        (ToolBarButton) this.toolBarButtonTable2[120], (ToolBarButton) this.toolBarButtonTable2[0x79], (ToolBarButton) this.toolBarButtonTable2[0x7a], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[0x6a], (ToolBarButton) this.toolBarButtonTable2[0x6b], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[100], (ToolBarButton) this.toolBarButtonTable2[0x65], (ToolBarButton) this.toolBarButtonTable2[0x66], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[0x6c], (ToolBarButton) this.toolBarButtonTable2[110], (ToolBarButton) this.toolBarButtonTable2[0x6d], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[0x6f], 
+            //        (ToolBarButton) this.toolBarButtonTable2[0x70], (ToolBarButton) this.toolBarButtonTable2[0x72], (ToolBarButton) this.toolBarButtonTable2[0x71], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[260], this.CreateSeparatorButton(), (ToolBarButton) this.toolBarButtonTable2[140]
+            //     });
+            //    this.cm.AddToolBar(this.documentToolBar);
+            //}
 
             private void InitializeHelpToolBar()
             {

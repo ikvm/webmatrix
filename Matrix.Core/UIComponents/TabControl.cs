@@ -425,7 +425,7 @@ namespace Microsoft.Matrix.UIComponents
                     rectX = 0;
                     rectY = 0;
                     g.FillRectangle(brush, 0, 0, clientRectangle.Width, this.TabWellHeight);
-                    g.DrawLine(SystemPens.ControlLightLight, this.TabWellHeight - 1, this.TabWellHeight - 1, clientRectangle.Width, this.TabWellHeight - 1);
+                    g.DrawLine(SystemPens.ControlLightLight, 0, this.TabWellHeight - 1, clientRectangle.Width, this.TabWellHeight - 1);
                 }
                 else if (this._placement == TabPlacement.Bottom)
                 {

@@ -12,6 +12,7 @@ namespace Microsoft.Matrix.Core.Projects.FileSystem
     using System.Globalization;
     using System.IO;
     using System.Windows.Forms;
+    using System.Text;
 
     internal sealed class MyComputerProject : FileSystemProject, ILocalFileSystemProject
     {
@@ -199,6 +200,9 @@ namespace Microsoft.Matrix.Core.Projects.FileSystem
                             try
                             {
                                 MiscFileProjectItem projectItem = new MiscFileProjectItem(Path.GetFileName(path), path, this);
+                                
+                                //TODO: 文件编码处理
+                                projectItem.Encoding = Encoding.Default;
                                 bool readOnly = readOnlyChecked || ((File.GetAttributes(path) & FileAttributes.ReadOnly) != 0);
                                 this.OpenProjectItem(projectItem, readOnly, DocumentViewType.Default);
                             }
