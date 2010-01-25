@@ -232,6 +232,7 @@ namespace Microsoft.Matrix.Core.Projects.FileSystem
             MiscFileProjectItem projectItem = item as MiscFileProjectItem;
             if ((projectItem == null) || (projectItem.Project != this))
             {
+                //TODO: 文件编码处理
                 projectItem = new MiscFileProjectItem(item.Caption, item.Path, this);
             }
             Document document = service.OpenDocument(projectItem, readOnly, initialView);

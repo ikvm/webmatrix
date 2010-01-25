@@ -21,7 +21,7 @@ namespace Microsoft.Matrix.Core.Documents.Text
         void IDocumentStorage.Load(Stream contentStream)
         {
             MiscFileProjectItem projectItem = this._owner.ProjectItem as MiscFileProjectItem;
-            Encoding encoding = projectItem != null ? projectItem.Encoding : Encoding.Default;
+            Encoding encoding = projectItem != null ? projectItem.Encoding : Encoding.UTF8;
 
             this.Load(contentStream, encoding);
         }
@@ -52,7 +52,7 @@ namespace Microsoft.Matrix.Core.Documents.Text
         void IDocumentStorage.Save(Stream contentStream)
         {
             MiscFileProjectItem projectItem = this._owner.ProjectItem as MiscFileProjectItem;
-            Encoding encoding = projectItem != null ? projectItem.Encoding : Encoding.Default;
+            Encoding encoding = projectItem != null ? projectItem.Encoding : Encoding.UTF8;
 
             this.Save(contentStream, encoding);
         }
