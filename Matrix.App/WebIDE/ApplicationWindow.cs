@@ -64,7 +64,6 @@ namespace Microsoft.Matrix.WebIDE
 
         private void InitializeUserInterface()
         {
-            //NOTE: 初始化工具窗口
             this._workspaceTool = new WorkspaceToolWindow(base.ServiceProvider);
             //this._openDocsTool = new OpenDocumentsToolWindow(base.ServiceProvider);
             this._toolboxTool = new ToolboxToolWindow(base.ServiceProvider);

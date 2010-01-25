@@ -2167,31 +2167,6 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
         {
             return this.MeasureString(chars, 0, chars.Length);
         }
-        //private Interop.SIZE MeasureString(char[] chars, int startIndex, int length)
-        //{
-        //    //NOTE: 使用这种方法的话, 反复选中文本会导致程序崩?
-        //    //IntPtr fontPtr = this.Font.ToHfont();
-        //    //Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
-        //    //IntPtr hdc = graphics.GetHdc();
-        //    //Interop.SelectObject(hdc, fontPtr);
-        //    //Interop.SIZE size = this.MeasureString(chars, startIndex, length);
-        //    //Interop.SelectObject(hdc, IntPtr.Zero);
-        //    //graphics.ReleaseHdc(hdc);
-        //    //graphics.Dispose();
-        //    //return size;
-
-        //    //�直接使用Graphics对象的MeasureString就没问题, 但是我觉得效率可能会比较? �哪位童鞋比较了解这方面的请赐?!
-        //    Graphics g = this.CreateGraphics();
-        //    SizeF s = g.MeasureString(new string(chars, startIndex, length), this.Font);
-        //    g.Dispose();
-
-        //    Interop.SIZE size = new Interop.SIZE();
-        //    size.x = (int)s.Width;
-        //    size.y = (int)s.Height;
-
-        //    return size;
-        //}
-
 
         private double MeasureString(char[] chars, int start, int length)
         {
@@ -2812,19 +2787,6 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     this._location.ColumnIndex = this._location.Line.Length;
                 }
 
-                ////////////////////////////////////////////////////////////////////////////////////// added code begin
-                //TextLine line = _location.Line;
-                //string str = new string(line.ToCharArray(this.ViewLeftIndex, (this.GetViewIndex(this._location) - this.ViewLeftIndex)));
-                //IntPtr fontPtr = this.Font.ToHfont();
-                //Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
-                //IntPtr hdc = graphics.GetHdc();
-                //Interop.SelectObject(hdc, fontPtr);
-                //Interop.SIZE size = new Interop.SIZE();
-                //bool ret = Interop.GetTextExtentPoint32W(hdc, str, str.Length, ref size);
-                //graphics.ReleaseHdc(hdc);
-                ////////////////////////////////////////////////////////////////////////////////////// added code end
-                //NOTE: 修改了更新光标位置的算法, 使其支持多字节文?
-                //int x = (((this._fontWidth * (this.GetViewIndex(this._location) - this.ViewLeftIndex)) + this.MarginPadding) + this.MarginWidth) + this._lineNumbersWidth;
                 TextLine line = _location.Line;
                 int x = (int)this.MeasureString(line.ToCharArray(), this.ViewLeftIndex, (this.GetViewIndex(this._location) - this.ViewLeftIndex)) + this.MarginPadding + this.MarginWidth + this._lineNumbersWidth;
 

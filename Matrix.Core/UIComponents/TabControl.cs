@@ -88,7 +88,6 @@ namespace Microsoft.Matrix.UIComponents
             this.EnsureTabRectangles(null, null, Rectangle.Empty);
         }
 
-        // UNDONE: 修改TabPage的Rectangle值使TabControl支持TabPlacement.Left和TabPlacement.Left
         private void EnsureTabRectangles(Graphics g, Font font, Rectangle clientRect)
         {
             #region if calculated
@@ -397,7 +396,6 @@ namespace Microsoft.Matrix.UIComponents
         }
 
 
-        // UNDONE: 修改渲染过程使TabControl支持TabPlacement.Left和TabPlacement.Left
         protected override void OnPaint(PaintEventArgs e)
         {
             Rectangle clientRectangle = base.ClientRectangle;
@@ -704,7 +702,6 @@ namespace Microsoft.Matrix.UIComponents
         {
             get
             {
-                // UNDONE: 修改返回的DisplayRectangle使TabControl支持TabPlacement.Left和TabPlacement.Left
                 Rectangle clientRectangle = base.ClientRectangle;
                 if (!this._awaysShowTab && this._tabCollection.Count < 2)
                 {
