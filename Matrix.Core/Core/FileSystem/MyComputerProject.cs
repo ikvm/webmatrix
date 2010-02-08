@@ -171,6 +171,7 @@ namespace Microsoft.Matrix.Core.Projects.FileSystem
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Filter = service.OpenFilters;
                 dialog.ShowReadOnly = true;
+                dialog.AutoUpgradeEnabled = true;
                 dialog.Multiselect = true;
                 dialog.CheckFileExists = true;
                 dialog.Title = "Open Files";

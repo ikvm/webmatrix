@@ -31,7 +31,7 @@ namespace Microsoft.Matrix.UIComponents
         private const int TabWellGap = 4;
         private const int TabWellPaddingX = 5;
         private const int TabWellPaddingY = 2;
-
+         
         public event EventHandler SelectedIndexChanged
         {
             add
