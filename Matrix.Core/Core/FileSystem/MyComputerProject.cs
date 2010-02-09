@@ -12,6 +12,7 @@ namespace Microsoft.Matrix.Core.Projects.FileSystem
     using System.Globalization;
     using System.IO;
     using System.Windows.Forms;
+    using System.Text;
 
     internal sealed class MyComputerProject : FileSystemProject, ILocalFileSystemProject
     {
@@ -170,6 +171,7 @@ namespace Microsoft.Matrix.Core.Projects.FileSystem
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Filter = service.OpenFilters;
                 dialog.ShowReadOnly = true;
+                dialog.AutoUpgradeEnabled = true;
                 dialog.Multiselect = true;
                 dialog.CheckFileExists = true;
                 dialog.Title = "Open Files";
@@ -199,6 +201,9 @@ namespace Microsoft.Matrix.Core.Projects.FileSystem
                             try
                             {
                                 MiscFileProjectItem projectItem = new MiscFileProjectItem(Path.GetFileName(path), path, this);
+                                
+                                //TODO: 文件编码处理
+                                projectItem.Encoding = Encoding.Default;
                                 bool readOnly = readOnlyChecked || ((File.GetAttributes(path) & FileAttributes.ReadOnly) != 0);
                                 this.OpenProjectItem(projectItem, readOnly, DocumentViewType.Default);
                             }
@@ -228,6 +233,7 @@ namespace Microsoft.Matrix.Core.Projects.FileSystem
             MiscFileProjectItem projectItem = item as MiscFileProjectItem;
             if ((projectItem == null) || (projectItem.Project != this))
             {
+                //TODO: 文件编码处理
                 projectItem = new MiscFileProjectItem(item.Caption, item.Path, this);
             }
             Document document = service.OpenDocument(projectItem, readOnly, initialView);

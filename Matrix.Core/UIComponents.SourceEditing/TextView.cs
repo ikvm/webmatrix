@@ -7,6 +7,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
     using System.IO;
     using System.Text;
     using System.Windows.Forms;
+    using System.Diagnostics;
 
     public class TextView : Control, ICommandHandler
     {
@@ -16,7 +17,6 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
         private int _bottomPaintLineNumber;
         private TextBuffer _buffer;
         private bool _caretHiding;
-        private int _caretWidth;
         private ICommandHandler _firstHandler;
         private int _fontHeight;
         private IntPtr _fontPtr;
@@ -63,6 +63,9 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
         private const int CtrlZKeyCode = 0x1a;
         private const int LineNumbersPadding = 3;
         private const int VerticalScrollAmount = 3;
+
+        private double _viewMaxLineWidth = 0;
+        private int _viewMaxLineWidthLineIndex = 0;
         #endregion
 
         internal TextView(TextControl owner, TextBuffer buffer, TextManager manager)
@@ -91,14 +94,38 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             {
                 this._viewMaxLineLength = 0;
             }
-            this._horizontalScrollBar.Maximum = this._viewMaxLineLength;
+            using (TextBufferLocation location = this._buffer.CreateTextBufferLocation())
+            {
+                location.GotoLine(0);
+                while (location.LineIndex <= this._buffer.LineCount)
+                {
+                    double num = this.MeasureString(location.Line.Data, 0, location.Line.Length);
+                    if (num > this._viewMaxLineWidth)
+                    {
+                        this._viewMaxLineWidth = num;
+                        this._viewMaxLineWidthLineIndex = location.LineIndex;
+                    }
+                    if (location.MoveDown(1) == 0)
+                    {
+                        goto Label_018C;
+                    }
+                }
+            }
+        Label_018C:
+            if (this._fontWidth != 0)
+            {
+                this._horizontalScrollBar.Maximum = (int)((this._viewMaxLineWidth / ((double)this._fontWidth)) + 0.5);
+            }
+            else
+            {
+                this._horizontalScrollBar.Maximum = (int)this._viewMaxLineWidth;
+            }
             this._verticalScrollBar = new VScrollBar();
             this._verticalScrollBar.Cursor = Cursors.Arrow;
             this._verticalScrollBar.Scroll += new ScrollEventHandler(this.OnVerticalScrollBarScroll);
             this._verticalScrollBar.Maximum = this._buffer.LineCount;
             this.Cursor = Cursors.IBeam;
             this._viewTopLineNumber = 0;
-            this._caretWidth = 2;
             this._insertMode = true;
             base.Controls.Add(this._verticalScrollBar);
             base.Controls.Add(this._horizontalScrollBar);
@@ -330,26 +357,27 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
         private int GetActualIndex(TextLine line, int xPos)
         {
             int index = 0;
-            int num2 = 0;
+            int end = 0;
             int length = line.Length;
             char[] data = line.Data;
-            int textWidth;
-            Interop.SIZE size;
+            int num4 = (this.MarginPadding + this._lineNumbersWidth) + this.MarginWidth;
+            int viewLeftIndex = this.ViewLeftIndex;
             while (index < length)
             {
                 if (data[index] == '\t')
                 {
-                    num2 += this.TabSize - (num2 % this.TabSize);
+                    end += this.TabSize - (end % this.TabSize);
                 }
                 else
                 {
-                    num2++;
+                    end++;
                 }
-
-                size = this.MeasureString(data, this.ViewLeftIndex, num2 - this.ViewLeftIndex);
-                textWidth = size.x - (this._fontWidth / 2);
-                //textWidth = (((num2 - this.ViewLeftIndex) * this._fontWidth) - (this._fontWidth / 2));
-                if (xPos < (((textWidth + this.MarginPadding) + this._lineNumbersWidth) + this.MarginWidth))
+                if (this.ViewLeftIndex < end)
+                {
+                    num4 += (int)this.MeasureString(data, viewLeftIndex, end - viewLeftIndex);
+                    viewLeftIndex = end;
+                }
+                if (xPos < num4)
                 {
                     return index;
                 }
@@ -361,7 +389,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
         private Point GetLineColFromXY(int x, int y)
         {
             int curLineIndex = y / this._fontHeight;
-            int lineIndex = Math.Max(0, Math.Min((int) (this._buffer.LineCount - 1), (int) (this.ViewTopLineNumber + curLineIndex)));
+            int lineIndex = Math.Max(0, Math.Min((int)(this._buffer.LineCount - 1), (int)(this.ViewTopLineNumber + curLineIndex)));
             int actualIndex = 0;
             using (TextBufferLocation location = this._buffer.CreateTextBufferLocation(this._location))
             {
@@ -469,10 +497,10 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                                 this._location.MoveDown(1);
                                 this._location.ColumnIndex = 0;
                                 flag = true;
-                                isSelecting = ((TextBufferCommand) command).IsSelecting;
+                                isSelecting = ((TextBufferCommand)command).IsSelecting;
                                 this.SetSmartCursorIndex();
                             }
-                            else if (!((TextBufferCommand) command).IsSelecting)
+                            else if (!((TextBufferCommand)command).IsSelecting)
                             {
                                 flag2 = true;
                             }
@@ -481,7 +509,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         {
                             this._location.ColumnIndex++;
                             flag = true;
-                            isSelecting = ((TextBufferCommand) command).IsSelecting;
+                            isSelecting = ((TextBufferCommand)command).IsSelecting;
                             this.SetSmartCursorIndex();
                         }
                         flag4 = true;
@@ -495,10 +523,10 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                                 this._location.MoveUp(1);
                                 this._location.ColumnIndex = this._location.Line.Length;
                                 flag = true;
-                                isSelecting = ((TextBufferCommand) command).IsSelecting;
+                                isSelecting = ((TextBufferCommand)command).IsSelecting;
                                 this.SetSmartCursorIndex();
                             }
-                            else if (!((TextBufferCommand) command).IsSelecting)
+                            else if (!((TextBufferCommand)command).IsSelecting)
                             {
                                 flag2 = true;
                             }
@@ -507,113 +535,113 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         {
                             this._location.ColumnIndex--;
                             flag = true;
-                            isSelecting = ((TextBufferCommand) command).IsSelecting;
+                            isSelecting = ((TextBufferCommand)command).IsSelecting;
                             this.SetSmartCursorIndex();
                         }
                         flag4 = true;
                         goto Label_0C3E;
 
                     case 0x20:
-                    {
-                        isSelecting = ((TextBufferCommand) command).IsSelecting;
-                        TextBufferLocation location2 = this._location.Clone();
-                        TextBufferSpan wordSpan = null;
-                        try
                         {
-                            wordSpan = this.TextLanguage.GetWordSpan(location2, WordType.Next);
-                            if (wordSpan != null)
+                            isSelecting = ((TextBufferCommand)command).IsSelecting;
+                            TextBufferLocation location2 = this._location.Clone();
+                            TextBufferSpan wordSpan = null;
+                            try
                             {
-                                this._location.MoveTo(wordSpan.Start);
-                                flag = true;
-                                this.SetSmartCursorIndex();
+                                wordSpan = this.TextLanguage.GetWordSpan(location2, WordType.Next);
+                                if (wordSpan != null)
+                                {
+                                    this._location.MoveTo(wordSpan.Start);
+                                    flag = true;
+                                    this.SetSmartCursorIndex();
+                                }
                             }
-                        }
-                        finally
-                        {
-                            location2.Dispose();
-                            if (wordSpan != null)
+                            finally
                             {
-                                wordSpan.Dispose();
+                                location2.Dispose();
+                                if (wordSpan != null)
+                                {
+                                    wordSpan.Dispose();
+                                }
                             }
+                            flag4 = true;
+                            goto Label_0C3E;
                         }
-                        flag4 = true;
-                        goto Label_0C3E;
-                    }
                     case 0x21:
-                    {
-                        isSelecting = ((TextBufferCommand) command).IsSelecting;
-                        TextBufferLocation location3 = this._location.Clone();
-                        TextBufferSpan span2 = null;
-                        try
                         {
-                            span2 = this.TextLanguage.GetWordSpan(location3, WordType.Previous);
-                            if (span2 != null)
+                            isSelecting = ((TextBufferCommand)command).IsSelecting;
+                            TextBufferLocation location3 = this._location.Clone();
+                            TextBufferSpan span2 = null;
+                            try
                             {
-                                this._location.MoveTo(span2.Start);
+                                span2 = this.TextLanguage.GetWordSpan(location3, WordType.Previous);
+                                if (span2 != null)
+                                {
+                                    this._location.MoveTo(span2.Start);
+                                    flag = true;
+                                    this.SetSmartCursorIndex();
+                                }
+                            }
+                            finally
+                            {
+                                location3.Dispose();
+                                if (span2 != null)
+                                {
+                                    span2.Dispose();
+                                }
+                            }
+                            flag4 = true;
+                            goto Label_0C3E;
+                        }
+                    case 0x22:
+                        {
+                            int columnIndex = this._location.ColumnIndex;
+                            if (this.MoveToFirstCharIndex(this._location) == columnIndex)
+                            {
+                                this._location.ColumnIndex = 0;
+                            }
+                            if (columnIndex != this._location.ColumnIndex)
+                            {
                                 flag = true;
+                                isSelecting = ((TextBufferCommand)command).IsSelecting;
                                 this.SetSmartCursorIndex();
                             }
-                        }
-                        finally
-                        {
-                            location3.Dispose();
-                            if (span2 != null)
+                            else
                             {
-                                span2.Dispose();
+                                if (!((TextBufferCommand)command).IsSelecting)
+                                {
+                                    flag2 = true;
+                                }
+                                this.SetSmartCursorIndex();
                             }
+                            flag4 = true;
+                            goto Label_0C3E;
                         }
-                        flag4 = true;
-                        goto Label_0C3E;
-                    }
-                    case 0x22:
-                    {
-                        int columnIndex = this._location.ColumnIndex;
-                        if (this.MoveToFirstCharIndex(this._location) == columnIndex)
-                        {
-                            this._location.ColumnIndex = 0;
-                        }
-                        if (columnIndex != this._location.ColumnIndex)
-                        {
-                            flag = true;
-                            isSelecting = ((TextBufferCommand) command).IsSelecting;
-                            this.SetSmartCursorIndex();
-                        }
-                        else
-                        {
-                            if (!((TextBufferCommand) command).IsSelecting)
-                            {
-                                flag2 = true;
-                            }
-                            this.SetSmartCursorIndex();
-                        }
-                        flag4 = true;
-                        goto Label_0C3E;
-                    }
                     case 0x23:
-                    {
-                        int length = this._location.Line.Length;
-                        if (this._location.ColumnIndex == length)
                         {
-                            if (!((TextBufferCommand) command).IsSelecting)
+                            int length = this._location.Line.Length;
+                            if (this._location.ColumnIndex == length)
                             {
-                                flag2 = true;
+                                if (!((TextBufferCommand)command).IsSelecting)
+                                {
+                                    flag2 = true;
+                                }
+                                this.SetSmartCursorIndex();
                             }
-                            this.SetSmartCursorIndex();
+                            else
+                            {
+                                this._location.ColumnIndex = this._location.Line.Length;
+                                flag = true;
+                                isSelecting = ((TextBufferCommand)command).IsSelecting;
+                                this.SetSmartCursorIndex();
+                            }
+                            flag4 = true;
+                            goto Label_0C3E;
                         }
-                        else
-                        {
-                            this._location.ColumnIndex = this._location.Line.Length;
-                            flag = true;
-                            isSelecting = ((TextBufferCommand) command).IsSelecting;
-                            this.SetSmartCursorIndex();
-                        }
-                        flag4 = true;
-                        goto Label_0C3E;
-                    }
                     case 0x24:
                         if (this._location.LineIndex >= this._buffer.LineCount)
                         {
-                            if (!((TextBufferCommand) command).IsSelecting)
+                            if (!((TextBufferCommand)command).IsSelecting)
                             {
                                 flag2 = true;
                             }
@@ -622,7 +650,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         {
                             this._location.MoveDown(1);
                             flag = true;
-                            isSelecting = ((TextBufferCommand) command).IsSelecting;
+                            isSelecting = ((TextBufferCommand)command).IsSelecting;
                             this.DoSmartCursorMovement();
                         }
                         flag4 = true;
@@ -631,7 +659,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     case 0x25:
                         if (this._location.LineIndex <= 0)
                         {
-                            if (!((TextBufferCommand) command).IsSelecting)
+                            if (!((TextBufferCommand)command).IsSelecting)
                             {
                                 flag2 = true;
                             }
@@ -640,7 +668,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         {
                             this._location.MoveUp(1);
                             flag = true;
-                            isSelecting = ((TextBufferCommand) command).IsSelecting;
+                            isSelecting = ((TextBufferCommand)command).IsSelecting;
                             this.DoSmartCursorMovement();
                         }
                         flag4 = true;
@@ -660,9 +688,9 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         if (this._location.MoveDown(this._visibleLines) != 0)
                         {
                             flag = true;
-                            isSelecting = ((TextBufferCommand) command).IsSelecting;
+                            isSelecting = ((TextBufferCommand)command).IsSelecting;
                             this.DoSmartCursorMovement();
-                            this.ViewTopLineNumber = Math.Max(Math.Min((int) (this._location.LineIndex - num3), (int) (this._buffer.LineCount - this._visibleLines)), 0);
+                            this.ViewTopLineNumber = Math.Max(Math.Min((int)(this._location.LineIndex - num3), (int)(this._buffer.LineCount - this._visibleLines)), 0);
                         }
                         flag4 = true;
                         goto Label_0C3E;
@@ -675,12 +703,12 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         }
                         else
                         {
-                            num3 = Math.Min((int) (this.VisibleLines - 1), (int) (this._location.LineIndex - this.ViewTopLineNumber));
+                            num3 = Math.Min((int)(this.VisibleLines - 1), (int)(this._location.LineIndex - this.ViewTopLineNumber));
                         }
                         if (this._location.MoveUp(this._visibleLines) != 0)
                         {
                             flag = true;
-                            isSelecting = ((TextBufferCommand) command).IsSelecting;
+                            isSelecting = ((TextBufferCommand)command).IsSelecting;
                             this.DoSmartCursorMovement();
                             this.ViewTopLineNumber = Math.Max(this._location.LineIndex - num3, 0);
                         }
@@ -690,7 +718,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     case 40:
                         this._location.MoveTo(this._buffer.Last);
                         flag = true;
-                        isSelecting = ((TextBufferCommand) command).IsSelecting;
+                        isSelecting = ((TextBufferCommand)command).IsSelecting;
                         this.SetSmartCursorIndex();
                         flag4 = true;
                         goto Label_0C3E;
@@ -698,23 +726,23 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     case 0x29:
                         this._location.MoveTo(this._buffer.First);
                         flag = true;
-                        isSelecting = ((TextBufferCommand) command).IsSelecting;
+                        isSelecting = ((TextBufferCommand)command).IsSelecting;
                         this.SetSmartCursorIndex();
                         flag4 = true;
                         goto Label_0C3E;
 
                     case 0x2a:
-                    {
-                        isSelecting = ((TextBufferCommand) command).IsSelecting;
-                        Point commandPosition = ((TextBufferCommand) command).CommandPosition;
-                        this._location.GotoLineColumn(commandPosition.X, commandPosition.Y);
-                        flag = true;
-                        this.SetSmartCursorIndex();
-                        flag4 = true;
-                        goto Label_0C3E;
-                    }
+                        {
+                            isSelecting = ((TextBufferCommand)command).IsSelecting;
+                            Point commandPosition = ((TextBufferCommand)command).CommandPosition;
+                            this._location.GotoLineColumn(commandPosition.X, commandPosition.Y);
+                            flag = true;
+                            this.SetSmartCursorIndex();
+                            flag4 = true;
+                            goto Label_0C3E;
+                        }
                     case 0x2b:
-                        this._location.GotoLine((int) ((TextBufferCommand) command).Data);
+                        this._location.GotoLine((int)((TextBufferCommand)command).Data);
                         this.ViewTopLineNumber = Math.Min(this._buffer.LineCount - this.VisibleLines, Math.Max(0, this._location.LineIndex - (this.VisibleLines / 2)));
                         flag = true;
                         flag4 = true;
@@ -748,12 +776,12 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         goto Label_0C3E;
 
                     case 50:
-                        this.ViewTopLineNumber = ((TextBufferCommand) command).CommandValue;
+                        this.ViewTopLineNumber = ((TextBufferCommand)command).CommandValue;
                         flag4 = true;
                         goto Label_0C3E;
 
                     case 0x33:
-                        this.ViewLeftIndex = ((TextBufferCommand) command).CommandValue;
+                        this.ViewLeftIndex = ((TextBufferCommand)command).CommandValue;
                         flag4 = true;
                         goto Label_0C3E;
 
@@ -813,32 +841,32 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         goto Label_0C3E;
 
                     case 0x43:
-                    {
-                        TextBufferLocation location4 = this._location.Clone();
-                        TextBufferSpan span3 = null;
-                        try
                         {
-                            span3 = this.TextLanguage.GetWordSpan(location4, WordType.Current);
-                            if (span3 != null)
+                            TextBufferLocation location4 = this._location.Clone();
+                            TextBufferSpan span3 = null;
+                            try
                             {
-                                isSelecting = true;
-                                this._location.MoveTo(span3.Start);
-                                this.ResetSelection();
-                                this._location.MoveTo(span3.End);
-                                flag = true;
+                                span3 = this.TextLanguage.GetWordSpan(location4, WordType.Current);
+                                if (span3 != null)
+                                {
+                                    isSelecting = true;
+                                    this._location.MoveTo(span3.Start);
+                                    this.ResetSelection();
+                                    this._location.MoveTo(span3.End);
+                                    flag = true;
+                                }
                             }
-                        }
-                        finally
-                        {
-                            location4.Dispose();
-                            if (span3 != null)
+                            finally
                             {
-                                span3.Dispose();
+                                location4.Dispose();
+                                if (span3 != null)
+                                {
+                                    span3.Dispose();
+                                }
                             }
+                            flag4 = true;
+                            goto Label_0C3E;
                         }
-                        flag4 = true;
-                        goto Label_0C3E;
-                    }
                     case 0x48:
                         location = this._buffer.CreateTextBufferLocation(this._selection.Start);
                         num5 = this._selection.End.LineIndex;
@@ -901,125 +929,125 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         goto Label_0C3E;
 
                     case 80:
-                        flag4 = this.OnKeyDownCommand(((TextBufferCommand) command).CommandValue);
+                        flag4 = this.OnKeyDownCommand(((TextBufferCommand)command).CommandValue);
                         goto Label_0C3E;
 
                     case 0x51:
-                        this.OnKeyPressedCommand(((TextBufferCommand) command).CommandValue);
+                        this.OnKeyPressedCommand(((TextBufferCommand)command).CommandValue);
                         flag4 = true;
                         goto Label_0C3E;
 
                     case 90:
-                    {
-                        using (TextBufferLocation location6 = this._location.Clone())
                         {
-                            TextBufferSpan span5 = null;
-                            try
+                            using (TextBufferLocation location6 = this._location.Clone())
+                            {
+                                TextBufferSpan span5 = null;
+                                try
+                                {
+                                    //NOTE: 手动修改
+                                    span5 = this.TextLanguage.GetWordSpan(location6, WordType.Current);
+                                    if (span5 != null)
+                                    {
+                                        span5.End.MoveTo(this._location);
+                                    }
+                                    if ((span5 == null) || span5.IsEmpty)
+                                    {
+                                        span5 = this.TextLanguage.GetWordSpan(location6, WordType.Previous);
+                                    }
+                                    if ((span5 != null) && !span5.IsEmpty)
+                                    {
+                                        span5.End.MoveTo(this._location);
+                                        this.HandleCommand(new TextBufferCommand(3, span5.Start, span5.End));
+                                        this._location.MoveTo(span5.Start);
+                                        this.SetSmartCursorIndex();
+                                    }
+
+                                }
+                                catch (Exception ex)
+                                {
+                                }
+                                finally
+                                {
+                                    span5.Dispose();
+                                    span5 = null;
+                                }
+                                //using (TextBufferSpan span5 = null)
+                                //{
+                                //    span5 = this.TextLanguage.GetWordSpan(location6, WordType.Current);
+                                //    if (span5 != null)
+                                //    {
+                                //        span5.End.MoveTo(this._location);
+                                //    }
+                                //    if ((span5 == null) || span5.IsEmpty)
+                                //    {
+                                //        span5 = this.TextLanguage.GetWordSpan(location6, WordType.Previous);
+                                //    }
+                                //    if ((span5 != null) && !span5.IsEmpty)
+                                //    {
+                                //        span5.End.MoveTo(this._location);
+                                //        this.HandleCommand(new TextBufferCommand(3, span5.Start, span5.End));
+                                //        this._location.MoveTo(span5.Start);
+                                //        this.SetSmartCursorIndex();
+                                //    }
+                                //}
+                                goto Label_0C3E;
+                            }
+                        }
+                    case 0x5b:
+                        {
+                            using (TextBufferLocation location5 = this._location.Clone())
                             {
                                 //NOTE: 手动修改
-                                span5 = this.TextLanguage.GetWordSpan(location6, WordType.Current);
-                                if (span5 != null)
+                                //using (TextBufferSpan span4 = null)
+                                //{
+                                //    span4 = this.TextLanguage.GetWordSpan(location5, WordType.Current);
+                                //    if (span4 != null)
+                                //    {
+                                //        span4.Start.MoveTo(this._location);
+                                //    }
+                                //    if ((span4 == null) || span4.IsEmpty)
+                                //    {
+                                //        span4 = this.TextLanguage.GetWordSpan(location5, WordType.Next);
+                                //    }
+                                //    if ((span4 != null) && !span4.IsEmpty)
+                                //    {
+                                //        span4.Start.MoveTo(this._location);
+                                //        this.HandleCommand(new TextBufferCommand(3, span4.Start, span4.End));
+                                //        this.SetSmartCursorIndex();
+                                //    }
+                                //}
+                                TextBufferSpan span4 = null;
+                                try
                                 {
-                                    span5.End.MoveTo(this._location);
+                                    span4 = this.TextLanguage.GetWordSpan(location5, WordType.Current);
+                                    if (span4 != null)
+                                    {
+                                        span4.Start.MoveTo(this._location);
+                                    }
+                                    if ((span4 == null) || span4.IsEmpty)
+                                    {
+                                        span4 = this.TextLanguage.GetWordSpan(location5, WordType.Next);
+                                    }
+                                    if ((span4 != null) && !span4.IsEmpty)
+                                    {
+                                        span4.Start.MoveTo(this._location);
+                                        this.HandleCommand(new TextBufferCommand(3, span4.Start, span4.End));
+                                        this.SetSmartCursorIndex();
+                                    }
+
                                 }
-                                if ((span5 == null) || span5.IsEmpty)
+                                catch (Exception ex)
                                 {
-                                    span5 = this.TextLanguage.GetWordSpan(location6, WordType.Previous);
                                 }
-                                if ((span5 != null) && !span5.IsEmpty)
+                                finally
                                 {
-                                    span5.End.MoveTo(this._location);
-                                    this.HandleCommand(new TextBufferCommand(3, span5.Start, span5.End));
-                                    this._location.MoveTo(span5.Start);
-                                    this.SetSmartCursorIndex();
+                                    span4.Dispose();
+                                    span4 = null;
                                 }
 
+                                goto Label_0C3E;
                             }
-                            catch (Exception ex)
-                            {
-                            }
-                            finally
-                            {
-                                span5.Dispose();
-                                span5 = null;
-                            }
-                            //using (TextBufferSpan span5 = null)
-                            //{
-                            //    span5 = this.TextLanguage.GetWordSpan(location6, WordType.Current);
-                            //    if (span5 != null)
-                            //    {
-                            //        span5.End.MoveTo(this._location);
-                            //    }
-                            //    if ((span5 == null) || span5.IsEmpty)
-                            //    {
-                            //        span5 = this.TextLanguage.GetWordSpan(location6, WordType.Previous);
-                            //    }
-                            //    if ((span5 != null) && !span5.IsEmpty)
-                            //    {
-                            //        span5.End.MoveTo(this._location);
-                            //        this.HandleCommand(new TextBufferCommand(3, span5.Start, span5.End));
-                            //        this._location.MoveTo(span5.Start);
-                            //        this.SetSmartCursorIndex();
-                            //    }
-                            //}
-                            goto Label_0C3E;
                         }
-                    }
-                    case 0x5b:
-                    {
-                        using (TextBufferLocation location5 = this._location.Clone())
-                        {
-                            //NOTE: 手动修改
-                            //using (TextBufferSpan span4 = null)
-                            //{
-                            //    span4 = this.TextLanguage.GetWordSpan(location5, WordType.Current);
-                            //    if (span4 != null)
-                            //    {
-                            //        span4.Start.MoveTo(this._location);
-                            //    }
-                            //    if ((span4 == null) || span4.IsEmpty)
-                            //    {
-                            //        span4 = this.TextLanguage.GetWordSpan(location5, WordType.Next);
-                            //    }
-                            //    if ((span4 != null) && !span4.IsEmpty)
-                            //    {
-                            //        span4.Start.MoveTo(this._location);
-                            //        this.HandleCommand(new TextBufferCommand(3, span4.Start, span4.End));
-                            //        this.SetSmartCursorIndex();
-                            //    }
-                            //}
-                            TextBufferSpan span4 = null;
-                            try
-                            {
-                                span4 = this.TextLanguage.GetWordSpan(location5, WordType.Current);
-                                if (span4 != null)
-                                {
-                                    span4.Start.MoveTo(this._location);
-                                }
-                                if ((span4 == null) || span4.IsEmpty)
-                                {
-                                    span4 = this.TextLanguage.GetWordSpan(location5, WordType.Next);
-                                }
-                                if ((span4 != null) && !span4.IsEmpty)
-                                {
-                                    span4.Start.MoveTo(this._location);
-                                    this.HandleCommand(new TextBufferCommand(3, span4.Start, span4.End));
-                                    this.SetSmartCursorIndex();
-                                }
-
-                            }
-                            catch (Exception ex)
-                            {
-                            }
-                            finally
-                            {
-                                span4.Dispose();
-                                span4 = null;
-                            }
-
-                            goto Label_0C3E;
-                        }
-                    }
                     case 0x5e:
                         if (this._owner.HelpEnabled)
                         {
@@ -1076,16 +1104,12 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
 
         private bool IsInSelection(int lineIndex, int columnIndex, int mouseX, int mouseY)
         {
-            if ((this._selectionExists && this._selection.Contains(lineIndex, columnIndex)) && ((lineIndex - this.ViewTopLineNumber) >= (mouseY / this._fontHeight)))
+            if ((mouseX > ((this.MarginPadding + this._lineNumbersWidth) + this.MarginWidth)) && (this._selectionExists && this._selection.Contains(lineIndex, columnIndex + 1)))
             {
                 using (TextBufferLocation location = this._location.Clone())
                 {
                     location.GotoLine(lineIndex);
-                    location.ColumnIndex = location.Line.Length;
-                    if ((this.GetViewIndex(location) - this.ViewLeftIndex) >= ((((mouseX - this.MarginPadding) - this._lineNumbersWidth) - this.MarginWidth) / this._fontWidth))
-                    {
-                        return true;
-                    }
+                    return ((((mouseX - this.MarginPadding) - this._lineNumbersWidth) - this.MarginWidth) <= ((int)this.MeasureString(location.Line.Data, this.ViewLeftIndex, location.Line.Length - this.ViewLeftIndex)));
                 }
             }
             return false;
@@ -1132,7 +1156,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             {
                 this.HandleCommand(new TextBufferCommand(4, this._location, this._autoCompleteForm.PickedItemSuffix));
             }
-            ((IDisposable) this._autoCompleteForm).Dispose();
+            ((IDisposable)this._autoCompleteForm).Dispose();
             this._autoCompleteForm = null;
             this._owner.Focus();
         }
@@ -1287,7 +1311,14 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
 
         protected void OnHorizontalScrollBarScroll(object sender, ScrollEventArgs e)
         {
-            this.ViewLeftIndex = Math.Min(e.NewValue, Math.Max(0, this._viewMaxLineLength - this._visibleColumns));
+            if (this._fontWidth != 0)
+            {
+                this.ViewLeftIndex = Math.Min(e.NewValue, Math.Max(0, ((int)(((this._viewMaxLineWidth / ((double)this._fontWidth)) * 2.0) + 0.5)) - this._visibleColumns));
+            }
+            else
+            {
+                this.ViewLeftIndex = Math.Min(e.NewValue, Math.Max(0, this._viewMaxLineLength - this._visibleColumns));
+            }
         }
 
         internal bool OnKeyDownCommand(int keyCode)
@@ -1389,51 +1420,51 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     break;
 
                 case 0x2e:
-                {
-                    bool flag2 = (Control.ModifierKeys & Keys.Control) != Keys.None;
-                    if (!this._selectionExists)
                     {
-                        if (flag2)
+                        bool flag2 = (Control.ModifierKeys & Keys.Control) != Keys.None;
+                        if (!this._selectionExists)
                         {
-                            return this.HandleCommand(new TextBufferCommand(0x5b));
-                        }
-                        int columnIndex = this._location.ColumnIndex;
-                        int length = this._location.Line.Length;
-                        if (columnIndex < length)
-                        {
-                            this.HandleCommand(new TextBufferCommand(2, this._location, (char) keyCode));
-                            return flag;
-                        }
-                        if (this._location.LineIndex < (this._buffer.LineCount - 1))
-                        {
-                            TextBufferLocation startLocation = this._buffer.CreateTextBufferLocation(this._location);
-                            startLocation.MoveDown(1);
-                            startLocation.ColumnIndex = 0;
-                            flag = this.HandleCommand(new TextBufferCommand(3, startLocation, this._location));
-                            startLocation.Dispose();
-                        }
-                        return flag;
-                    }
-                    if ((Control.ModifierKeys & Keys.Shift) == Keys.None)
-                    {
-                        if (flag2)
-                        {
-                            this._buffer.BeginBatchUndo();
-                            try
+                            if (flag2)
                             {
-                                flag = this.HandleCommand(new TextBufferCommand(0x3e, this._location));
                                 return this.HandleCommand(new TextBufferCommand(0x5b));
                             }
-                            finally
+                            int columnIndex = this._location.ColumnIndex;
+                            int length = this._location.Line.Length;
+                            if (columnIndex < length)
                             {
-                                this._buffer.EndBatchUndo();
+                                this.HandleCommand(new TextBufferCommand(2, this._location, (char)keyCode));
+                                return flag;
                             }
+                            if (this._location.LineIndex < (this._buffer.LineCount - 1))
+                            {
+                                TextBufferLocation startLocation = this._buffer.CreateTextBufferLocation(this._location);
+                                startLocation.MoveDown(1);
+                                startLocation.ColumnIndex = 0;
+                                flag = this.HandleCommand(new TextBufferCommand(3, startLocation, this._location));
+                                startLocation.Dispose();
+                            }
+                            return flag;
                         }
-                        return this.HandleCommand(new TextBufferCommand(0x3e, this._location));
+                        if ((Control.ModifierKeys & Keys.Shift) == Keys.None)
+                        {
+                            if (flag2)
+                            {
+                                this._buffer.BeginBatchUndo();
+                                try
+                                {
+                                    flag = this.HandleCommand(new TextBufferCommand(0x3e, this._location));
+                                    return this.HandleCommand(new TextBufferCommand(0x5b));
+                                }
+                                finally
+                                {
+                                    this._buffer.EndBatchUndo();
+                                }
+                            }
+                            return this.HandleCommand(new TextBufferCommand(0x3e, this._location));
+                        }
+                        this.Cut();
+                        return true;
                     }
-                    this.Cut();
-                    return true;
-                }
                 case 9:
                     return true;
 
@@ -1444,34 +1475,34 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     return flag;
 
                 case 0x72:
-                {
-                    if ((Control.ModifierKeys & Keys.Control) == Keys.None)
                     {
-                        return flag;
-                    }
-                    string searchString = string.Empty;
-                    if (!this._selectionExists)
-                    {
-                        using (TextBufferSpan span = this.TextLanguage.GetWordSpan(this._location, WordType.Current))
+                        if ((Control.ModifierKeys & Keys.Control) == Keys.None)
                         {
-                            if (span == null)
-                            {
-                                return flag;
-                            }
-                            searchString = span.Text;
+                            return flag;
                         }
+                        string searchString = string.Empty;
+                        if (!this._selectionExists)
+                        {
+                            using (TextBufferSpan span = this.TextLanguage.GetWordSpan(this._location, WordType.Current))
+                            {
+                                if (span == null)
+                                {
+                                    return flag;
+                                }
+                                searchString = span.Text;
+                            }
+                        }
+                        else
+                        {
+                            searchString = this.SelectedText;
+                        }
+                        using (TextBufferSpan span2 = this.Find(searchString, true, false, false, false))
+                        {
+                            this._location.MoveTo(span2.Start);
+                            this.Select(span2);
+                        }
+                        return true;
                     }
-                    else
-                    {
-                        searchString = this.SelectedText;
-                    }
-                    using (TextBufferSpan span2 = this.Find(searchString, true, false, false, false))
-                    {
-                        this._location.MoveTo(span2.Start);
-                        this.Select(span2);
-                    }
-                    return true;
-                }
                 default:
                     return flag;
             }
@@ -1546,7 +1577,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         if (columnIndex > 0)
                         {
                             this._location.ColumnIndex--;
-                            this.HandleCommand(new TextBufferCommand(2, this._location, (char) keyCode));
+                            this.HandleCommand(new TextBufferCommand(2, this._location, (char)keyCode));
                         }
                         else if (this._location.LineIndex > 0)
                         {
@@ -1631,18 +1662,18 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                 {
                     this.HandleCommand(new TextBufferCommand(7, this._location));
                     this.HandleCommand(new TextBufferCommand(0x3e, this._location));
-                    this.HandleCommand(new TextBufferCommand(1, this._location, (char) keyCode));
+                    this.HandleCommand(new TextBufferCommand(1, this._location, (char)keyCode));
                     this.HandleCommand(new TextBufferCommand(8, this._location));
                 }
                 else
                 {
                     if (this.InsertMode)
                     {
-                        this.HandleCommand(new TextBufferCommand(1, this._location, (char) keyCode));
+                        this.HandleCommand(new TextBufferCommand(1, this._location, (char)keyCode));
                     }
                     else
                     {
-                        this.HandleCommand(new TextBufferCommand(9, this._location, (char) keyCode));
+                        this.HandleCommand(new TextBufferCommand(9, this._location, (char)keyCode));
                     }
                     this.ResetSelection();
                 }
@@ -1665,9 +1696,18 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             {
                 this.ViewLeftIndex = Math.Max(0, viewIndex - this._horizontalScrollAmount);
             }
-            else if (viewIndex > ((this.ViewLeftIndex + this.VisibleColumns) - 1))
+            else if ((this.MeasureString(this._location.Line.Data, this.ViewLeftIndex, viewIndex - this.ViewLeftIndex) + 2.0) > (base.Width - ((this.MarginPadding + this.MarginWidth) + this._lineNumbersWidth)))
             {
-                this.ViewLeftIndex = Math.Min((int) (Math.Max(this.VisibleColumns, this._viewMaxLineLength) - this.VisibleColumns), (int) ((viewIndex - this.VisibleColumns) + this._horizontalScrollAmount));
+                int start = this.ViewLeftIndex + this._horizontalScrollAmount;
+                double num2 = this.MeasureString(this._location.Line.Data, start, viewIndex - start);
+                if ((num2 + 2.0) > (base.Width - ((this.MarginPadding + this.MarginWidth) + this._lineNumbersWidth)))
+                {
+                    start += (int)(((num2 + 2.0) - (base.Width - ((this.MarginPadding + this.MarginWidth) + this._lineNumbersWidth))) / ((double)(this._fontWidth * 2)));
+                    for (num2 = this.MeasureString(this._location.Line.Data, start, viewIndex - start); (num2 + 2.0) > (base.Width - ((this.MarginPadding + this.MarginWidth) + this._lineNumbersWidth)); num2 = this.MeasureString(this._location.Line.Data, ++start, viewIndex - start))
+                    {
+                    }
+                }
+                this.ViewLeftIndex = start;
             }
             this.UpdateCaret();
             this._owner.OnViewLocationChanged(this);
@@ -1868,8 +1908,8 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     e.Graphics.ReleaseHdc(hdc);
                     if (this._updateCaretOnPaint)
                     {
-                        this._updateCaretOnPaint = false;
                         this.UpdateCaret();
+                        this._updateCaretOnPaint = false;
                     }
                 }
             }
@@ -1941,6 +1981,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             {
                 return;
             }
+
             this._verticalScrollBar.Maximum = this._buffer.LineCount - 1;
             using (TextBufferLocation location = this._buffer.CreateTextBufferLocation(this._location))
             {
@@ -1952,14 +1993,31 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     {
                         this._viewMaxLineLength = viewIndex;
                     }
+
+                    double realWidth = this.MeasureString(location.Line.Data, 0, location.Line.Length);
+                    if (realWidth >= this._viewMaxLineWidth)
+                    {
+                        this._viewMaxLineWidth = realWidth + 0.1;
+                        this._viewMaxLineWidthLineIndex = location.LineIndex;
+                    }
+
                     if (location.MoveDown(1) == 0)
                     {
                         goto Label_008A;
                     }
                 }
             }
+
         Label_008A:
-            this._horizontalScrollBar.Maximum = this._viewMaxLineLength;
+            if (this._fontWidth != 0)
+            {
+                this._horizontalScrollBar.Maximum = (int)((this._viewMaxLineWidth / ((double)this._fontWidth)) + 0.5);
+            }
+            else
+            {
+                this._horizontalScrollBar.Maximum = (int)this._viewMaxLineWidth;
+            }
+
             this.UpdateScrollBarVisibility();
             if ((this.ViewTopLineNumber + this.VisibleLines) > (this._buffer.LineCount - 1))
             {
@@ -2055,13 +2113,13 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                         Interop.SIZE size = new Interop.SIZE();
                         bool ret = Interop.GetTextExtentPoint32W(hdc, text, count, ref size);
                         textRect.left = textRect.right;
-                        textRect.right += size.x ;
+                        textRect.right += size.x;
 
                         fixed (char* chRef = chars)
                         {
                             char* chPtr = chRef;
                             chPtr += startColumnIndex;
-                            Interop.ExtTextOutW(hdc, textRect.left, yPos, 2, ref textRect, (IntPtr) chPtr, count, null);
+                            Interop.ExtTextOutW(hdc, textRect.left, yPos, 2, ref textRect, (IntPtr)chPtr, count, null);
                         }
                         continue;
                     }
@@ -2105,45 +2163,64 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             base.Invalidate(new Rectangle(0, num, base.Width - this.VerticalScrollBarWidth, y - num));
         }
 
-        private Interop.SIZE MeasureString(char[] chars)
+        private double MeasureString(char[] chars)
         {
             return this.MeasureString(chars, 0, chars.Length);
         }
-        private Interop.SIZE MeasureString(char[] chars, int startIndex, int length)
+
+        private double MeasureString(char[] chars, int start, int length)
         {
-            //NOTE: 使用这种方法的话, 反复选中文本会导致程序崩溃
-            //IntPtr fontPtr = this.Font.ToHfont();
-            //Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
-            //IntPtr hdc = graphics.GetHdc();
-            //Interop.SelectObject(hdc, fontPtr);
-            //Interop.SIZE size = this.MeasureString(hdc, chars, startIndex, length);
-            //Interop.SelectObject(hdc, IntPtr.Zero);
-            //graphics.ReleaseHdc(hdc);
-            //graphics.Dispose();
-            //return size;
-
-            //直接使用Graphics对象的MeasureString就没问题, 但是我觉得效率可能会比较低, 哪位童鞋比较了解这方面的请赐教!!
-            Graphics g = this.CreateGraphics();
-            SizeF s = g.MeasureString(new string(chars, startIndex, length), this.Font);
-            g.Dispose();
-
-            Interop.SIZE size = new Interop.SIZE();
-            size.x = (int)s.Width;
-            size.y = (int)s.Height;
-
-            return size;
-        }
-
-        private Interop.SIZE MeasureString(IntPtr hdc, char[] chars, int startIndex, int length)
-        {
-            Interop.SIZE size = new Interop.SIZE();
-            if (length > 0)
-            { 
-                string text = new string(chars, startIndex, length);
-                bool ret = Interop.GetTextExtentPoint32W(hdc, text, length, ref size);
+            int end = start + length;
+            double realWidth;
+            double width = 0.0;
+            if (chars == null)
+            {
+                return (int)width;
             }
-            return size;
+            char[] chArray = chars;
+
+            Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
+            IntPtr zero = IntPtr.Zero;
+            try
+            {
+                zero = graphics.GetHdc();
+                Interop.SelectObject(zero, this._fontPtr);
+                for (int i = start; i < end; i++)
+                {
+                    Interop.SIZE size = new Interop.SIZE();
+                    Interop.GetTextExtentPoint32W(zero, new string(chArray[i], 1), 1, ref size);
+                    width += size.x;
+                }
+                realWidth = width;
+            }
+            catch (Exception exception)
+            {
+                StackFrame frame = new StackFrame(1);
+                StreamWriter writer = new StreamWriter(@"c:\temp\log.txt");
+                writer.Write(frame.GetMethod().Name);
+                writer.WriteLine("---" + exception.ToString());
+                writer.Close();
+                realWidth = width;
+            }
+            finally
+            {
+                graphics.ReleaseHdc(zero);
+            }
+
+            return realWidth;
         }
+
+
+        //private Interop.SIZE MeasureString(IntPtr hdc, char[] chars, int startIndex, int length)
+        //{
+        //    Interop.SIZE size = new Interop.SIZE();
+        //    if (length > 0)
+        //    { 
+        //        string text = new string(chars, startIndex, length);
+        //        bool ret = Interop.GetTextExtentPoint32W(hdc, text, length, ref size);
+        //    }
+        //    return size;
+        //}
 
         private unsafe void PaintTextLine(TextLine line, int lineNum, IntPtr hdc, int yPos, int startIndex)
         {
@@ -2223,14 +2300,14 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                             int minLenght = Math.Min(Math.Max(startIndex, this.GetViewIndex(line, this._selection.End.ColumnIndex)), chars.Length);
                             int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
                             //int textWidth = Math.Max(0, endIndex - startIndex) * this._fontWidth;
-                            int textWidth = this.MeasureString(hdc, chars, startIndex, endIndex - startIndex).x;
+                            int textWidth = (int)this.MeasureString(chars, startIndex, endIndex - startIndex);
                             this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, endIndex, false);
 
                             rectLeft += textWidth;
                             //textWidth = Math.Max(0, minLenght - endIndex) * this._fontWidth;
-                            textWidth = this.MeasureString(hdc, chars, endIndex, minLenght - endIndex).x;
+                            textWidth = (int)this.MeasureString(chars, endIndex, minLenght - endIndex);
                             this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, endIndex, minLenght, true);
-                            
+
                             rectLeft += textWidth;
                             this.PaintColoredText(chars, colors, hdc, rectLeft, base.Width - this.VerticalScrollBarWidth, yPos, minLenght, chars.Length, false);
                             return;
@@ -2238,20 +2315,20 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     }
                     else
                     {
-                        // 已选择文本中的第一行
+                        // �已选择文本中的第一?
                         if (lineNum == this._selection.Start.LineIndex)
                         {
                             int endIndex = Math.Min(Math.Max(this.GetViewIndex(line, this._selection.Start.ColumnIndex), startIndex), chars.Length);
                             int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
 
-                            // 先画出行前未选中的文本
-                            int textWidth = this.MeasureString(hdc, chars, startIndex, endIndex - startIndex).x;
+                            // �先画出行前未选中的文?
+                            int textWidth = (int)this.MeasureString(chars, startIndex, endIndex - startIndex);
                             //int textWidth = Math.Max(0, endIndex - startIndex) * this._fontWidth;
                             this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, endIndex, false);
                             rectLeft += textWidth;
 
-                            // 然后画出选中的文本
-                            textWidth = this.MeasureString(hdc, chars, endIndex, chars.Length - endIndex).x;
+                            // �然后画出选中的文?
+                            textWidth = (int)this.MeasureString(chars, endIndex, chars.Length - endIndex);
                             if (startIndex <= chars.Length)
                             {
                                 textWidth += this._fontWidth;
@@ -2262,24 +2339,24 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                             return;
                         }
 
-                        // 已选择文本中的最后一行
+                        // �已选择文本中的最后一?
                         if (lineNum == this._selection.End.LineIndex)
                         {
                             int endIndex = Math.Min(Math.Max(this.GetViewIndex(line, this._selection.End.ColumnIndex), startIndex), chars.Length);
                             int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
                             //int num20 = Math.Max(0, num17 - startIndex) * this._fontWidth;
-                            int textWidth = this.MeasureString(hdc, chars, startIndex, endIndex - startIndex).x;
+                            int textWidth = (int)this.MeasureString(chars, startIndex, endIndex - startIndex);
                             this.PaintColoredText(chars, colors, hdc, rectLeft, rectLeft + textWidth, yPos, startIndex, endIndex, true);
                             rectLeft += textWidth;
                             this.PaintColoredText(chars, colors, hdc, rectLeft, base.Width - this.VerticalScrollBarWidth, yPos, endIndex, chars.Length, false);
                             return;
                         }
 
-                        // 选中文本的中间行
+                        // �选中文本的中间行
                         if ((lineNum > this._selection.Start.LineIndex) && (lineNum < this._selection.End.LineIndex))
                         {
                             int rectLeft = (this.MarginWidth + this._lineNumbersWidth) + this.MarginPadding;
-                            int textWidth = this.MeasureString(hdc, chars, startIndex, chars.Length - startIndex).x;
+                            int textWidth = (int)this.MeasureString(chars, startIndex, chars.Length - startIndex);
                             if (startIndex <= chars.Length)
                             {
                                 textWidth += this._fontWidth;
@@ -2317,11 +2394,11 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             this._buffer.BeginBatchUndo();
             try
             {
-                DataObject dataObject = (DataObject) Clipboard.GetDataObject();
+                DataObject dataObject = (DataObject)Clipboard.GetDataObject();
                 string textFromDataObject = this.TextLanguage.GetTextFromDataObject(dataObject, this.ServiceProvider);
                 if (textFromDataObject == null)
                 {
-                    textFromDataObject = (string) dataObject.GetData(DataFormats.Text);
+                    textFromDataObject = (string)dataObject.GetData(DataFormats.Text);
                 }
                 if (textFromDataObject != null)
                 {
@@ -2345,7 +2422,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             {
                 case 0x100:
                 case 0x102:
-                    if (this.ProcessCmdKey(ref msg, ((Keys) ((int) msg.WParam)) | Control.ModifierKeys))
+                    if (this.ProcessCmdKey(ref msg, ((Keys)((int)msg.WParam)) | Control.ModifierKeys))
                     {
                         break;
                     }
@@ -2559,7 +2636,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
         {
             if ((!checkForFocus || ((this._owner.ActiveView == this) && this._owner.ContainsFocus)) && this._caretHiding)
             {
-                Interop.CreateCaret(base.Handle, IntPtr.Zero, this._caretWidth, this._fontHeight);
+                Interop.CreateCaret(base.Handle, IntPtr.Zero, this.CaretWidth, this._fontHeight);
                 Interop.ShowCaret(base.Handle);
                 this.UpdateCaretPosition();
                 this._caretHiding = false;
@@ -2710,22 +2787,8 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     this._location.ColumnIndex = this._location.Line.Length;
                 }
 
-                ////////////////////////////////////////////////////////////////////////////////////// added code begin
-                //TextLine line = _location.Line;
-                //string str = new string(line.ToCharArray(this.ViewLeftIndex, (this.GetViewIndex(this._location) - this.ViewLeftIndex)));
-                //IntPtr fontPtr = this.Font.ToHfont();
-                //Graphics graphics = Graphics.FromHwnd(IntPtr.Zero);
-                //IntPtr hdc = graphics.GetHdc();
-                //Interop.SelectObject(hdc, fontPtr);
-                //Interop.SIZE size = new Interop.SIZE();
-                //bool ret = Interop.GetTextExtentPoint32W(hdc, str, str.Length, ref size);
-                //graphics.ReleaseHdc(hdc);
-                ////////////////////////////////////////////////////////////////////////////////////// added code end
-                //NOTE: 修改了更新光标位置的算法, 使其支持多字节文字
-                //int x = (((this._fontWidth * (this.GetViewIndex(this._location) - this.ViewLeftIndex)) + this.MarginPadding) + this.MarginWidth) + this._lineNumbersWidth;
                 TextLine line = _location.Line;
-                Interop.SIZE size = this.MeasureString(line.ToCharArray(), this.ViewLeftIndex, (this.GetViewIndex(this._location) - this.ViewLeftIndex));
-                int x = size.x + this.MarginPadding + this.MarginWidth + this._lineNumbersWidth;
+                int x = (int)this.MeasureString(line.ToCharArray(), this.ViewLeftIndex, (this.GetViewIndex(this._location) - this.ViewLeftIndex)) + this.MarginPadding + this.MarginWidth + this._lineNumbersWidth;
 
                 int y = (this._location.LineIndex - this.ViewTopLineNumber) * this._fontHeight;
                 Interop.SetCaretPos(x, y);
@@ -2814,9 +2877,38 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
 
         private void UpdateScrollBarVisibility()
         {
-            if (this._viewMaxLineLength < this.VisibleColumns)
+            this.UpdateScrollBarVisibility(false);
+        }
+
+
+        private void UpdateScrollBarVisibility(bool recalc)
+        {
+            if (recalc)
+            {
+                using (TextBufferLocation location = this._buffer.CreateTextBufferLocation(this._location))
+                {
+                    location.GotoLine(0);
+                    while (location.LineIndex <= this._buffer.LineCount)
+                    {
+                        double realWidth = this.MeasureString(location.Line.Data, 0, location.Line.Length);
+                        if (realWidth > this._viewMaxLineWidth)
+                        {
+                            this._viewMaxLineWidth = realWidth;
+                            this._viewMaxLineWidthLineIndex = location.LineIndex;
+                        }
+                        if (location.MoveDown(1) == 0)
+                        {
+                            goto Label_007E;
+                        }
+                    }
+                }
+            }
+
+        Label_007E:
+            if ((((this._viewMaxLineWidth + this.MarginPadding) + this._lineNumbersWidth) + this.MarginWidth) < base.Width)
             {
                 this._horizontalScrollBar.Visible = false;
+                this.ViewLeftIndex = 0;
             }
             else
             {
@@ -2962,6 +3054,23 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             }
         }
 
+        internal int CaretWidth
+        {
+            get
+            {
+                if (!this._insertMode)
+                {
+                    int viewIndex = this.GetViewIndex(this._location);
+                    int num2 = (int)this.MeasureString(this._location.Line.Data, viewIndex, 1);
+                    if (num2 != 0)
+                    {
+                        return num2;
+                    }
+                }
+                return 2;
+            }
+        }
+
         private ITextColorizer Colorizer
         {
             get
@@ -3029,14 +3138,6 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                 if (this._insertMode != value)
                 {
                     this._insertMode = value;
-                    if (this._insertMode)
-                    {
-                        this._caretWidth = 2;
-                    }
-                    else
-                    {
-                        this._caretWidth = this._fontWidth;
-                    }
                     if (!this._caretHiding)
                     {
                         this.HideCaret();
@@ -3277,18 +3378,18 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     {
                         int num2 = rect.Left + 2;
                         SizeF ef = graphics.MeasureString(this.Text.Substring(0, index), this.Font);
-                        graphics.DrawString(this.Text.Substring(0, index), this.Font, this._foreBrush, (float) num2, (float) rect.Top);
-                        num2 += (int) ef.Width;
+                        graphics.DrawString(this.Text.Substring(0, index), this.Font, this._foreBrush, (float)num2, (float)rect.Top);
+                        num2 += (int)ef.Width;
                         SizeF ef2 = graphics.MeasureString(this.Text.Substring(index, this._highlightText.Length), new Font(this.Font, FontStyle.Bold));
-                        graphics.DrawString(this.Text.Substring(index, this._highlightText.Length), new Font(this.Font, FontStyle.Bold), this._foreBrush, (float) num2, (float) rect.Top);
-                        num2 += (int) ef2.Width;
-                        graphics.DrawString(this.Text.Substring(index + this._highlightText.Length), this.Font, this._foreBrush, (float) num2, (float) rect.Top);
+                        graphics.DrawString(this.Text.Substring(index, this._highlightText.Length), new Font(this.Font, FontStyle.Bold), this._foreBrush, (float)num2, (float)rect.Top);
+                        num2 += (int)ef2.Width;
+                        graphics.DrawString(this.Text.Substring(index + this._highlightText.Length), this.Font, this._foreBrush, (float)num2, (float)rect.Top);
                         flag = true;
                     }
                 }
                 if (!flag)
                 {
-                    graphics.DrawString(this.Text, this.Font, this._foreBrush, (float) (rect.Left + 2), (float) rect.Top);
+                    graphics.DrawString(this.Text, this.Font, this._foreBrush, (float)(rect.Left + 2), (float)rect.Top);
                 }
             }
 
@@ -3310,18 +3411,18 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
                     if (index != -1)
                     {
                         SizeF ef = graphics.MeasureString(this.Text.Substring(0, index), this.Font);
-                        num += (int) ef.Width;
+                        num += (int)ef.Width;
                         SizeF ef2 = graphics.MeasureString(this.Text.Substring(index, this._highlightText.Length), new Font(this.Font, FontStyle.Bold));
-                        num += (int) ef2.Width;
+                        num += (int)ef2.Width;
                         SizeF ef3 = graphics.MeasureString(this.Text.Substring(index + this._highlightText.Length), this.Font);
-                        num += (int) ef3.Width;
+                        num += (int)ef3.Width;
                         flag = true;
                     }
                 }
                 if (!flag)
                 {
                     SizeF ef4 = graphics.MeasureString(this.Text, this.Font, base.Width);
-                    num += (int) ef4.Width;
+                    num += (int)ef4.Width;
                 }
                 base.Width = num + 4;
             }

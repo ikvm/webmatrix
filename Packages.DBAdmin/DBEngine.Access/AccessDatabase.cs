@@ -57,7 +57,7 @@ namespace Microsoft.Matrix.Packages.DBAdmin.DBEngine.Access
                 throw new InvalidOperationException("The filename must have the '.mdb' file extension.\r\nExample: c:\\example.mdb");
             }
             this._adoxCatalog = (Interop.ICatalog) new Interop.Catalog();
-            this._adoxCatalog.SetActiveConnection(this.ConnectionString);
+            int ret = this._adoxCatalog.SetActiveConnection(this.ConnectionString);
         }
 
         public override Microsoft.Matrix.Packages.DBAdmin.DBEngine.Column CreateColumn()

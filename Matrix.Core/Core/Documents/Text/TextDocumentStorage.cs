@@ -4,6 +4,7 @@ namespace Microsoft.Matrix.Core.Documents.Text
     using System;
     using System.IO;
     using System.Text;
+    using Microsoft.Matrix.Core.Projects.FileSystem;
 
     public class TextDocumentStorage : IDocumentStorage, IDisposable, IEmbeddedDocumentStorage
     {
@@ -19,8 +20,16 @@ namespace Microsoft.Matrix.Core.Documents.Text
 
         void IDocumentStorage.Load(Stream contentStream)
         {
+            MiscFileProjectItem projectItem = this._owner.ProjectItem as MiscFileProjectItem;
+            Encoding encoding = projectItem != null ? projectItem.Encoding : Encoding.UTF8;
+
+            this.Load(contentStream, encoding);
+        }
+
+        void Load(Stream contentStream, Encoding encoding)
+        {
             StringBuilder builder = new StringBuilder(0x400);
-            StreamReader reader = new StreamReader(contentStream);
+            StreamReader reader = new StreamReader(contentStream, encoding);
             char[] chArray = new char[0x400];
             int charCount = 1;
             while (charCount > 0)
@@ -42,9 +51,17 @@ namespace Microsoft.Matrix.Core.Documents.Text
 
         void IDocumentStorage.Save(Stream contentStream)
         {
+            MiscFileProjectItem projectItem = this._owner.ProjectItem as MiscFileProjectItem;
+            Encoding encoding = projectItem != null ? projectItem.Encoding : Encoding.UTF8;
+
+            this.Save(contentStream, encoding);
+        }
+
+        void Save(Stream contentStream, Encoding encoding)
+        {
             if ((this._text != null) && (this._text.Length > 0))
             {
-                StreamWriter writer = new StreamWriter(contentStream, new UTF8Encoding(this.ContainsUnicodeCharacters));
+                StreamWriter writer = new StreamWriter(contentStream, encoding);
                 writer.Write(this._text);
                 writer.Flush();
             }

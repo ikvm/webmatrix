@@ -2,6 +2,7 @@ namespace Microsoft.Matrix.Core.Documents
 {
     using System;
     using System.IO;
+using System.Text;
 
     public interface IDocumentStorage : IDisposable
     {

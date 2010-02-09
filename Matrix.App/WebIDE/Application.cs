@@ -64,6 +64,8 @@ namespace Microsoft.Matrix.WebIDE
 
         protected override bool OnUnhandledException(Exception e)
         {
+            System.Windows.Forms.MessageBox.Show(e.Message, "Application.OnUnhandledException");
+            File.WriteAllText(this.ApplicationPath + "\\error.log", e.StackTrace);
             if (e is NullReferenceException)
             {
                 MethodBase targetSite = e.TargetSite;

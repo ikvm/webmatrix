@@ -19,6 +19,7 @@ namespace Microsoft.Matrix.UIComponents
         private TabPageCollection _tabCollection;
         private int _tabHeight = -1;
         private bool _tabRectanglesCalculated;
+        private bool _awaysShowTab;
         private RegionToolTip _toolTip;
         private static readonly object EventSelectedIndexChanged = new object();
         private static readonly object EventSelectedIndexChanging = new object();
@@ -30,7 +31,7 @@ namespace Microsoft.Matrix.UIComponents
         private const int TabWellGap = 4;
         private const int TabWellPaddingX = 5;
         private const int TabWellPaddingY = 2;
-
+         
         public event EventHandler SelectedIndexChanged
         {
             add
@@ -73,7 +74,7 @@ namespace Microsoft.Matrix.UIComponents
             return new ControlCollection(this);
         }
 
-        private void DirtyTabRectangles(bool repaintNow)
+        protected void DirtyTabRectangles(bool repaintNow)
         {
             this._tabRectanglesCalculated = false;
             if (repaintNow)
@@ -87,14 +88,13 @@ namespace Microsoft.Matrix.UIComponents
             this.EnsureTabRectangles(null, null, Rectangle.Empty);
         }
 
-        // UNDONE: 修改TabPage的Rectangle值使TabControl支持TabPlacement.Left和TabPlacement.Left
         private void EnsureTabRectangles(Graphics g, Font font, Rectangle clientRect)
         {
             #region if calculated
             if (this._tabRectanglesCalculated)
                 return;
 
-            if (this._tabCollection.Count < 2)
+            if (!this._awaysShowTab && this._tabCollection.Count < 2)
             {
                 this._tabRectanglesCalculated = true;
                 return;
@@ -396,12 +396,11 @@ namespace Microsoft.Matrix.UIComponents
         }
 
 
-        // UNDONE: 修改渲染过程使TabControl支持TabPlacement.Left和TabPlacement.Left
         protected override void OnPaint(PaintEventArgs e)
         {
             Rectangle clientRectangle = base.ClientRectangle;
             Graphics g = e.Graphics;
-            if (this._tabCollection.Count < 2)
+            if (!this._awaysShowTab && this._tabCollection.Count < 2)
             {
                 if (this._tabCollection.Count < 1)
                 {
@@ -424,7 +423,7 @@ namespace Microsoft.Matrix.UIComponents
                     rectX = 0;
                     rectY = 0;
                     g.FillRectangle(brush, 0, 0, clientRectangle.Width, this.TabWellHeight);
-                    g.DrawLine(SystemPens.ControlLightLight, this.TabWellHeight - 1, this.TabWellHeight - 1, clientRectangle.Width, this.TabWellHeight - 1);
+                    g.DrawLine(SystemPens.ControlLightLight, 0, this.TabWellHeight - 1, clientRectangle.Width, this.TabWellHeight - 1);
                 }
                 else if (this._placement == TabPlacement.Bottom)
                 {
@@ -618,6 +617,7 @@ namespace Microsoft.Matrix.UIComponents
             {
                 this.SelectedIndex = 0;
             }
+            this.DirtyTabRectangles(true);
         }
 
         internal void OnTabChanged(TabPage page, bool relayoutRequired)
@@ -637,12 +637,16 @@ namespace Microsoft.Matrix.UIComponents
             if (page == this._selectedTabPage)
             {
                 int selectedIndex = this.SelectedIndex;
-                this.SelectedIndex = -1;
+                //this.SelectedIndex = -1;
                 if (selectedIndex == this._tabCollection.Count)
                 {
                     selectedIndex--;
                 }
-                this.SelectedIndex = selectedIndex;
+
+                if(selectedIndex >= 0)
+                    this.SelectedIndex = selectedIndex;
+
+                this.DirtyTabRectangles(true);
             }
         }
 
@@ -698,9 +702,8 @@ namespace Microsoft.Matrix.UIComponents
         {
             get
             {
-                // UNDONE: 修改返回的DisplayRectangle使TabControl支持TabPlacement.Left和TabPlacement.Left
                 Rectangle clientRectangle = base.ClientRectangle;
-                if (this._tabCollection.Count < 2)
+                if (!this._awaysShowTab && this._tabCollection.Count < 2)
                 {
                     return clientRectangle;
                 }
@@ -777,7 +780,27 @@ namespace Microsoft.Matrix.UIComponents
             }
         }
 
-        private int TabHeight
+        public virtual TabPage SelectedTabPage
+        {
+            get { return this._selectedTabPage; }
+            set 
+            {
+                int newIndex = -1;
+                foreach (TabPage page in this._tabCollection)
+                { 
+                    newIndex++;
+                    if (page == value)
+                    { 
+                        this.SelectedIndex = newIndex;
+                        return;
+                    }
+                }
+
+                throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        protected int TabHeight
         {
             get
             {
@@ -821,7 +844,7 @@ namespace Microsoft.Matrix.UIComponents
             }
         }
 
-        private int TabWellHeight
+        protected int TabWellHeight
         {
             get
             {
@@ -839,6 +862,12 @@ namespace Microsoft.Matrix.UIComponents
             {
                 this.OnTabSelected(num, true);
             }
+        }
+
+        public bool AwaysShowTab
+        {
+            get { return _awaysShowTab;  }
+            set { _awaysShowTab = value; }
         }
 
         /*
@@ -911,7 +940,8 @@ namespace Microsoft.Matrix.UIComponents
         {
             private TabControl _owner;
 
-            internal ControlCollection(TabControl owner) : base(owner)
+            internal ControlCollection(TabControl owner)
+                : base(owner)
             {
                 this._owner = owner;
             }
@@ -1018,8 +1048,8 @@ namespace Microsoft.Matrix.UIComponents
             {
                 if (this._orderedTabs.Contains(value))
                 {
-                    this._owner.Controls.Remove(value);
                     this._orderedTabs.Remove(value);
+                    this._owner.Controls.Remove(value);
                 }
             }
 

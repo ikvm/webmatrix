@@ -340,6 +340,7 @@ namespace Microsoft.Matrix.Core.Projects.FileSystem
             }
             if (dialog.ShowDialog() == DialogResult.OK)
             {
+                //TODO: 增加另存文件编码
                 item2 = new MiscFileProjectItem(Path.GetFileName(dialog.FileName), dialog.FileName, this);
             }
             if (manager2 != null)

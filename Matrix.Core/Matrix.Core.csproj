@@ -42,6 +42,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>..\output\</OutputPath>
@@ -132,6 +133,7 @@
       <Name>System</Name>
       <HintPath>System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data" />
     <Reference Include="System.Design">
       <Name>System.Design</Name>
       <HintPath>System.Design.dll</HintPath>
@@ -1162,6 +1164,9 @@
     </Compile>
     <Compile Include="UIComponents\MxUserControl.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\OpenDocumentsTabControl.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UIComponents\ProgressStatusBarPanel.cs">
       <SubType>Component</SubType>

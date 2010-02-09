@@ -147,7 +147,7 @@ namespace Microsoft.Matrix.Core.Projects
         protected void SetFlags(ProjectItemFlags flags, bool isSet)
         {
             int num = this._state[StateFlags];
-            this._state[StateFlags] = isSet ? (num | (int)flags) : (num & ~(int)flags); //TODO: 手动修改
+            this._state[StateFlags] = isSet ? (num | (int)flags) : (num & ~(int)flags); //NOTE: 手动修改
             //this._state[StateFlags] = isSet ? (num | flags) : (num & ~flags); 
         }
 

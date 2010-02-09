@@ -12,4 +12,4 @@
 [assembly: System.Reflection.AssemblyConfiguration("Release")]
 [assembly: System.Reflection.AssemblyDescription("ASP.NET Web Matrix Web Host")]
 [assembly: System.Security.Permissions.SecurityPermission(System.Security.Permissions.SecurityAction.RequestMinimum, SkipVerification=true)]
-
+[assembly: System.Reflection.AssemblyKeyFile(@"..\AppMatrix.snk")]
