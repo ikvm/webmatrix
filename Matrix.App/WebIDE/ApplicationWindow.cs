@@ -3,7 +3,7 @@ namespace Microsoft.Matrix.WebIDE
     using Microsoft.Matrix.Core.Application;
     using Microsoft.Matrix.Core.UserInterface;
     using Microsoft.Matrix.Packages.ClassView.UserInterface;
-    using Microsoft.Matrix.Packages.Community.UserInterface;
+    //using Microsoft.Matrix.Packages.Community.UserInterface;
     using Microsoft.Matrix.Packages.DBAdmin.UserInterface;
     using Microsoft.Matrix.Packages.Web;
     using Microsoft.Matrix.UIComponents;

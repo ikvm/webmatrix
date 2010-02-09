@@ -1,7 +1,7 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{5F94714E-615C-4C9E-ACEF-12BD5656A24B}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -810,11 +810,6 @@
     <ProjectReference Include="..\Matrix.Framework\Matrix.Framework.csproj">
       <Project>{276B7F71-3D40-4FF1-B549-6064529B402A}</Project>
       <Name>Matrix.Framework</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\Packages.DBAdmin\Packages.DBAdmin.csproj">
-      <Project>{54C5619D-85DD-4FE5-B770-4F47A80BEFDB}</Project>
-      <Name>Packages.DBAdmin</Name>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Matrix.Core\Matrix.Core.csproj">
