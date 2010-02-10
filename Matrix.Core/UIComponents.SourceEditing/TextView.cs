@@ -2171,6 +2171,9 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
         private double MeasureString(char[] chars, int start, int length)
         {
             int end = start + length;
+            //if (end > chars.Length)
+            //    return 0.0;
+
             double realWidth;
             double width = 0.0;
             if (chars == null)
@@ -2196,7 +2199,7 @@ namespace Microsoft.Matrix.UIComponents.SourceEditing
             catch (Exception exception)
             {
                 StackFrame frame = new StackFrame(1);
-                StreamWriter writer = new StreamWriter(@"c:\temp\log.txt");
+                StreamWriter writer = new StreamWriter(@"c:\log.txt");
                 writer.Write(frame.GetMethod().Name);
                 writer.WriteLine("---" + exception.ToString());
                 writer.Close();

@@ -147,13 +147,11 @@
     <Content Include="Data\WebMatrix\Templates\cs\C#\NewFile.cs" />
     <Content Include="CmdID.cs" />
     <Compile Include="WebIDE\AboutDialog.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="WebIDE\Application.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="WebIDE\ApplicationOptionsPage.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="WebIDE\ApplicationPackage.cs">
       <SubType>Code</SubType>
@@ -180,15 +178,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Packages.Web\Packages.Web.csproj">
-      <Project>{5F94714E-615C-4C9E-ACEF-12BD5656A24B}</Project>
-      <Name>Packages.Web</Name>
-      <Private>False</Private>
-    </ProjectReference>
     <ProjectReference Include="..\Matrix.Core\Matrix.Core.csproj">
       <Project>{BF18EE70-9F39-4D99-AD14-7098D35BED0A}</Project>
       <Name>Matrix.Core</Name>
       <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Packages.ClassView\Packages.ClassView.csproj">
+      <Project>{486DDE87-177A-4268-957C-A09C1EDFE23A}</Project>
+      <Name>Packages.ClassView</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
