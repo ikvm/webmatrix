@@ -1,5 +1,12 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 5.2
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{A8009355-0A53-4F33-97B7-374732190FED}"
+	ProjectSection(SolutionItems) = preProject
+		WebMatrix.snk = WebMatrix.snk
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix.App", "Matrix.App\Matrix.App.csproj", "{B5D45BDB-37C1-4E36-B27C-427CA7944C8B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix.Core", "Matrix.Core\Matrix.Core.csproj", "{BF18EE70-9F39-4D99-AD14-7098D35BED0A}"
@@ -18,18 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer.WebHost", "WebSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer", "WebServer\WebServer.csproj", "{E69E3850-33C5-4CE1-A567-D6DB26C4C80A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{A8009355-0A53-4F33-97B7-374732190FED}"
-	ProjectSection(SolutionItems) = preProject
-		WebMatrix.snk = WebMatrix.snk
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins.CodeWizards", "Plugins.CodeWizards\Plugins.CodeWizards.csproj", "{3E39FAC6-908A-4B4E-8524-16BBE26B7538}"
 EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -159,6 +157,10 @@ Global
 		{3E39FAC6-908A-4B4E-8524-16BBE26B7538}.Release|x64.Build.0 = Release|x64
 		{3E39FAC6-908A-4B4E-8524-16BBE26B7538}.Release|x86.ActiveCfg = Release|x86
 		{3E39FAC6-908A-4B4E-8524-16BBE26B7538}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
